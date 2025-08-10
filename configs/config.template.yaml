@@ -1,0 +1,43 @@
+# Configuration Template for PINN Experiments
+#
+# How to use:
+# 1. Copy this file to a new file, e.g., `configs/my_experiment.yaml`.
+# 2. Modify the parameters below for your specific experiment.
+# 3. Pass the path to your new config file to the main script.
+#    Example: python main_script.py --config configs/my_experiment.yaml
+
+# Seed for reproducibility
+seed: 42
+
+# Dataset and Physics Parameters
+# Defines the physical problem and the data generation process
+data:
+  nu_true: 0.05
+  noise_level: 0.01
+  num_datasets_gene: 10 # For surrogate/generalist models
+
+# Neural Network Architecture
+model:
+  layers: 5
+  neurons: 60
+  activation: 'swish'
+
+# Training Hyperparameters
+training:
+  # Stage 1: Data-only pre-training and parameter discovery (inverse problem)
+  stage1:
+    epochs_data_only: 500
+    adam_epochs: 2000
+    lbfgs_epochs: 8000
+    learning_rate: 0.001
+    num_pde_points: 20000
+
+  # Stage 2 (Optional): Fine-tuning or further training
+  stage2:
+    adam_epochs: 1000
+    learning_rate: 0.0001
+
+# Output Configuration
+output:
+  run_id: "default_run"
+  results_dir: "results/"
