@@ -1,0 +1,16 @@
+Running with seed: 1
+Traceback (most recent call last):
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 560, in <module>
+    pinn = PINN_Burgers2D(
+           ^^^^^^^^^^^^^^^
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 110, in __init__
+    u_pred_inverse, v_pred_inverse = self.predict_velocity_inverse(
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 179, in predict_velocity_inverse
+    X_input = tf.concat([x, y, t, nu_val], axis=1)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/util/traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/framework/ops.py", line 1037, in _create_c_op
+    raise ValueError(e.message)
+ValueError: Shape must be rank 2 but is rank 0 for '{{node concat_6}} = ConcatV2[N=4, T=DT_FLOAT, Tidx=DT_INT32](x_data_inverse, y_data_inverse, t_data_inverse, Exp, concat_6/axis)' with input shapes: [?,1], [?,1], [?,1], [], [].

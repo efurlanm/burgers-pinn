@@ -1,0 +1,42 @@
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+Running with seed: 1
+Ground truth nu: 0.05
+Initial guess for nu: 0.060000
+Training with: Adam Epochs = 200, Data-Only Epochs = 1000, Lambda Data = 1.0, Lambda PDE = 1.0, PDE Points = 20000
+Searching for the best initial nu...
+  Candidate nu: 0.01, Loss: 0.07388371974229813
+  Candidate nu: 0.05, Loss: 0.07086172699928284
+  Candidate nu: 0.1, Loss: 0.06909529119729996
+  Candidate nu: 0.5, Loss: 0.06689167767763138
+Best initial nu found: 0.5
+Starting Data-Only Pre-training for 1000 epochs...
+Data-Only Epoch 0: Data Loss = 0.065639
+Data-Only Pre-training finished in 56.80 seconds.
+Starting Adam training (Full Loss)...
+Adam Epoch 0: Loss = 0.846135, Discovered nu = 0.500000
+Adam Epoch 100: Loss = 0.055698, Discovered nu = 0.500000
+Adam training finished in 74.22 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B training finished in 266.71 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 583
+--------------------------------------------------
+Final Discovered nu: 0.500000
+Ground Truth nu: 0.05
+Prediction MSE (u): 5.308791e-02
+Prediction MSE (v): 5.496801e-02
+Total Prediction MSE (u+v): 1.080559e-01
+Results saved to results/precision_results_data_1.0_pde_1.0_epochs_200_pdepoints_20000_seed_1.npz
+--- HPC Performance Metrics ---
+Data Preparation Duration: 1.08 seconds
+Model Initialization Duration: 0.11 seconds
+Data-Only Pre-training Duration: 56.80 seconds
+Adam Training Duration: 74.22 seconds
+L-BFGS-B Training Duration: 266.71 seconds
+Total Execution Duration: 1141.59 seconds

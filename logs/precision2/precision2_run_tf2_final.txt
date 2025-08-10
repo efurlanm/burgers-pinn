@@ -1,0 +1,69 @@
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+Running with seed: 1
+Ground truth nu: 0.05
+Initial guess for nu: 0.060000
+Training with: Adam Epochs = 2000, Data-Only Epochs = 10000, Lambda Data = 1.0, Lambda PDE = 1.0, PDE Points = 60000
+Searching for the best initial nu...
+  Candidate nu: 0.01, Loss: 9.611588478088379
+  Candidate nu: 0.05, Loss: 9.611536979675293
+  Candidate nu: 0.1, Loss: 9.611495971679688
+  Candidate nu: 0.5, Loss: 9.61192798614502
+Best initial nu found: 0.1
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Epoch 0: Data Loss = 0.111404
+Data-Only Epoch 1000: Data Loss = 0.111404
+Data-Only Epoch 2000: Data Loss = 0.111404
+Data-Only Epoch 3000: Data Loss = 0.111404
+Data-Only Epoch 4000: Data Loss = 0.111404
+Data-Only Epoch 5000: Data Loss = 0.111404
+Data-Only Epoch 6000: Data Loss = 0.111404
+Data-Only Epoch 7000: Data Loss = 0.111404
+Data-Only Epoch 8000: Data Loss = 0.111404
+Data-Only Epoch 9000: Data Loss = 0.111404
+Data-Only Pre-training finished in 599.69 seconds.
+Starting Adam training (Full Loss)...
+Adam Epoch 0: Loss = 9.611496, Discovered nu = 0.100000
+Adam Epoch 100: Loss = 9.611496, Discovered nu = 0.100000
+Adam Epoch 200: Loss = 9.611496, Discovered nu = 0.100000
+Adam Epoch 300: Loss = 9.611496, Discovered nu = 0.100000
+Adam Epoch 400: Loss = 9.611496, Discovered nu = 0.100000
+Adam Epoch 500: Loss = 9.611496, Discovered nu = 0.100000
+Adam Epoch 600: Loss = 9.611496, Discovered nu = 0.100000
+Adam Epoch 700: Loss = 9.611496, Discovered nu = 0.100000
+Adam Epoch 800: Loss = 9.611496, Discovered nu = 0.100000
+Adam Epoch 900: Loss = 9.611496, Discovered nu = 0.100000
+Adam Epoch 1000: Loss = 9.611496, Discovered nu = 0.100000
+Adam Epoch 1100: Loss = 9.611496, Discovered nu = 0.100000
+Adam Epoch 1200: Loss = 9.611496, Discovered nu = 0.100000
+Adam Epoch 1300: Loss = 9.611496, Discovered nu = 0.100000
+Adam Epoch 1400: Loss = 9.611496, Discovered nu = 0.100000
+Adam Epoch 1500: Loss = 9.611496, Discovered nu = 0.100000
+Adam Epoch 1600: Loss = 9.611496, Discovered nu = 0.100000
+Adam Epoch 1700: Loss = 9.611496, Discovered nu = 0.100000
+Adam Epoch 1800: Loss = 9.611496, Discovered nu = 0.100000
+Adam Epoch 1900: Loss = 9.611496, Discovered nu = 0.100000
+Adam training finished in 762.53 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B training finished in 101.59 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 113
+--------------------------------------------------
+Final Discovered nu: 0.100000
+Ground Truth nu: 0.05
+Prediction MSE (u): 3.456141e-02
+Prediction MSE (v): 3.468702e-02
+Total Prediction MSE (u+v): 6.924844e-02
+Results saved to results/precision_results_data_1.0_pde_1.0_epochs_2000_pdepoints_60000_seed_1.npz
+--- HPC Performance Metrics ---
+Data Preparation Duration: 1.05 seconds
+Model Initialization Duration: 0.10 seconds
+Data-Only Pre-training Duration: 599.69 seconds
+Adam Training Duration: 762.53 seconds
+L-BFGS-B Training Duration: 101.59 seconds
+Total Execution Duration: 2257.40 seconds

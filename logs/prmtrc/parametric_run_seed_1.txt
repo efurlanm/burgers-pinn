@@ -1,0 +1,55 @@
+Running with seed: 1
+Training with: Adam Epochs = 2000, Data-Only Epochs = 10000, Lambda Data = 1.0, Lambda PDE = 1.0, PDE Points = 60000, Nu Range = [0.01, 0.1]
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Epoch 0: Data Loss = 0.093262
+Data-Only Epoch 1000: Data Loss = 0.000063
+Data-Only Epoch 2000: Data Loss = 0.000027
+Data-Only Epoch 3000: Data Loss = 0.000065
+Data-Only Epoch 4000: Data Loss = 0.000019
+Data-Only Epoch 5000: Data Loss = 0.000062
+Data-Only Epoch 6000: Data Loss = 0.000020
+Data-Only Epoch 7000: Data Loss = 0.000021
+Data-Only Epoch 8000: Data Loss = 0.000031
+Data-Only Epoch 9000: Data Loss = 0.000031
+Data-Only Pre-training finished in 21.24 seconds.
+Starting Adam training (Full Loss)...
+Adam Epoch 0: Loss = 0.628549
+Adam Epoch 100: Loss = 0.014799
+Adam Epoch 200: Loss = 0.010300
+Adam Epoch 300: Loss = 0.008433
+Adam Epoch 400: Loss = 0.007007
+Adam Epoch 500: Loss = 0.005909
+Adam Epoch 600: Loss = 0.004975
+Adam Epoch 700: Loss = 0.004408
+Adam Epoch 800: Loss = 0.003852
+Adam Epoch 900: Loss = 0.003789
+Adam Epoch 1000: Loss = 0.002798
+Adam Epoch 1100: Loss = 0.002513
+Adam Epoch 1200: Loss = 0.002297
+Adam Epoch 1300: Loss = 0.001992
+Adam Epoch 1400: Loss = 0.001722
+Adam Epoch 1500: Loss = 0.001610
+Adam Epoch 1600: Loss = 0.001345
+Adam Epoch 1700: Loss = 0.001328
+Adam Epoch 1800: Loss = 0.001165
+Adam Epoch 1900: Loss = 0.001027
+
+Adam training finished in 324.35 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B training finished in 461.15 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 379
+--------------------------------------------------
+Generating predictions for various nu values...
+Prediction MSE (u) for nu=0.05: 3.592486e-02
+Prediction MSE (v) for nu=0.05: 3.803270e-02
+Total Prediction MSE (u+v) for nu=0.05: 7.395756e-02
+Results saved to results/parametric_results_data_1.0_pde_1.0_epochs_2000_pdepoints_60000_seed_1.npz
+--- HPC Performance Metrics ---
+Data Preparation Duration: 3.81 seconds
+Model Initialization Duration: 4.34 seconds
+Data-Only Pre-training Duration: 21.24 seconds
+Adam Training Duration: 324.35 seconds
+L-BFGS-B Training Duration: 461.15 seconds
+Total Execution Duration: 821.29 seconds

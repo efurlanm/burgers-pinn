@@ -1,0 +1,38 @@
+Running with seed: 1
+--- Stage 1: Parametric PINN Training ---
+Training with: Adam Epochs = 3000, Data-Only Epochs = 10000, Lambda Data = 1.0, Lambda PDE = 1.0, PDE Points = 100000, Nu Range = [0.01, 0.1])
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Epoch 0: Data Loss = 0.093262
+Data-Only Epoch 1000: Data Loss = 0.000063
+Data-Only Epoch 2000: Data Loss = 0.000027
+Data-Only Epoch 3000: Data Loss = 0.000065
+Data-Only Epoch 4000: Data Loss = 0.000019
+Data-Only Epoch 5000: Data Loss = 0.000062
+Data-Only Epoch 6000: Data Loss = 0.000020
+Data-Only Epoch 7000: Data Loss = 0.000021
+Data-Only Epoch 8000: Data Loss = 0.000031
+Data-Only Epoch 9000: Data Loss = 0.000031
+Data-Only Pre-training finished in 19.05 seconds.
+Starting Adam training (Full Loss)...
+Traceback (most recent call last):
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 648, in <module>
+    duration_data_only_stage1, adam_duration_stage1, lbfgs_duration_stage1 = pinn.train(
+                                                                             ^^^^^^^^^^^
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 396, in train
+    self.train_step_adam(x_pde_batch, y_pde_batch, t_pde_batch, nu_pde_batch)
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 243, in train_step_adam
+    f_u_pred, f_v_pred = self.compute_pde_residual(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 200, in compute_pde_residual
+    u_xx = tf_v1.gradients(u_x, x)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/gradients_impl.py", line 181, in gradients
+    return gradients_util._GradientsHelper(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/gradients_util.py", line 573, in _GradientsHelper
+    grad_ys = _DefaultGradYs(grad_ys, ys, colocate_gradients_with_ops,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/gradients_util.py", line 170, in _DefaultGradYs
+    with _maybe_colocate_with(y.op, gradient_uid, colocate_gradients_with_ops):
+                              ^^^^
+AttributeError: 'NoneType' object has no attribute 'op'

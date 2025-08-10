@@ -1,0 +1,44 @@
+--- Starting Run 1/1 ---
+Running with Seed: 1, Learning Rate: 1.000000e-05
+Explicitly setting initial nu to: 0.02
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Epoch 0: Data Loss = 0.133554
+Data-Only Epoch 1000: Data Loss = 0.071138
+Data-Only Epoch 2000: Data Loss = 0.070855
+Data-Only Epoch 3000: Data Loss = 0.069937
+Data-Only Epoch 4000: Data Loss = 0.063238
+Data-Only Epoch 5000: Data Loss = 0.047206
+Data-Only Epoch 6000: Data Loss = 0.020872
+Data-Only Epoch 7000: Data Loss = 0.009109
+Data-Only Epoch 8000: Data Loss = 0.003165
+Data-Only Epoch 9000: Data Loss = 0.000930
+Data-Only Pre-training finished in 20.50 seconds.
+Starting Adam training (Full Loss)...
+Adam Epoch 0: Loss = 0.211652, Discovered nu = 0.020000
+Adam Epoch 100: Loss = 0.141317, Discovered nu = 0.019981
+Adam Epoch 200: Loss = 0.104760, Discovered nu = 0.019961
+Adam Epoch 300: Loss = 0.081680, Discovered nu = 0.019944
+Adam Epoch 400: Loss = 0.066146, Discovered nu = 0.019928
+Adam Epoch 500: Loss = 0.055335, Discovered nu = 0.019913
+Adam Epoch 600: Loss = 0.047544, Discovered nu = 0.019899
+Adam Epoch 700: Loss = 0.041823, Discovered nu = 0.019885
+Adam Epoch 800: Loss = 0.037539, Discovered nu = 0.019872
+Adam Epoch 900: Loss = 0.034282, Discovered nu = 0.019860
+Adam Epoch 1000: Loss = 0.031732, Discovered nu = 0.019848
+Adam Epoch 1100: Loss = 0.029710, Discovered nu = 0.019836
+Adam Epoch 1200: Loss = 0.028049, Discovered nu = 0.019825
+Adam Epoch 1300: Loss = 0.026660, Discovered nu = 0.019813
+Adam Epoch 1400: Loss = 0.025482, Discovered nu = 0.019802
+Adam Epoch 1500: Loss = 0.024447, Discovered nu = 0.019791
+Adam Epoch 1600: Loss = 0.023540, Discovered nu = 0.019780
+Adam Epoch 1700: Loss = 0.022721, Discovered nu = 0.019770
+Adam Epoch 1800: Loss = 0.021985, Discovered nu = 0.019759
+Adam Epoch 1900: Loss = 0.021308, Discovered nu = 0.019749
+Adam training finished in 52.33 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B training finished in 628.26 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 522
+RESULT_RUN,1,1.000000e-05,0.017434,0.6513,1.784223e-03,20.50,52.33,628.26
+Run 1 Finished. Discovered nu: 0.017434, Relative Error: 0.6513

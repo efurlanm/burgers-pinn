@@ -1,0 +1,47 @@
+--- Starting Run 1/1 ---
+Running with Seed: 1, Learning Rate: 1.000000e-05
+Explicitly setting initial nu to: 0.02
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Iter 0: Data Loss = 0.133554
+Data-Only Iter 1000: Data Loss = 0.071138
+Data-Only Iter 2000: Data Loss = 0.070855
+Data-Only Iter 3000: Data Loss = 0.069937
+Data-Only Iter 4000: Data Loss = 0.063238
+Data-Only Iter 5000: Data Loss = 0.047206
+Data-Only Iter 6000: Data Loss = 0.020872
+Data-Only Iter 7000: Data Loss = 0.009109
+Data-Only Iter 8000: Data Loss = 0.003165
+Data-Only Iter 9000: Data Loss = 0.000930
+Data-Only Pre-training finished in 20.45 seconds.
+Starting Adam training (Full Loss)...
+Adam Iter 0: Loss = 211.204529, Discovered nu = 0.020000, loss_data = 0.000447, loss_pde = 0.211204
+Adam Iter 100: Loss = 139.380508, Discovered nu = 0.019981, loss_data = 0.002561, loss_pde = 0.139378
+Adam Iter 200: Loss = 101.102631, Discovered nu = 0.019963, loss_data = 0.006432, loss_pde = 0.101096
+Adam Iter 300: Loss = 76.483215, Discovered nu = 0.019947, loss_data = 0.010452, loss_pde = 0.076473
+Adam Iter 400: Loss = 59.513321, Discovered nu = 0.019933, loss_data = 0.014418, loss_pde = 0.059499
+Adam Iter 500: Loss = 47.383636, Discovered nu = 0.019919, loss_data = 0.018458, loss_pde = 0.047365
+Adam Iter 600: Loss = 38.512280, Discovered nu = 0.019907, loss_data = 0.022508, loss_pde = 0.038490
+Adam Iter 700: Loss = 31.885584, Discovered nu = 0.019895, loss_data = 0.026463, loss_pde = 0.031859
+Adam Iter 800: Loss = 26.851368, Discovered nu = 0.019883, loss_data = 0.030197, loss_pde = 0.026821
+Adam Iter 900: Loss = 22.992376, Discovered nu = 0.019872, loss_data = 0.033626, loss_pde = 0.022959
+Adam Iter 1000: Loss = 19.956367, Discovered nu = 0.019861, loss_data = 0.036711, loss_pde = 0.019920
+Adam Iter 1100: Loss = 17.547739, Discovered nu = 0.019850, loss_data = 0.039440, loss_pde = 0.017508
+Adam Iter 1200: Loss = 15.589877, Discovered nu = 0.019840, loss_data = 0.041814, loss_pde = 0.015548
+Adam Iter 1300: Loss = 13.962262, Discovered nu = 0.019830, loss_data = 0.043903, loss_pde = 0.013918
+Adam Iter 1400: Loss = 12.603114, Discovered nu = 0.019820, loss_data = 0.045735, loss_pde = 0.012557
+Adam Iter 1500: Loss = 11.446743, Discovered nu = 0.019811, loss_data = 0.047345, loss_pde = 0.011399
+Adam Iter 1600: Loss = 10.449866, Discovered nu = 0.019801, loss_data = 0.048742, loss_pde = 0.010401
+Adam Iter 1700: Loss = 9.574216, Discovered nu = 0.019792, loss_data = 0.049923, loss_pde = 0.009524
+Adam Iter 1800: Loss = 8.807087, Discovered nu = 0.019784, loss_data = 0.051059, loss_pde = 0.008756
+Adam Iter 1900: Loss = 8.112006, Discovered nu = 0.019775, loss_data = 0.051999, loss_pde = 0.008060
+Adam Iter 1999: Loss = 7.508440, Discovered nu = 0.019767, loss_data = 0.052897, loss_pde = 0.007456
+Adam training finished in 53.09 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B Iter 100: Loss = 0.264519, Discovered nu = 0.019289, loss_data = 0.104431, loss_pde = 0.000160
+L-BFGS-B Final Iter 135: Loss = 0.180680, Discovered nu = 0.019213, loss_data = 0.092308, loss_pde = 0.000088
+L-BFGS-B training finished in 206.53 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 135
+RESULT_COLO1000_RUN,1,1.000000e-05,0.019213,0.6157,1.806799e-01,20.45,53.09,206.53
+Run 1 Finished. Discovered nu: 0.019213, Relative Error: 0.6157

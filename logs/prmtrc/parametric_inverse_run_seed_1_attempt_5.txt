@@ -1,0 +1,45 @@
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+Running with seed: 1
+--- Stage 1: Parametric PINN Training ---
+Training with: Adam Epochs = 3000, Data-Only Epochs = 10000, Lambda Data = 1.0, Lambda PDE = 1.0, PDE Points = 100000, Nu Range = [0.01, 0.1])
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Epoch 0: Data Loss = 0.093262
+Data-Only Epoch 1000: Data Loss = 0.000063
+Data-Only Epoch 2000: Data Loss = 0.000027
+Data-Only Epoch 3000: Data Loss = 0.000065
+Data-Only Epoch 4000: Data Loss = 0.000019
+Data-Only Epoch 5000: Data Loss = 0.000062
+Data-Only Epoch 6000: Data Loss = 0.000020
+Data-Only Epoch 7000: Data Loss = 0.000021
+Data-Only Epoch 8000: Data Loss = 0.000031
+Data-Only Epoch 9000: Data Loss = 0.000031
+Data-Only Pre-training finished in 20.81 seconds.
+Starting Adam training (Full Loss)...
+Traceback (most recent call last):
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 662, in <module>
+    duration_data_only_stage1, adam_duration_stage1, lbfgs_duration_stage1 = pinn.train(
+                                                                             ^^^^^^^^^^^
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 410, in train
+    self.train_step_adam(x_pde_batch, y_pde_batch, t_pde_batch, nu_pde_batch)
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 257, in train_step_adam
+    f_u_pred, f_v_pred = self.compute_pde_residual(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 188, in compute_pde_residual
+    inner_tape.watch([x, y, t])
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/eager/backprop.py", line 873, in watch
+    for t in _extract_tensors_and_variables(tensor):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/eager/backprop.py", line 700, in _extract_tensors_and_variables
+    raise ValueError(f"Passed in object {obj} of type {type(obj).__name__!r}"
+ValueError: Passed in object [[8.3404398e-01]
+ [1.4406490e+00]
+ [2.2874963e-04]
+ ...
+ [1.6360917e+00]
+ [1.1357071e+00]
+ [1.2261149e+00]] of type 'ndarray', not tf.Tensor or tf.Variable or ExtensionType.

@@ -1,0 +1,88 @@
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+Running with seed: 1
+--- Stage 1: Parametric PINN Training ---
+Training with: Adam Epochs = 3000, Data-Only Epochs = 10000, Lambda Data = 1.0, Lambda PDE = 1.0, PDE Points = 100000, Nu Range = [0.01, 0.1])
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Epoch 0: Data Loss = 0.093262
+Data-Only Epoch 1000: Data Loss = 0.000063
+Data-Only Epoch 2000: Data Loss = 0.000027
+Data-Only Epoch 3000: Data Loss = 0.000065
+Data-Only Epoch 4000: Data Loss = 0.000019
+Data-Only Epoch 5000: Data Loss = 0.000062
+Data-Only Epoch 6000: Data Loss = 0.000020
+Data-Only Epoch 7000: Data Loss = 0.000021
+Data-Only Epoch 8000: Data Loss = 0.000031
+Data-Only Epoch 9000: Data Loss = 0.000031
+Data-Only Pre-training finished in 20.40 seconds.
+Starting Adam training (Full Loss)...
+Traceback (most recent call last):
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/client/session.py", line 1401, in _do_call
+    return fn(*args)
+           ^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/client/session.py", line 1384, in _run_fn
+    return self._call_tf_sessionrun(options, feed_dict, fetch_list,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/client/session.py", line 1477, in _call_tf_sessionrun
+    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tensorflow.python.framework.errors_impl.InvalidArgumentError: 2 root error(s) found.
+  (0) INVALID_ARGUMENT: You must feed a value for placeholder tensor 'nu_pde' with dtype float and shape [?,1]
+	 [[{{node nu_pde}}]]
+	 [[ReadVariableOp_4/_9]]
+  (1) INVALID_ARGUMENT: You must feed a value for placeholder tensor 'nu_pde' with dtype float and shape [?,1]
+	 [[{{node nu_pde}}]]
+0 successful operations.
+0 derived errors ignored.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 675, in <module>
+    duration_data_only_stage1, adam_duration_stage1, lbfgs_duration_stage1 = pinn.train(
+                                                                             ^^^^^^^^^^^
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 423, in train
+    self.train_step_adam(x_pde_batch, y_pde_batch, t_pde_batch, nu_pde_batch)
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 300, in train_step_adam
+    self.session.run(tf_v1.assign(self.lambda_data, new_lambda_data))
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/client/session.py", line 971, in run
+    result = self._run(None, fetches, feed_dict, options_ptr,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/client/session.py", line 1214, in _run
+    results = self._do_run(handle, final_targets, final_fetches,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/client/session.py", line 1394, in _do_run
+    return self._do_call(_run_fn, feeds, fetches, targets, options,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/client/session.py", line 1420, in _do_call
+    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:
+
+Detected at node 'nu_pde' defined at (most recent call last):
+    File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 648, in <module>
+Node: 'nu_pde'
+Detected at node 'nu_pde' defined at (most recent call last):
+    File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 648, in <module>
+Node: 'nu_pde'
+2 root error(s) found.
+  (0) INVALID_ARGUMENT: You must feed a value for placeholder tensor 'nu_pde' with dtype float and shape [?,1]
+	 [[{{node nu_pde}}]]
+	 [[ReadVariableOp_4/_9]]
+  (1) INVALID_ARGUMENT: You must feed a value for placeholder tensor 'nu_pde' with dtype float and shape [?,1]
+	 [[{{node nu_pde}}]]
+0 successful operations.
+0 derived errors ignored.
+
+Original stack trace for 'nu_pde':
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 648, in <module>
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/array_ops.py", line 2994, in placeholder
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/gen_array_ops.py", line 7089, in placeholder
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/framework/op_def_library.py", line 796, in _apply_op_helper
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/framework/ops.py", line 2682, in _create_op_internal
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/framework/ops.py", line 1177, in from_node_def
+

@@ -1,0 +1,111 @@
+Running with seed: 1
+--- Stage 1: Parametric PINN Training ---
+Training with: Adam Epochs = 5000, Data-Only Epochs = 10000, Lambda Data = 1.0, Lambda PDE = 1.0, PDE Points = 60000, Nu Range = [0.01, 0.1])
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Epoch 0: Data Loss = 0.087642
+Data-Only Epoch 1000: Data Loss = 0.000677
+Data-Only Epoch 2000: Data Loss = 0.000013
+Data-Only Epoch 3000: Data Loss = 0.000008
+Data-Only Epoch 4000: Data Loss = 0.000006
+Data-Only Epoch 5000: Data Loss = 0.000025
+Data-Only Epoch 6000: Data Loss = 0.000003
+Data-Only Epoch 7000: Data Loss = 0.000006
+Data-Only Epoch 8000: Data Loss = 0.000044
+Data-Only Epoch 9000: Data Loss = 0.000002
+Data-Only Pre-training finished in 27.67 seconds.
+Starting Adam training (Full Loss)...
+Traceback (most recent call last):
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/client/session.py", line 1401, in _do_call
+    return fn(*args)
+           ^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/client/session.py", line 1384, in _run_fn
+    return self._call_tf_sessionrun(options, feed_dict, fetch_list,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/client/session.py", line 1477, in _call_tf_sessionrun
+    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tensorflow.python.framework.errors_impl.ResourceExhaustedError: failed to allocate memory
+	 [[{{node gradients_11/gradients_8/gradients_4/mul_1443_grad/Mul_grad/Mul_1_grad/Mul_1}}]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. This isn't available when running in Eager mode.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 577, in <module>
+    duration_data_only_stage1, adam_duration_stage1, lbfgs_duration_stage1 = pinn.train(
+                                                                             ^^^^^^^^^^^
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 325, in train
+    self.train_step_adam(x_pde_batch, y_pde_batch, t_pde_batch, nu_pde_batch)
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 244, in train_step_adam
+    self.session.run(self.train_op_adam, feed_dict=feed_dict)
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/client/session.py", line 971, in run
+    result = self._run(None, fetches, feed_dict, options_ptr,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/client/session.py", line 1214, in _run
+    results = self._do_run(handle, final_targets, final_fetches,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/client/session.py", line 1394, in _do_run
+    return self._do_call(_run_fn, feeds, fetches, targets, options,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/client/session.py", line 1420, in _do_call
+    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tensorflow.python.framework.errors_impl.ResourceExhaustedError: Graph execution error:
+
+Detected at node 'gradients_11/gradients_8/gradients_4/mul_1443_grad/Mul_grad/Mul_1_grad/Mul_1' defined at (most recent call last):
+    File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 563, in <module>
+    File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 87, in __init__
+Node: 'gradients_11/gradients_8/gradients_4/mul_1443_grad/Mul_grad/Mul_1_grad/Mul_1'
+failed to allocate memory
+	 [[{{node gradients_11/gradients_8/gradients_4/mul_1443_grad/Mul_grad/Mul_1_grad/Mul_1}}]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. This isn't available when running in Eager mode.
+
+Original stack trace for 'gradients_11/gradients_8/gradients_4/mul_1443_grad/Mul_grad/Mul_1_grad/Mul_1':
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 563, in <module>
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 87, in __init__
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/training/optimizer.py", line 495, in minimize
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/training/optimizer.py", line 621, in compute_gradients
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/gradients_impl.py", line 181, in gradients
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/gradients_util.py", line 733, in _GradientsHelper
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/gradients_util.py", line 365, in _MaybeCompile
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/gradients_util.py", line 734, in <lambda>
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/math_grad.py", line 1434, in _MulGrad
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/gen_math_ops.py", line 6837, in mul
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/framework/op_def_library.py", line 796, in _apply_op_helper
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/framework/ops.py", line 2682, in _create_op_internal
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/framework/ops.py", line 1177, in from_node_def
+
+...which was originally created as op 'gradients_8/gradients_4/mul_1443_grad/Mul_grad/Mul_1', defined at:
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 563, in <module>
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 79, in __init__
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 225, in compute_loss
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 206, in compute_pde_residual
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/gradients_impl.py", line 181, in gradients
+
+...which was originally created as op 'gradients_4/mul_1443_grad/Mul', defined at:
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 563, in <module>
+[elided 1 identical lines from previous traceback]
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 225, in compute_loss
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 200, in compute_pde_residual
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/gradients_impl.py", line 181, in gradients
+[elided 2 identical lines from previous traceback]
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/gradients_util.py", line 734, in <lambda>
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/math_grad.py", line 1429, in _MulGrad
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/gen_math_ops.py", line 6837, in mul
+
+...which was originally created as op 'mul_1443', defined at:
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 563, in <module>
+[elided 1 identical lines from previous traceback]
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 225, in compute_loss
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 193, in compute_pde_residual
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 175, in predict_velocity
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 165, in neural_network_model
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 39, in swish_activation
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/util/traceback_utils.py", line 150, in error_handler
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/framework/override_binary_operator.py", line 113, in binary_op_wrapper
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/tensor_math_operator_overrides.py", line 64, in _mul_dispatch_factory
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/math_ops.py", line 1711, in _mul_dispatch
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/weak_tensor_ops.py", line 142, in wrapper
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/util/traceback_utils.py", line 150, in error_handler
+

@@ -1,0 +1,193 @@
+--- Starting Run 1 (True nu: 0.05, Learning Rate: 1.000000e-05) ---
+Running with Seed: 1, Learning Rate: 1.000000e-05
+Explicitly setting initial nu to: 0.02
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Iter 0: Data Loss = 0.133554
+Data-Only Iter 1000: Data Loss = 0.071138
+Data-Only Iter 2000: Data Loss = 0.070855
+Data-Only Iter 3000: Data Loss = 0.069937
+Data-Only Iter 4000: Data Loss = 0.063238
+Data-Only Iter 5000: Data Loss = 0.047206
+Data-Only Iter 6000: Data Loss = 0.020872
+Data-Only Iter 7000: Data Loss = 0.009109
+Data-Only Iter 8000: Data Loss = 0.003165
+Data-Only Iter 9000: Data Loss = 0.000930
+Data-Only Pre-training finished in 20.60 seconds.
+Starting Adam training (Full Loss)...
+Adam Iter 0: Loss = 0.211652, Discovered nu = 0.020000, loss_data = 0.000447, loss_pde = 0.211205, mse_u_data = 2.218723e-04, mse_v_data = 2.251306e-04, mse_u_pde = 1.120008e-01, mse_v_pde = 9.920449e-02
+Adam Iter 100: Loss = 0.141317, Discovered nu = 0.019981, loss_data = 0.001241, loss_pde = 0.140077, mse_u_data = 6.117522e-04, mse_v_data = 6.287871e-04, mse_u_pde = 7.231963e-02, mse_v_pde = 6.775721e-02
+Adam Iter 200: Loss = 0.104760, Discovered nu = 0.019961, loss_data = 0.002056, loss_pde = 0.102704, mse_u_data = 9.770807e-04, mse_v_data = 1.078937e-03, mse_u_pde = 5.254048e-02, mse_v_pde = 5.016352e-02
+Adam Iter 300: Loss = 0.081680, Discovered nu = 0.019944, loss_data = 0.002851, loss_pde = 0.078829, mse_u_data = 1.319443e-03, mse_v_data = 1.531931e-03, mse_u_pde = 4.036383e-02, mse_v_pde = 3.846529e-02
+Adam Iter 400: Loss = 0.066146, Discovered nu = 0.019928, loss_data = 0.003650, loss_pde = 0.062496, mse_u_data = 1.673686e-03, mse_v_data = 1.976105e-03, mse_u_pde = 3.210268e-02, mse_v_pde = 3.039361e-02
+Adam Iter 500: Loss = 0.055335, Discovered nu = 0.019913, loss_data = 0.004421, loss_pde = 0.050913, mse_u_data = 2.024272e-03, mse_v_data = 2.397182e-03, mse_u_pde = 2.623806e-02, mse_v_pde = 2.467539e-02
+Adam Iter 600: Loss = 0.047544, Discovered nu = 0.019899, loss_data = 0.005132, loss_pde = 0.042412, mse_u_data = 2.346147e-03, mse_v_data = 2.786210e-03, mse_u_pde = 2.188593e-02, mse_v_pde = 2.052573e-02
+Adam Iter 700: Loss = 0.041823, Discovered nu = 0.019885, loss_data = 0.005764, loss_pde = 0.036059, mse_u_data = 2.626013e-03, mse_v_data = 3.137491e-03, mse_u_pde = 1.862060e-02, mse_v_pde = 1.743879e-02
+Adam Iter 800: Loss = 0.037539, Discovered nu = 0.019872, loss_data = 0.006321, loss_pde = 0.031218, mse_u_data = 2.865499e-03, mse_v_data = 3.455342e-03, mse_u_pde = 1.610013e-02, mse_v_pde = 1.511787e-02
+Adam Iter 900: Loss = 0.034282, Discovered nu = 0.019860, loss_data = 0.006783, loss_pde = 0.027500, mse_u_data = 3.058731e-03, mse_v_data = 3.723770e-03, mse_u_pde = 1.414680e-02, mse_v_pde = 1.335284e-02
+Adam Iter 1000: Loss = 0.031732, Discovered nu = 0.019848, loss_data = 0.007153, loss_pde = 0.024579, mse_u_data = 3.207177e-03, mse_v_data = 3.946185e-03, mse_u_pde = 1.260517e-02, mse_v_pde = 1.197359e-02
+Adam Iter 1100: Loss = 0.029710, Discovered nu = 0.019836, loss_data = 0.007446, loss_pde = 0.022264, mse_u_data = 3.317868e-03, mse_v_data = 4.127859e-03, mse_u_pde = 1.138445e-02, mse_v_pde = 1.087985e-02
+Adam Iter 1200: Loss = 0.028049, Discovered nu = 0.019825, loss_data = 0.007665, loss_pde = 0.020384, mse_u_data = 3.399395e-03, mse_v_data = 4.265226e-03, mse_u_pde = 1.038901e-02, mse_v_pde = 9.994997e-03
+Adam Iter 1300: Loss = 0.026660, Discovered nu = 0.019813, loss_data = 0.007826, loss_pde = 0.018834, mse_u_data = 3.453280e-03, mse_v_data = 4.372558e-03, mse_u_pde = 9.572051e-03, mse_v_pde = 9.262057e-03
+Adam Iter 1400: Loss = 0.025482, Discovered nu = 0.019802, loss_data = 0.007932, loss_pde = 0.017549, mse_u_data = 3.483669e-03, mse_v_data = 4.448611e-03, mse_u_pde = 8.895156e-03, mse_v_pde = 8.654127e-03
+Adam Iter 1500: Loss = 0.024447, Discovered nu = 0.019791, loss_data = 0.007992, loss_pde = 0.016455, mse_u_data = 3.496803e-03, mse_v_data = 4.495403e-03, mse_u_pde = 8.328755e-03, mse_v_pde = 8.126418e-03
+Adam Iter 1600: Loss = 0.023540, Discovered nu = 0.019780, loss_data = 0.008021, loss_pde = 0.015520, mse_u_data = 3.499695e-03, mse_v_data = 4.520986e-03, mse_u_pde = 7.834368e-03, mse_v_pde = 7.685222e-03
+Adam Iter 1700: Loss = 0.022721, Discovered nu = 0.019770, loss_data = 0.008013, loss_pde = 0.014707, mse_u_data = 3.485909e-03, mse_v_data = 4.527424e-03, mse_u_pde = 7.414992e-03, mse_v_pde = 7.292451e-03
+Adam Iter 1800: Loss = 0.021985, Discovered nu = 0.019759, loss_data = 0.007981, loss_pde = 0.014004, mse_u_data = 3.464321e-03, mse_v_data = 4.516782e-03, mse_u_pde = 7.052831e-03, mse_v_pde = 6.951280e-03
+Adam Iter 1900: Loss = 0.021308, Discovered nu = 0.019749, loss_data = 0.007932, loss_pde = 0.013376, mse_u_data = 3.437884e-03, mse_v_data = 4.494319e-03, mse_u_pde = 6.726637e-03, mse_v_pde = 6.649230e-03
+Adam Iter 1999: Loss = 0.020687, Discovered nu = 0.019739, loss_data = 0.007868, loss_pde = 0.012819, mse_u_data = 3.404660e-03, mse_v_data = 4.463166e-03, mse_u_pde = 6.444050e-03, mse_v_pde = 6.375369e-03
+Adam training finished in 52.62 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B Iter 100: Loss = 0.007639, Discovered nu = 0.019126, loss_data = 0.005306, loss_pde = 0.002333
+L-BFGS-B Iter 200: Loss = 0.005165, Discovered nu = 0.018356, loss_data = 0.003212, loss_pde = 0.001953
+L-BFGS-B Iter 300: Loss = 0.003615, Discovered nu = 0.017665, loss_data = 0.001985, loss_pde = 0.001630
+L-BFGS-B Iter 400: Loss = 0.002428, Discovered nu = 0.017518, loss_data = 0.001338, loss_pde = 0.001090
+L-BFGS-B Iter 500: Loss = 0.001984, Discovered nu = 0.017456, loss_data = 0.000945, loss_pde = 0.001040
+L-BFGS-B Final Iter 522: Loss = 0.001784, Discovered nu = 0.017434, loss_data = 0.000797, loss_pde = 0.000988, mse_u_data = 4.396960e-04, mse_v_data = 3.569556e-04, mse_u_pde = 4.974942e-04, mse_v_pde = 4.900773e-04
+L-BFGS-B training finished in 1469.00 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 522
+RESULT_NU0502_RUN_HEADER: Run_ID, True_nu, Learning_Rate, Discovered_nu, Relative_Error, Final_Total_Loss, Final_Data_Loss, Final_PDE_Loss, MSE_u_Data, MSE_v_Data, MSE_u_PDE, MSE_v_PDE, Data_Only_Adam_Duration, Adam_Full_Loss_Duration, L-BFGS-B_Duration
+RESULT_NU0502_RUN,1,0.05,1.000000e-05,0.017434,0.6513,1.784223e-03,7.966516e-04,9.875714e-04,4.396960e-04,3.569556e-04,4.974942e-04,4.900773e-04,20.60,52.62,1469.00
+Run 1 Finished. Discovered nu: 0.017434, Relative Error: 0.6513
+--- Starting Run 2 (True nu: 0.05, Learning Rate: 1.000000e-04) ---
+Running with Seed: 1, Learning Rate: 1.000000e-04
+Explicitly setting initial nu to: 0.02
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Iter 0: Data Loss = 0.129796
+Data-Only Iter 1000: Data Loss = 0.006384
+Data-Only Iter 2000: Data Loss = 0.000349
+Data-Only Iter 3000: Data Loss = 0.000104
+Data-Only Iter 4000: Data Loss = 0.000050
+Data-Only Iter 5000: Data Loss = 0.000030
+Data-Only Iter 6000: Data Loss = 0.000020
+Data-Only Iter 7000: Data Loss = 0.000015
+Data-Only Iter 8000: Data Loss = 0.000012
+Data-Only Iter 9000: Data Loss = 0.000010
+Data-Only Pre-training finished in 15.29 seconds.
+Starting Adam training (Full Loss)...
+Adam Iter 0: Loss = 0.089609, Discovered nu = 0.020002, loss_data = 0.000063, loss_pde = 0.089546, mse_u_data = 2.483737e-05, mse_v_data = 3.843931e-05, mse_u_pde = 4.009112e-02, mse_v_pde = 4.945501e-02
+Adam Iter 100: Loss = 0.021586, Discovered nu = 0.020128, loss_data = 0.002287, loss_pde = 0.019299, mse_u_data = 9.272867e-04, mse_v_data = 1.360125e-03, mse_u_pde = 9.618649e-03, mse_v_pde = 9.680122e-03
+Adam Iter 200: Loss = 0.014714, Discovered nu = 0.020176, loss_data = 0.002573, loss_pde = 0.012141, mse_u_data = 1.032052e-03, mse_v_data = 1.540842e-03, mse_u_pde = 6.013437e-03, mse_v_pde = 6.128058e-03
+Adam Iter 300: Loss = 0.011000, Discovered nu = 0.020204, loss_data = 0.002379, loss_pde = 0.008621, mse_u_data = 1.014300e-03, mse_v_data = 1.364976e-03, mse_u_pde = 4.192946e-03, mse_v_pde = 4.427819e-03
+Adam Iter 400: Loss = 0.008673, Discovered nu = 0.020225, loss_data = 0.002260, loss_pde = 0.006413, mse_u_data = 1.038998e-03, mse_v_data = 1.220586e-03, mse_u_pde = 3.074309e-03, mse_v_pde = 3.339098e-03
+Adam Iter 500: Loss = 0.007122, Discovered nu = 0.020243, loss_data = 0.002177, loss_pde = 0.004945, mse_u_data = 1.064001e-03, mse_v_data = 1.113028e-03, mse_u_pde = 2.347211e-03, mse_v_pde = 2.598237e-03
+Adam Iter 600: Loss = 0.005998, Discovered nu = 0.020259, loss_data = 0.002069, loss_pde = 0.003929, mse_u_data = 1.053857e-03, mse_v_data = 1.015014e-03, mse_u_pde = 1.853141e-03, mse_v_pde = 2.075860e-03
+Adam Iter 700: Loss = 0.005122, Discovered nu = 0.020273, loss_data = 0.001925, loss_pde = 0.003198, mse_u_data = 1.006369e-03, mse_v_data = 9.182275e-04, mse_u_pde = 1.501176e-03, mse_v_pde = 1.696503e-03
+Adam Iter 800: Loss = 0.004405, Discovered nu = 0.020287, loss_data = 0.001752, loss_pde = 0.002654, mse_u_data = 9.317660e-04, mse_v_data = 8.197413e-04, mse_u_pde = 1.240665e-03, mse_v_pde = 1.413128e-03
+Adam Iter 900: Loss = 0.003800, Discovered nu = 0.020300, loss_data = 0.001570, loss_pde = 0.002230, mse_u_data = 8.454738e-04, mse_v_data = 7.243297e-04, mse_u_pde = 1.035750e-03, mse_v_pde = 1.193955e-03
+Adam Iter 1000: Loss = 0.003286, Discovered nu = 0.020312, loss_data = 0.001393, loss_pde = 0.001894, mse_u_data = 7.564168e-04, mse_v_data = 6.363337e-04, mse_u_pde = 8.765329e-04, mse_v_pde = 1.016980e-03
+Adam Iter 1100: Loss = 0.002853, Discovered nu = 0.020324, loss_data = 0.001227, loss_pde = 0.001626, mse_u_data = 6.705758e-04, mse_v_data = 5.565981e-04, mse_u_pde = 7.510611e-04, mse_v_pde = 8.747861e-04
+Adam Iter 1200: Loss = 0.002491, Discovered nu = 0.020336, loss_data = 0.001079, loss_pde = 0.001412, mse_u_data = 5.913892e-04, mse_v_data = 4.875496e-04, mse_u_pde = 6.547790e-04, mse_v_pde = 7.573877e-04
+Adam Iter 1300: Loss = 0.002188, Discovered nu = 0.020346, loss_data = 0.000946, loss_pde = 0.001242, mse_u_data = 5.191141e-04, mse_v_data = 4.269543e-04, mse_u_pde = 5.785763e-04, mse_v_pde = 6.630135e-04
+Adam Iter 1400: Loss = 0.001937, Discovered nu = 0.020356, loss_data = 0.000830, loss_pde = 0.001107, mse_u_data = 4.542003e-04, mse_v_data = 3.757504e-04, mse_u_pde = 5.213245e-04, mse_v_pde = 5.854769e-04
+Adam Iter 1500: Loss = 0.001729, Discovered nu = 0.020365, loss_data = 0.000729, loss_pde = 0.001000, mse_u_data = 3.972621e-04, mse_v_data = 3.314143e-04, mse_u_pde = 4.771612e-04, mse_v_pde = 5.227228e-04
+Adam Iter 1600: Loss = 0.001559, Discovered nu = 0.020373, loss_data = 0.000641, loss_pde = 0.000917, mse_u_data = 3.480063e-04, mse_v_data = 2.933188e-04, mse_u_pde = 4.441819e-04, mse_v_pde = 4.730536e-04
+Adam Iter 1700: Loss = 0.001412, Discovered nu = 0.020380, loss_data = 0.000568, loss_pde = 0.000844, mse_u_data = 3.060164e-04, mse_v_data = 2.616149e-04, mse_u_pde = 4.133421e-04, mse_v_pde = 4.308156e-04
+Adam Iter 1800: Loss = 0.001293, Discovered nu = 0.020387, loss_data = 0.000503, loss_pde = 0.000789, mse_u_data = 2.692009e-04, mse_v_data = 2.342782e-04, mse_u_pde = 3.936033e-04, mse_v_pde = 3.958060e-04
+Adam Iter 1900: Loss = 0.001191, Discovered nu = 0.020394, loss_data = 0.000449, loss_pde = 0.000742, mse_u_data = 2.384015e-04, mse_v_data = 2.109312e-04, mse_u_pde = 3.729614e-04, mse_v_pde = 3.685933e-04
+Adam Iter 1999: Loss = 0.001105, Discovered nu = 0.020400, loss_data = 0.000404, loss_pde = 0.000700, mse_u_data = 2.125946e-04, mse_v_data = 1.916916e-04, mse_u_pde = 3.595724e-04, mse_v_pde = 3.409070e-04
+Adam training finished in 54.60 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B Final Iter 9: Loss = 0.001093, Discovered nu = 0.020400, loss_data = 0.000404, loss_pde = 0.000689, mse_u_data = 2.125310e-04, mse_v_data = 1.916167e-04, mse_u_pde = 3.480008e-04, mse_v_pde = 3.405845e-04
+L-BFGS-B training finished in 34.87 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 9
+RESULT_NU0502_RUN_HEADER: Run_ID, True_nu, Learning_Rate, Discovered_nu, Relative_Error, Final_Total_Loss, Final_Data_Loss, Final_PDE_Loss, MSE_u_Data, MSE_v_Data, MSE_u_PDE, MSE_v_PDE, Data_Only_Adam_Duration, Adam_Full_Loss_Duration, L-BFGS-B_Duration
+RESULT_NU0502_RUN,2,0.05,1.000000e-04,0.020400,0.5920,1.092733e-03,4.041477e-04,6.885854e-04,2.125310e-04,1.916167e-04,3.480008e-04,3.405845e-04,15.29,54.60,34.87
+Run 2 Finished. Discovered nu: 0.020400, Relative Error: 0.5920
+--- Starting Run 3 (True nu: 0.05, Learning Rate: 1.000000e-03) ---
+Running with Seed: 1, Learning Rate: 1.000000e-03
+Explicitly setting initial nu to: 0.02
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Iter 0: Data Loss = 0.099572
+Data-Only Iter 1000: Data Loss = 0.000135
+Data-Only Iter 2000: Data Loss = 0.000029
+Data-Only Iter 3000: Data Loss = 0.000040
+Data-Only Iter 4000: Data Loss = 0.000013
+Data-Only Iter 5000: Data Loss = 0.000061
+Data-Only Iter 6000: Data Loss = 0.000019
+Data-Only Iter 7000: Data Loss = 0.000014
+Data-Only Iter 8000: Data Loss = 0.000019
+Data-Only Iter 9000: Data Loss = 0.000020
+Data-Only Pre-training finished in 21.09 seconds.
+Starting Adam training (Full Loss)...
+Adam Iter 0: Loss = 0.836819, Discovered nu = 0.020020, loss_data = 0.002625, loss_pde = 0.834194, mse_u_data = 1.537738e-03, mse_v_data = 1.087489e-03, mse_u_pde = 3.783279e-01, mse_v_pde = 4.558656e-01
+Adam Iter 100: Loss = 0.008788, Discovered nu = 0.020938, loss_data = 0.001564, loss_pde = 0.007224, mse_u_data = 8.537700e-04, mse_v_data = 7.098406e-04, mse_u_pde = 3.298485e-03, mse_v_pde = 3.925711e-03
+Adam Iter 200: Loss = 0.004850, Discovered nu = 0.021477, loss_data = 0.000887, loss_pde = 0.003963, mse_u_data = 5.096428e-04, mse_v_data = 3.771074e-04, mse_u_pde = 1.743009e-03, mse_v_pde = 2.220106e-03
+Adam Iter 300: Loss = 0.003440, Discovered nu = 0.021683, loss_data = 0.000871, loss_pde = 0.002568, mse_u_data = 4.939668e-04, mse_v_data = 3.772392e-04, mse_u_pde = 1.136595e-03, mse_v_pde = 1.431704e-03
+Adam Iter 400: Loss = 0.002678, Discovered nu = 0.021789, loss_data = 0.000775, loss_pde = 0.001903, mse_u_data = 4.269741e-04, mse_v_data = 3.481609e-04, mse_u_pde = 8.684294e-04, mse_v_pde = 1.034861e-03
+Adam Iter 500: Loss = 0.002165, Discovered nu = 0.021872, loss_data = 0.000647, loss_pde = 0.001518, mse_u_data = 3.456904e-04, mse_v_data = 3.009261e-04, mse_u_pde = 7.099154e-04, mse_v_pde = 8.080167e-04
+Adam Iter 600: Loss = 0.001791, Discovered nu = 0.021960, loss_data = 0.000530, loss_pde = 0.001261, mse_u_data = 2.743264e-04, mse_v_data = 2.555500e-04, mse_u_pde = 5.994583e-04, mse_v_pde = 6.618166e-04
+Adam Iter 700: Loss = 0.001509, Discovered nu = 0.022058, loss_data = 0.000437, loss_pde = 0.001071, mse_u_data = 2.205954e-04, mse_v_data = 2.166056e-04, mse_u_pde = 5.139512e-04, mse_v_pde = 5.574221e-04
+Adam Iter 800: Loss = 0.001289, Discovered nu = 0.022167, loss_data = 0.000365, loss_pde = 0.000924, mse_u_data = 1.805470e-04, mse_v_data = 1.842197e-04, mse_u_pde = 4.463677e-04, mse_v_pde = 4.778446e-04
+Adam Iter 900: Loss = 0.001113, Discovered nu = 0.022283, loss_data = 0.000309, loss_pde = 0.000804, mse_u_data = 1.513992e-04, mse_v_data = 1.577903e-04, mse_u_pde = 3.901611e-04, mse_v_pde = 4.136449e-04
+Adam Iter 1000: Loss = 0.000970, Discovered nu = 0.022403, loss_data = 0.000265, loss_pde = 0.000705, mse_u_data = 1.289405e-04, mse_v_data = 1.362682e-04, mse_u_pde = 3.436246e-04, mse_v_pde = 3.615814e-04
+Adam Iter 1100: Loss = 0.000850, Discovered nu = 0.022523, loss_data = 0.000230, loss_pde = 0.000620, mse_u_data = 1.116099e-04, mse_v_data = 1.187849e-04, mse_u_pde = 3.045422e-04, mse_v_pde = 3.154291e-04
+Adam Iter 1200: Loss = 0.000751, Discovered nu = 0.022639, loss_data = 0.000202, loss_pde = 0.000549, mse_u_data = 9.754323e-05, mse_v_data = 1.043124e-04, mse_u_pde = 2.708245e-04, mse_v_pde = 2.779896e-04
+Adam Iter 1300: Loss = 0.000665, Discovered nu = 0.022749, loss_data = 0.000178, loss_pde = 0.000487, mse_u_data = 8.571789e-05, mse_v_data = 9.213311e-05, mse_u_pde = 2.417635e-04, mse_v_pde = 2.453369e-04
+Adam Iter 1400: Loss = 0.000593, Discovered nu = 0.022852, loss_data = 0.000158, loss_pde = 0.000435, mse_u_data = 7.617260e-05, mse_v_data = 8.175105e-05, mse_u_pde = 2.162773e-04, mse_v_pde = 2.185551e-04
+Adam Iter 1500: Loss = 0.000530, Discovered nu = 0.022945, loss_data = 0.000141, loss_pde = 0.000389, mse_u_data = 6.803748e-05, mse_v_data = 7.291411e-05, mse_u_pde = 1.936858e-04, mse_v_pde = 1.956669e-04
+Adam Iter 1600: Loss = 0.000477, Discovered nu = 0.023029, loss_data = 0.000126, loss_pde = 0.000351, mse_u_data = 6.101745e-05, mse_v_data = 6.517425e-05, mse_u_pde = 1.742577e-04, mse_v_pde = 1.766900e-04
+Adam Iter 1700: Loss = 0.000448, Discovered nu = 0.023104, loss_data = 0.000114, loss_pde = 0.000334, mse_u_data = 5.529408e-05, mse_v_data = 5.873075e-05, mse_u_pde = 1.652219e-04, mse_v_pde = 1.690070e-04
+Adam Iter 1800: Loss = 0.000393, Discovered nu = 0.023172, loss_data = 0.000103, loss_pde = 0.000290, mse_u_data = 5.016325e-05, mse_v_data = 5.294397e-05, mse_u_pde = 1.432254e-04, mse_v_pde = 1.471216e-04
+Adam Iter 1900: Loss = 0.000366, Discovered nu = 0.023234, loss_data = 0.000094, loss_pde = 0.000271, mse_u_data = 4.618612e-05, mse_v_data = 4.817928e-05, mse_u_pde = 1.344308e-04, mse_v_pde = 1.367524e-04
+Adam Iter 1999: Loss = 0.000332, Discovered nu = 0.023290, loss_data = 0.000087, loss_pde = 0.000245, mse_u_data = 4.234457e-05, mse_v_data = 4.424938e-05, mse_u_pde = 1.194318e-04, mse_v_pde = 1.259777e-04
+Adam training finished in 54.19 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B Final Iter 10: Loss = 0.000328, Discovered nu = 0.023290, loss_data = 0.000086, loss_pde = 0.000241, mse_u_data = 4.227649e-05, mse_v_data = 4.415644e-05, mse_u_pde = 1.163958e-04, mse_v_pde = 1.249604e-04
+L-BFGS-B training finished in 25.24 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 10
+RESULT_NU0502_RUN_HEADER: Run_ID, True_nu, Learning_Rate, Discovered_nu, Relative_Error, Final_Total_Loss, Final_Data_Loss, Final_PDE_Loss, MSE_u_Data, MSE_v_Data, MSE_u_PDE, MSE_v_PDE, Data_Only_Adam_Duration, Adam_Full_Loss_Duration, L-BFGS-B_Duration
+RESULT_NU0502_RUN,3,0.05,1.000000e-03,0.023290,0.5342,3.277891e-04,8.643293e-05,2.413562e-04,4.227649e-05,4.415644e-05,1.163958e-04,1.249604e-04,21.09,54.19,25.24
+Run 3 Finished. Discovered nu: 0.023290, Relative Error: 0.5342
+--- Starting Run 4 (True nu: 0.05, Learning Rate: 1.000000e-02) ---
+Running with Seed: 1, Learning Rate: 1.000000e-02
+Explicitly setting initial nu to: 0.02
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Iter 0: Data Loss = 0.281302
+Data-Only Iter 1000: Data Loss = 0.000041
+Data-Only Iter 2000: Data Loss = 0.000212
+Data-Only Iter 3000: Data Loss = 0.000196
+Data-Only Iter 4000: Data Loss = 0.000013
+Data-Only Iter 5000: Data Loss = 0.000009
+Data-Only Iter 6000: Data Loss = 0.000570
+Data-Only Iter 7000: Data Loss = 0.000168
+Data-Only Iter 8000: Data Loss = 0.000934
+Data-Only Iter 9000: Data Loss = 0.000058
+Data-Only Pre-training finished in 21.17 seconds.
+Starting Adam training (Full Loss)...
+Adam Iter 0: Loss = 956.352905, Discovered nu = 0.019801, loss_data = 0.055946, loss_pde = 956.296936, mse_u_data = 4.312146e-02, mse_v_data = 1.282475e-02, mse_u_pde = 3.953231e+02, mse_v_pde = 5.609739e+02
+Adam Iter 100: Loss = 1.272975, Discovered nu = 0.016031, loss_data = 0.132316, loss_pde = 1.140658, mse_u_data = 3.521914e-02, mse_v_data = 9.709729e-02, mse_u_pde = 6.378725e-01, mse_v_pde = 5.027856e-01
+Adam Iter 200: Loss = 0.453779, Discovered nu = 0.016009, loss_data = 0.123269, loss_pde = 0.330510, mse_u_data = 3.569958e-02, mse_v_data = 8.756908e-02, mse_u_pde = 1.813223e-01, mse_v_pde = 1.491878e-01
+Adam Iter 300: Loss = 0.288394, Discovered nu = 0.015999, loss_data = 0.114349, loss_pde = 0.174045, mse_u_data = 3.570793e-02, mse_v_data = 7.864098e-02, mse_u_pde = 9.423018e-02, mse_v_pde = 7.981493e-02
+Adam Iter 400: Loss = 0.213545, Discovered nu = 0.015993, loss_data = 0.105590, loss_pde = 0.107955, mse_u_data = 3.576082e-02, mse_v_data = 6.982873e-02, mse_u_pde = 5.755023e-02, mse_v_pde = 5.040489e-02
+Adam Iter 500: Loss = 0.170678, Discovered nu = 0.015988, loss_data = 0.097628, loss_pde = 0.073049, mse_u_data = 3.582655e-02, mse_v_data = 6.180166e-02, mse_u_pde = 3.838664e-02, mse_v_pde = 3.466277e-02
+Adam Iter 600: Loss = 0.143504, Discovered nu = 0.015984, loss_data = 0.090833, loss_pde = 0.052671, mse_u_data = 3.588753e-02, mse_v_data = 5.494500e-02, mse_u_pde = 2.723151e-02, mse_v_pde = 2.543947e-02
+Adam Iter 700: Loss = 0.124866, Discovered nu = 0.015981, loss_data = 0.085346, loss_pde = 0.039520, mse_u_data = 3.592433e-02, mse_v_data = 4.942191e-02, mse_u_pde = 2.022563e-02, mse_v_pde = 1.929440e-02
+Adam Iter 800: Loss = 0.112071, Discovered nu = 0.015979, loss_data = 0.081078, loss_pde = 0.030992, mse_u_data = 3.592609e-02, mse_v_data = 4.515225e-02, mse_u_pde = 1.577935e-02, mse_v_pde = 1.521295e-02
+Adam Iter 900: Loss = 0.102838, Discovered nu = 0.015977, loss_data = 0.077912, loss_pde = 0.024926, mse_u_data = 3.591525e-02, mse_v_data = 4.199698e-02, mse_u_pde = 1.264735e-02, mse_v_pde = 1.227837e-02
+Adam Iter 1000: Loss = 0.096202, Discovered nu = 0.015976, loss_data = 0.075644, loss_pde = 0.020558, mse_u_data = 3.588635e-02, mse_v_data = 3.975771e-02, mse_u_pde = 1.041724e-02, mse_v_pde = 1.014054e-02
+Adam Iter 1100: Loss = 0.091402, Discovered nu = 0.015975, loss_data = 0.074061, loss_pde = 0.017340, mse_u_data = 3.584166e-02, mse_v_data = 3.821959e-02, mse_u_pde = 8.816760e-03, mse_v_pde = 8.523681e-03
+Adam Iter 1200: Loss = 0.087827, Discovered nu = 0.015974, loss_data = 0.072985, loss_pde = 0.014842, mse_u_data = 3.579202e-02, mse_v_data = 3.719285e-02, mse_u_pde = 7.621014e-03, mse_v_pde = 7.221042e-03
+Adam Iter 1300: Loss = 0.085224, Discovered nu = 0.015973, loss_data = 0.072268, loss_pde = 0.012956, mse_u_data = 3.574411e-02, mse_v_data = 3.652356e-02, mse_u_pde = 6.666117e-03, mse_v_pde = 6.289896e-03
+Adam Iter 1400: Loss = 0.083139, Discovered nu = 0.015973, loss_data = 0.071805, loss_pde = 0.011334, mse_u_data = 3.570562e-02, mse_v_data = 3.609966e-02, mse_u_pde = 5.889299e-03, mse_v_pde = 5.444269e-03
+Adam Iter 1500: Loss = 0.081587, Discovered nu = 0.015972, loss_data = 0.071476, loss_pde = 0.010111, mse_u_data = 3.565413e-02, mse_v_data = 3.582223e-02, mse_u_pde = 5.309560e-03, mse_v_pde = 4.801192e-03
+Adam Iter 1600: Loss = 0.080334, Discovered nu = 0.015972, loss_data = 0.071264, loss_pde = 0.009069, mse_u_data = 3.561399e-02, mse_v_data = 3.565042e-02, mse_u_pde = 4.789477e-03, mse_v_pde = 4.279689e-03
+Adam Iter 1700: Loss = 0.079238, Discovered nu = 0.015972, loss_data = 0.071110, loss_pde = 0.008128, mse_u_data = 3.557476e-02, mse_v_data = 3.553517e-02, mse_u_pde = 4.335789e-03, mse_v_pde = 3.791787e-03
+Adam Iter 1800: Loss = 0.078361, Discovered nu = 0.015972, loss_data = 0.070989, loss_pde = 0.007372, mse_u_data = 3.553451e-02, mse_v_data = 3.545400e-02, mse_u_pde = 3.966709e-03, mse_v_pde = 3.405714e-03
+Adam Iter 1900: Loss = 0.077586, Discovered nu = 0.015972, loss_data = 0.070896, loss_pde = 0.006690, mse_u_data = 3.549818e-02, mse_v_data = 3.539810e-02, mse_u_pde = 3.623004e-03, mse_v_pde = 3.066652e-03
+Adam Iter 1999: Loss = 0.076920, Discovered nu = 0.015972, loss_data = 0.070801, loss_pde = 0.006119, mse_u_data = 3.545411e-02, mse_v_data = 3.534728e-02, mse_u_pde = 3.340482e-03, mse_v_pde = 2.778438e-03
+Adam training finished in 54.73 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B Final Iter 4: Loss = 0.076898, Discovered nu = 0.015972, loss_data = 0.070802, loss_pde = 0.006096, mse_u_data = 3.545437e-02, mse_v_data = 3.534740e-02, mse_u_pde = 3.339093e-03, mse_v_pde = 2.757229e-03
+L-BFGS-B training finished in 22.24 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 4
+RESULT_NU0502_RUN_HEADER: Run_ID, True_nu, Learning_Rate, Discovered_nu, Relative_Error, Final_Total_Loss, Final_Data_Loss, Final_PDE_Loss, MSE_u_Data, MSE_v_Data, MSE_u_PDE, MSE_v_PDE, Data_Only_Adam_Duration, Adam_Full_Loss_Duration, L-BFGS-B_Duration
+RESULT_NU0502_RUN,4,0.05,1.000000e-02,0.015972,0.6806,7.689810e-02,7.080177e-02,6.096323e-03,3.545437e-02,3.534740e-02,3.339093e-03,2.757229e-03,21.17,54.73,22.24
+Run 4 Finished. Discovered nu: 0.015972, Relative Error: 0.6806

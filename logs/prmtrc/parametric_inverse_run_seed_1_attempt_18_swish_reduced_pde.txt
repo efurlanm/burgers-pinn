@@ -1,0 +1,109 @@
+Running with seed: 1
+--- Stage 1: Parametric PINN Training ---
+Training with: Adam Epochs = 1000, Data-Only Epochs = 10000, Lambda Data = 1.0, Lambda PDE = 1.0, PDE Points = 10000, Nu Range = [0.01, 0.1])
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Epoch 0: Data Loss = 0.086210
+Data-Only Epoch 1000: Data Loss = 0.000024
+Data-Only Epoch 2000: Data Loss = 0.000016
+Data-Only Epoch 3000: Data Loss = 0.000007
+Data-Only Epoch 4000: Data Loss = 0.000008
+Data-Only Epoch 5000: Data Loss = 0.000053
+Data-Only Epoch 6000: Data Loss = 0.000003
+Data-Only Epoch 7000: Data Loss = 0.000004
+Data-Only Epoch 8000: Data Loss = 0.000002
+Data-Only Epoch 9000: Data Loss = 0.000036
+Data-Only Pre-training finished in 20.66 seconds.
+Starting Adam training (Full Loss)...
+Adam Epoch 0: Loss = 0.115378
+Adam Epoch 100: Loss = 0.001282
+Adam Epoch 200: Loss = 0.000650
+Adam Epoch 300: Loss = 0.000402
+Adam Epoch 400: Loss = 0.000301
+Adam Epoch 500: Loss = 0.000244
+Adam Epoch 600: Loss = 0.000206
+Adam Epoch 700: Loss = 0.000188
+Adam Epoch 800: Loss = 0.000133
+Adam Epoch 900: Loss = 0.000136
+
+Adam training finished in 72.48 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B training finished in 41.26 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 12
+
+--------------------------------------------------
+Starting Stage 2: Inverse Problem (Discovering nu)...
+Training nu_inverse for 5000 epochs...
+Inverse Epoch 0: Loss = 0.100444, Discovered nu = 0.049950
+Inverse Epoch 100: Loss = 0.096704, Discovered nu = 0.045058
+Inverse Epoch 200: Loss = 0.091955, Discovered nu = 0.040333
+Inverse Epoch 300: Loss = 0.086195, Discovered nu = 0.035891
+Inverse Epoch 400: Loss = 0.079609, Discovered nu = 0.031837
+Inverse Epoch 500: Loss = 0.072520, Discovered nu = 0.028230
+Inverse Epoch 600: Loss = 0.065309, Discovered nu = 0.025084
+Inverse Epoch 700: Loss = 0.058315, Discovered nu = 0.022377
+Inverse Epoch 800: Loss = 0.051782, Discovered nu = 0.020062
+Inverse Epoch 900: Loss = 0.045845, Discovered nu = 0.018089
+Inverse Epoch 1000: Loss = 0.040560, Discovered nu = 0.016404
+Inverse Epoch 1100: Loss = 0.035908, Discovered nu = 0.014960
+Inverse Epoch 1200: Loss = 0.031848, Discovered nu = 0.013717
+Inverse Epoch 1300: Loss = 0.028318, Discovered nu = 0.012639
+Inverse Epoch 1400: Loss = 0.025253, Discovered nu = 0.011700
+Inverse Epoch 1500: Loss = 0.022590, Discovered nu = 0.010876
+Inverse Epoch 1600: Loss = 0.020272, Discovered nu = 0.010148
+Inverse Epoch 1700: Loss = 0.018251, Discovered nu = 0.009501
+Inverse Epoch 1800: Loss = 0.016479, Discovered nu = 0.008924
+Inverse Epoch 1900: Loss = 0.014927, Discovered nu = 0.008405
+Inverse Epoch 2000: Loss = 0.013556, Discovered nu = 0.007937
+Inverse Epoch 2100: Loss = 0.012347, Discovered nu = 0.007512
+Inverse Epoch 2200: Loss = 0.011272, Discovered nu = 0.007126
+Inverse Epoch 2300: Loss = 0.010314, Discovered nu = 0.006772
+Inverse Epoch 2400: Loss = 0.009459, Discovered nu = 0.006447
+Inverse Epoch 2500: Loss = 0.008694, Discovered nu = 0.006148
+Inverse Epoch 2600: Loss = 0.008005, Discovered nu = 0.005872
+Inverse Epoch 2700: Loss = 0.007384, Discovered nu = 0.005615
+Inverse Epoch 2800: Loss = 0.006823, Discovered nu = 0.005377
+Inverse Epoch 2900: Loss = 0.006316, Discovered nu = 0.005155
+Inverse Epoch 3000: Loss = 0.005853, Discovered nu = 0.004948
+Inverse Epoch 3100: Loss = 0.005433, Discovered nu = 0.004753
+Inverse Epoch 3200: Loss = 0.005050, Discovered nu = 0.004571
+Inverse Epoch 3300: Loss = 0.004699, Discovered nu = 0.004399
+Inverse Epoch 3400: Loss = 0.004377, Discovered nu = 0.004237
+Inverse Epoch 3500: Loss = 0.004082, Discovered nu = 0.004085
+Inverse Epoch 3600: Loss = 0.003811, Discovered nu = 0.003940
+Inverse Epoch 3700: Loss = 0.003561, Discovered nu = 0.003803
+Inverse Epoch 3800: Loss = 0.003331, Discovered nu = 0.003674
+Inverse Epoch 3900: Loss = 0.003117, Discovered nu = 0.003550
+Inverse Epoch 4000: Loss = 0.002920, Discovered nu = 0.003433
+Inverse Epoch 4100: Loss = 0.002738, Discovered nu = 0.003321
+Inverse Epoch 4200: Loss = 0.002568, Discovered nu = 0.003215
+Inverse Epoch 4300: Loss = 0.002410, Discovered nu = 0.003113
+Inverse Epoch 4400: Loss = 0.002265, Discovered nu = 0.003016
+Inverse Epoch 4500: Loss = 0.002128, Discovered nu = 0.002923
+Inverse Epoch 4600: Loss = 0.002001, Discovered nu = 0.002835
+Inverse Epoch 4700: Loss = 0.001883, Discovered nu = 0.002749
+Inverse Epoch 4800: Loss = 0.001772, Discovered nu = 0.002668
+Inverse Epoch 4900: Loss = 0.001669, Discovered nu = 0.002589
+Stage 2 (Inverse Problem) training finished in 17.55 seconds.
+
+--------------------------------------------------
+Stage 2: Discovered nu (Inverse Problem): 0.002515
+Stage 2: Ground Truth nu for Inverse Problem: 0.05
+--------------------------------------------------
+Generating predictions for various nu values (using Stage 1 trained model)...
+Prediction MSE (u) for nu=0.05 (Stage 1 model): 5.270433e-02
+Prediction MSE (v) for nu=0.05 (Stage 1 model): 4.658354e-02
+Total Prediction MSE (u+v) for nu=0.05 (Stage 1 model): 9.928787e-02
+Prediction MSE (u) for Discovered nu=0.002515 (Stage 2): 7.823735e-04
+Prediction MSE (v) for Discovered nu=0.002515 (Stage 2): 7.908586e-04
+Total Prediction MSE (u+v) for Discovered nu=0.002515 (Stage 2): 1.573232e-03
+Results saved to results/parametric_inverse_results_nu_0.05_s1_epochs_1000_s2_epochs_5000_seed_1.npz
+------------------------------ HPC Performance Metrics ------------------------------
+Data Preparation Duration: 7.58 seconds
+Model Initialization Duration: 8.47 seconds
+Stage 1 Data-Only Pre-training Duration: 20.66 seconds
+Stage 1 Adam Training Duration: 72.48 seconds
+Stage 1 L-BFGS-B Training Duration: 41.26 seconds
+Stage 2 Inverse Problem Training Duration: 17.55 seconds
+Total Execution Duration: 174.78 seconds

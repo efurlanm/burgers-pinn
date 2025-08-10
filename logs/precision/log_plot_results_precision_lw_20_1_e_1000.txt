@@ -1,0 +1,7 @@
+Loading results from: ../results/pinn_results_precision_lw_20_1_e_1000.npz
+Plot saved to: ../results/pinn_results_precision_lw_20_1_e_1000.jpg
+
+--- Statistics ---
+Mean Squared Error (MSE): 1.151308e-05
+Ground Truth: min=0.0000, max=0.9269, mean=0.0934
+PINN Predicted: min=-0.0074, max=0.9282, mean=0.0935

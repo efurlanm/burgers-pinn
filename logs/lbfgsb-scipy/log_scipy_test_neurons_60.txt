@@ -1,0 +1,491 @@
+True nu: 0.05
+Initial nu_pinn guess: 0.060000
+Starting Adam training...
+Adam Epoch 0: Loss = 1.140543, Discovered nu = 0.059940
+Adam Epoch 10: Loss = 1.530531, Discovered nu = 0.059493
+Adam Epoch 20: Loss = 1.618547, Discovered nu = 0.059207
+Adam Epoch 30: Loss = 1.188334, Discovered nu = 0.059044
+Adam Epoch 40: Loss = 0.712194, Discovered nu = 0.058961
+Adam Epoch 50: Loss = 0.771175, Discovered nu = 0.058928
+Adam Epoch 60: Loss = 0.703352, Discovered nu = 0.058909
+Adam Epoch 70: Loss = 0.706867, Discovered nu = 0.058902
+Adam Epoch 80: Loss = 0.695075, Discovered nu = 0.058897
+Adam Epoch 90: Loss = 0.693902, Discovered nu = 0.058886
+Adam Epoch 100: Loss = 0.691375, Discovered nu = 0.058868
+Adam Epoch 110: Loss = 0.689411, Discovered nu = 0.058844
+Adam Epoch 120: Loss = 0.687957, Discovered nu = 0.058813
+Adam Epoch 130: Loss = 0.686598, Discovered nu = 0.058774
+Adam Epoch 140: Loss = 0.685312, Discovered nu = 0.058725
+Adam Epoch 150: Loss = 0.684102, Discovered nu = 0.058666
+Adam Epoch 160: Loss = 0.682928, Discovered nu = 0.058596
+Adam Epoch 170: Loss = 0.681781, Discovered nu = 0.058513
+Adam Epoch 180: Loss = 0.680627, Discovered nu = 0.058416
+Adam Epoch 190: Loss = 0.679492, Discovered nu = 0.058305
+Adam Epoch 200: Loss = 0.678315, Discovered nu = 0.058178
+Adam Epoch 210: Loss = 0.677089, Discovered nu = 0.058033
+Adam Epoch 220: Loss = 0.675802, Discovered nu = 0.057868
+Adam Epoch 230: Loss = 0.674455, Discovered nu = 0.057683
+Adam Epoch 240: Loss = 0.673027, Discovered nu = 0.057475
+Adam Epoch 250: Loss = 0.671484, Discovered nu = 0.057241
+Adam Epoch 260: Loss = 0.669833, Discovered nu = 0.056981
+Adam Epoch 270: Loss = 0.668021, Discovered nu = 0.056692
+Adam Epoch 280: Loss = 0.666058, Discovered nu = 0.056368
+Adam Epoch 290: Loss = 0.663852, Discovered nu = 0.056007
+Adam Epoch 300: Loss = 0.661428, Discovered nu = 0.055607
+Adam Epoch 310: Loss = 0.658736, Discovered nu = 0.055161
+Adam Epoch 320: Loss = 0.655665, Discovered nu = 0.054668
+Adam Epoch 330: Loss = 0.652221, Discovered nu = 0.054121
+Adam Epoch 340: Loss = 0.648204, Discovered nu = 0.053516
+Adam Epoch 350: Loss = 0.643624, Discovered nu = 0.052850
+Adam Epoch 360: Loss = 0.638322, Discovered nu = 0.052124
+Adam Epoch 370: Loss = 0.632212, Discovered nu = 0.051328
+Adam Epoch 380: Loss = 0.624670, Discovered nu = 0.050474
+Adam Epoch 390: Loss = 0.616008, Discovered nu = 0.049542
+Adam Epoch 400: Loss = 0.605705, Discovered nu = 0.048542
+Adam Epoch 410: Loss = 0.593694, Discovered nu = 0.047479
+Adam Epoch 420: Loss = 0.579857, Discovered nu = 0.046370
+Adam Epoch 430: Loss = 0.564223, Discovered nu = 0.045226
+Adam Epoch 440: Loss = 0.547253, Discovered nu = 0.044065
+Adam Epoch 450: Loss = 0.529526, Discovered nu = 0.042906
+Adam Epoch 460: Loss = 0.511467, Discovered nu = 0.041801
+Adam Epoch 470: Loss = 0.498076, Discovered nu = 0.040801
+Adam Epoch 480: Loss = 0.477756, Discovered nu = 0.040042
+Adam Epoch 490: Loss = 0.459476, Discovered nu = 0.039340
+Adam Epoch 500: Loss = 0.441284, Discovered nu = 0.038712
+Adam Epoch 510: Loss = 0.421985, Discovered nu = 0.038120
+Adam Epoch 520: Loss = 0.403663, Discovered nu = 0.037479
+Adam Epoch 530: Loss = 0.386153, Discovered nu = 0.036887
+Adam Epoch 540: Loss = 0.356418, Discovered nu = 0.036302
+Adam Epoch 550: Loss = 0.333239, Discovered nu = 0.035675
+Adam Epoch 560: Loss = 0.312353, Discovered nu = 0.035009
+Adam Epoch 570: Loss = 0.291499, Discovered nu = 0.034309
+Adam Epoch 580: Loss = 0.272618, Discovered nu = 0.033573
+Adam Epoch 590: Loss = 0.257385, Discovered nu = 0.032795
+Adam Epoch 600: Loss = 0.244267, Discovered nu = 0.031986
+Adam Epoch 610: Loss = 0.232639, Discovered nu = 0.031158
+Adam Epoch 620: Loss = 0.222229, Discovered nu = 0.030327
+Adam Epoch 630: Loss = 0.212483, Discovered nu = 0.029506
+Adam Epoch 640: Loss = 0.203449, Discovered nu = 0.028708
+Adam Epoch 650: Loss = 0.194941, Discovered nu = 0.027938
+Adam Epoch 660: Loss = 0.187090, Discovered nu = 0.027201
+Adam Epoch 670: Loss = 0.179676, Discovered nu = 0.026497
+Adam Epoch 680: Loss = 0.172761, Discovered nu = 0.025827
+Adam Epoch 690: Loss = 0.166396, Discovered nu = 0.025189
+Adam Epoch 700: Loss = 0.160619, Discovered nu = 0.024581
+Adam Epoch 710: Loss = 0.155339, Discovered nu = 0.024002
+Adam Epoch 720: Loss = 0.150483, Discovered nu = 0.023448
+Adam Epoch 730: Loss = 0.146052, Discovered nu = 0.022920
+Adam Epoch 740: Loss = 0.142031, Discovered nu = 0.022414
+Adam Epoch 750: Loss = 0.138168, Discovered nu = 0.021930
+Adam Epoch 760: Loss = 0.134686, Discovered nu = 0.021468
+Adam Epoch 770: Loss = 0.131273, Discovered nu = 0.021026
+Adam Epoch 780: Loss = 0.128094, Discovered nu = 0.020603
+Adam Epoch 790: Loss = 0.124984, Discovered nu = 0.020198
+Adam Epoch 800: Loss = 0.122050, Discovered nu = 0.019812
+Adam Epoch 810: Loss = 0.119185, Discovered nu = 0.019442
+Adam Epoch 820: Loss = 0.116398, Discovered nu = 0.019089
+Adam Epoch 830: Loss = 0.113670, Discovered nu = 0.018751
+Adam Epoch 840: Loss = 0.110993, Discovered nu = 0.018427
+Adam Epoch 850: Loss = 0.108371, Discovered nu = 0.018118
+Adam Epoch 860: Loss = 0.105772, Discovered nu = 0.017821
+Adam Epoch 870: Loss = 0.103191, Discovered nu = 0.017537
+Adam Epoch 880: Loss = 0.100653, Discovered nu = 0.017265
+Adam Epoch 890: Loss = 0.098152, Discovered nu = 0.017004
+Adam Epoch 900: Loss = 0.095675, Discovered nu = 0.016754
+Adam Epoch 910: Loss = 0.093173, Discovered nu = 0.016513
+Adam Epoch 920: Loss = 0.090742, Discovered nu = 0.016282
+Adam Epoch 930: Loss = 0.088316, Discovered nu = 0.016060
+Adam Epoch 940: Loss = 0.085954, Discovered nu = 0.015847
+Adam Epoch 950: Loss = 0.083569, Discovered nu = 0.015642
+Adam Epoch 960: Loss = 0.081310, Discovered nu = 0.015444
+Adam Epoch 970: Loss = 0.078991, Discovered nu = 0.015254
+Adam Epoch 980: Loss = 0.076743, Discovered nu = 0.015071
+Adam Epoch 990: Loss = 0.074569, Discovered nu = 0.014894
+Adam Epoch 1000: Loss = 0.072424, Discovered nu = 0.014724
+Adam Epoch 1010: Loss = 0.070339, Discovered nu = 0.014561
+Adam Epoch 1020: Loss = 0.068292, Discovered nu = 0.014402
+Adam Epoch 1030: Loss = 0.066335, Discovered nu = 0.014250
+Adam Epoch 1040: Loss = 0.064452, Discovered nu = 0.014103
+Adam Epoch 1050: Loss = 0.062588, Discovered nu = 0.013961
+Adam Epoch 1060: Loss = 0.060789, Discovered nu = 0.013825
+Adam Epoch 1070: Loss = 0.059065, Discovered nu = 0.013693
+Adam Epoch 1080: Loss = 0.057441, Discovered nu = 0.013566
+Adam Epoch 1090: Loss = 0.055811, Discovered nu = 0.013444
+Adam Epoch 1100: Loss = 0.054261, Discovered nu = 0.013327
+Adam Epoch 1110: Loss = 0.052784, Discovered nu = 0.013214
+Adam Epoch 1120: Loss = 0.051349, Discovered nu = 0.013105
+Adam Epoch 1130: Loss = 0.049969, Discovered nu = 0.013000
+Adam Epoch 1140: Loss = 0.048670, Discovered nu = 0.012899
+Adam Epoch 1150: Loss = 0.047384, Discovered nu = 0.012802
+Adam Epoch 1160: Loss = 0.046166, Discovered nu = 0.012709
+Adam Epoch 1170: Loss = 0.044996, Discovered nu = 0.012619
+Adam Epoch 1180: Loss = 0.043871, Discovered nu = 0.012532
+Adam Epoch 1190: Loss = 0.042747, Discovered nu = 0.012448
+Adam Epoch 1200: Loss = 0.041715, Discovered nu = 0.012368
+Adam Epoch 1210: Loss = 0.040689, Discovered nu = 0.012290
+Adam Epoch 1220: Loss = 0.039710, Discovered nu = 0.012215
+Adam Epoch 1230: Loss = 0.038774, Discovered nu = 0.012143
+Adam Epoch 1240: Loss = 0.037863, Discovered nu = 0.012073
+Adam Epoch 1250: Loss = 0.036995, Discovered nu = 0.012006
+Adam Epoch 1260: Loss = 0.036142, Discovered nu = 0.011941
+Adam Epoch 1270: Loss = 0.035324, Discovered nu = 0.011878
+Adam Epoch 1280: Loss = 0.034529, Discovered nu = 0.011818
+Adam Epoch 1290: Loss = 0.033787, Discovered nu = 0.011760
+Adam Epoch 1300: Loss = 0.033053, Discovered nu = 0.011703
+Adam Epoch 1310: Loss = 0.032347, Discovered nu = 0.011649
+Adam Epoch 1320: Loss = 0.031656, Discovered nu = 0.011596
+Adam Epoch 1330: Loss = 0.030997, Discovered nu = 0.011546
+Adam Epoch 1340: Loss = 0.030361, Discovered nu = 0.011497
+Adam Epoch 1350: Loss = 0.029746, Discovered nu = 0.011450
+Adam Epoch 1360: Loss = 0.029145, Discovered nu = 0.011405
+Adam Epoch 1370: Loss = 0.028562, Discovered nu = 0.011362
+Adam Epoch 1380: Loss = 0.028006, Discovered nu = 0.011321
+Adam Epoch 1390: Loss = 0.027455, Discovered nu = 0.011281
+Adam Epoch 1400: Loss = 0.026929, Discovered nu = 0.011243
+Adam Epoch 1410: Loss = 0.026413, Discovered nu = 0.011206
+Adam Epoch 1420: Loss = 0.025912, Discovered nu = 0.011171
+Adam Epoch 1430: Loss = 0.025422, Discovered nu = 0.011138
+Adam Epoch 1440: Loss = 0.024939, Discovered nu = 0.011106
+Adam Epoch 1450: Loss = 0.024481, Discovered nu = 0.011076
+Adam Epoch 1460: Loss = 0.024029, Discovered nu = 0.011047
+Adam Epoch 1470: Loss = 0.023584, Discovered nu = 0.011019
+Adam Epoch 1480: Loss = 0.023152, Discovered nu = 0.010993
+Adam Epoch 1490: Loss = 0.022721, Discovered nu = 0.010968
+Adam Epoch 1500: Loss = 0.022310, Discovered nu = 0.010944
+Adam Epoch 1510: Loss = 0.021901, Discovered nu = 0.010922
+Adam Epoch 1520: Loss = 0.021510, Discovered nu = 0.010900
+Adam Epoch 1530: Loss = 0.021106, Discovered nu = 0.010880
+Adam Epoch 1540: Loss = 0.020733, Discovered nu = 0.010860
+Adam Epoch 1550: Loss = 0.020370, Discovered nu = 0.010842
+Adam Epoch 1560: Loss = 0.019962, Discovered nu = 0.010824
+Adam Epoch 1570: Loss = 0.019593, Discovered nu = 0.010808
+Adam Epoch 1580: Loss = 0.019262, Discovered nu = 0.010792
+Adam Epoch 1590: Loss = 0.018863, Discovered nu = 0.010777
+Adam Epoch 1600: Loss = 0.018502, Discovered nu = 0.010762
+Adam Epoch 1610: Loss = 0.018159, Discovered nu = 0.010749
+Adam Epoch 1620: Loss = 0.017802, Discovered nu = 0.010735
+Adam Epoch 1630: Loss = 0.017464, Discovered nu = 0.010723
+Adam Epoch 1640: Loss = 0.017117, Discovered nu = 0.010711
+Adam Epoch 1650: Loss = 0.016773, Discovered nu = 0.010699
+Adam Epoch 1660: Loss = 0.016446, Discovered nu = 0.010688
+Adam Epoch 1670: Loss = 0.016114, Discovered nu = 0.010677
+Adam Epoch 1680: Loss = 0.015786, Discovered nu = 0.010667
+Adam Epoch 1690: Loss = 0.015453, Discovered nu = 0.010657
+Adam Epoch 1700: Loss = 0.015161, Discovered nu = 0.010648
+Adam Epoch 1710: Loss = 0.014805, Discovered nu = 0.010638
+Adam Epoch 1720: Loss = 0.014496, Discovered nu = 0.010629
+Adam Epoch 1730: Loss = 0.014207, Discovered nu = 0.010621
+Adam Epoch 1740: Loss = 0.013873, Discovered nu = 0.010613
+Adam Epoch 1750: Loss = 0.013568, Discovered nu = 0.010605
+Adam Epoch 1760: Loss = 0.013264, Discovered nu = 0.010598
+Adam Epoch 1770: Loss = 0.012966, Discovered nu = 0.010591
+Adam Epoch 1780: Loss = 0.012682, Discovered nu = 0.010584
+Adam Epoch 1790: Loss = 0.012396, Discovered nu = 0.010577
+Adam Epoch 1800: Loss = 0.012111, Discovered nu = 0.010571
+Adam Epoch 1810: Loss = 0.011833, Discovered nu = 0.010566
+Adam Epoch 1820: Loss = 0.011565, Discovered nu = 0.010560
+Adam Epoch 1830: Loss = 0.011301, Discovered nu = 0.010555
+Adam Epoch 1840: Loss = 0.011036, Discovered nu = 0.010550
+Adam Epoch 1850: Loss = 0.010786, Discovered nu = 0.010546
+Adam Epoch 1860: Loss = 0.010547, Discovered nu = 0.010542
+Adam Epoch 1870: Loss = 0.010304, Discovered nu = 0.010538
+Adam Epoch 1880: Loss = 0.010083, Discovered nu = 0.010534
+Adam Epoch 1890: Loss = 0.009833, Discovered nu = 0.010530
+Adam Epoch 1900: Loss = 0.009606, Discovered nu = 0.010527
+Adam Epoch 1910: Loss = 0.009421, Discovered nu = 0.010524
+Adam Epoch 1920: Loss = 0.009202, Discovered nu = 0.010522
+Adam Epoch 1930: Loss = 0.008971, Discovered nu = 0.010519
+Adam Epoch 1940: Loss = 0.008772, Discovered nu = 0.010517
+Adam Epoch 1950: Loss = 0.008578, Discovered nu = 0.010515
+Adam Epoch 1960: Loss = 0.008382, Discovered nu = 0.010513
+Adam Epoch 1970: Loss = 0.008286, Discovered nu = 0.010512
+Adam Epoch 1980: Loss = 0.008042, Discovered nu = 0.010510
+Adam Epoch 1990: Loss = 0.007859, Discovered nu = 0.010509
+Adam training finished.
+Starting L-BFGS-B training with SciPy...
+  L-BFGS-B: Loss = 7.717225e-03, Grad Norm = 4.172419e-01, nu_pinn_grad = -2.502425e-05
+  L-BFGS-B: Loss = 1.371906e+03, Grad Norm = 6.637615e+03, nu_pinn_grad = 6.161824e-01
+  L-BFGS-B: Loss = 7.691174e-03, Grad Norm = 4.931680e-02, nu_pinn_grad = 3.317449e-05
+  L-BFGS-B: Loss = 7.691641e-03, Grad Norm = 3.336569e-02, nu_pinn_grad = 3.535267e-05
+  L-BFGS-B: Loss = 7.691522e-03, Grad Norm = 4.610322e-02, nu_pinn_grad = 3.353337e-05
+  L-BFGS-B: Loss = 7.691198e-03, Grad Norm = 4.926058e-02, nu_pinn_grad = 3.319297e-05
+  L-BFGS-B: Loss = 7.691173e-03, Grad Norm = 4.931646e-02, nu_pinn_grad = 3.317444e-05
+  L-BFGS-B: Loss = 7.691173e-03, Grad Norm = 4.931646e-02, nu_pinn_grad = 3.317444e-05
+  L-BFGS-B: Loss = 7.691174e-03, Grad Norm = 4.928834e-02, nu_pinn_grad = 3.318479e-05
+  L-BFGS-B: Loss = 7.691173e-03, Grad Norm = 4.931663e-02, nu_pinn_grad = 3.317485e-05
+  L-BFGS-B: Loss = 7.691172e-03, Grad Norm = 4.931263e-02, nu_pinn_grad = 3.318332e-05
+  L-BFGS-B: Loss = 7.691178e-03, Grad Norm = 4.929698e-02, nu_pinn_grad = 3.319614e-05
+  L-BFGS-B: Loss = 7.691172e-03, Grad Norm = 4.931262e-02, nu_pinn_grad = 3.318333e-05
+  L-BFGS-B: Loss = 7.691185e-03, Grad Norm = 4.929688e-02, nu_pinn_grad = 3.319210e-05
+  L-BFGS-B: Loss = 7.691172e-03, Grad Norm = 4.931262e-02, nu_pinn_grad = 3.318333e-05
+  L-BFGS-B: Loss = 7.691184e-03, Grad Norm = 4.930225e-02, nu_pinn_grad = 3.319081e-05
+  L-BFGS-B: Loss = 7.691172e-03, Grad Norm = 4.931262e-02, nu_pinn_grad = 3.318333e-05
+  L-BFGS-B: Loss = 7.691172e-03, Grad Norm = 4.931262e-02, nu_pinn_grad = 3.318333e-05
+  L-BFGS-B: Loss = 7.691178e-03, Grad Norm = 4.931043e-02, nu_pinn_grad = 3.318304e-05
+  L-BFGS-B: Loss = 7.691172e-03, Grad Norm = 4.931262e-02, nu_pinn_grad = 3.318333e-05
+  L-BFGS-B: Loss = 7.691172e-03, Grad Norm = 4.931262e-02, nu_pinn_grad = 3.318333e-05
+  L-BFGS-B: Loss = 7.691175e-03, Grad Norm = 4.931139e-02, nu_pinn_grad = 3.318468e-05
+  L-BFGS-B: Loss = 7.691172e-03, Grad Norm = 4.931262e-02, nu_pinn_grad = 3.318333e-05
+  L-BFGS-B: Loss = 7.691172e-03, Grad Norm = 4.931262e-02, nu_pinn_grad = 3.318333e-05
+  L-BFGS-B: Loss = 7.691176e-03, Grad Norm = 4.931211e-02, nu_pinn_grad = 3.318506e-05
+  L-BFGS-B: Loss = 7.691172e-03, Grad Norm = 4.931262e-02, nu_pinn_grad = 3.318333e-05
+  L-BFGS-B: Loss = 7.721918e-03, Grad Norm = 4.569356e-01, nu_pinn_grad = 7.138199e-05
+  L-BFGS-B: Loss = 7.690822e-03, Grad Norm = 5.353113e-02, nu_pinn_grad = 4.050324e-05
+  L-BFGS-B: Loss = 7.690034e-03, Grad Norm = 4.715119e-02, nu_pinn_grad = 3.683500e-05
+  L-BFGS-B: Loss = 7.687122e-03, Grad Norm = 3.307870e-02, nu_pinn_grad = 2.192907e-05
+  L-BFGS-B: Loss = 7.686391e-03, Grad Norm = 7.269992e-02, nu_pinn_grad = -4.592540e-06
+  L-BFGS-B: Loss = 7.683918e-03, Grad Norm = 5.289619e-02, nu_pinn_grad = -5.215913e-06
+  L-BFGS-B: Loss = 7.676580e-03, Grad Norm = 8.865439e-02, nu_pinn_grad = -3.077752e-05
+  L-BFGS-B: Loss = 7.659865e-03, Grad Norm = 3.759456e-01, nu_pinn_grad = -1.721186e-05
+  L-BFGS-B: Loss = 7.643518e-03, Grad Norm = 2.923333e-01, nu_pinn_grad = -4.447138e-05
+  L-BFGS-B: Loss = 7.600467e-03, Grad Norm = 2.090141e-01, nu_pinn_grad = -8.114077e-05
+  L-BFGS-B: Loss = 7.572954e-03, Grad Norm = 2.090753e-01, nu_pinn_grad = -1.304364e-04
+  L-BFGS-B: Loss = 7.521109e-03, Grad Norm = 2.401478e-01, nu_pinn_grad = -1.838033e-04
+  L-BFGS-B: Loss = 7.463436e-03, Grad Norm = 3.333833e-01, nu_pinn_grad = -2.567621e-04
+  L-BFGS-B: Loss = 7.408062e-03, Grad Norm = 1.502115e-01, nu_pinn_grad = -2.138722e-04
+  L-BFGS-B: Loss = 7.367547e-03, Grad Norm = 1.595703e-01, nu_pinn_grad = -1.466233e-04
+  L-BFGS-B: Loss = 7.287538e-03, Grad Norm = 2.383961e-01, nu_pinn_grad = -1.375660e-04
+  L-BFGS-B: Loss = 7.206778e-03, Grad Norm = 1.547218e-01, nu_pinn_grad = -4.403657e-05
+  L-BFGS-B: Loss = 7.146064e-03, Grad Norm = 1.371686e-01, nu_pinn_grad = -1.263061e-05
+  L-BFGS-B: Loss = 7.091143e-03, Grad Norm = 1.277403e-01, nu_pinn_grad = -3.114359e-05
+  L-BFGS-B: Loss = 7.034421e-03, Grad Norm = 1.807366e-01, nu_pinn_grad = 1.604824e-05
+  L-BFGS-B: Loss = 6.984962e-03, Grad Norm = 2.241497e-01, nu_pinn_grad = 6.739743e-05
+  L-BFGS-B: Loss = 6.887292e-03, Grad Norm = 2.194087e-01, nu_pinn_grad = 1.564090e-04
+  L-BFGS-B: Loss = 6.827537e-03, Grad Norm = 3.072403e-01, nu_pinn_grad = 2.657460e-04
+  L-BFGS-B: Loss = 6.677632e-03, Grad Norm = 2.891739e-01, nu_pinn_grad = 6.144409e-04
+  L-BFGS-B: Loss = 6.614137e-03, Grad Norm = 2.325322e-01, nu_pinn_grad = 6.789053e-04
+  L-BFGS-B: Loss = 6.498625e-03, Grad Norm = 2.566071e-01, nu_pinn_grad = 6.887285e-04
+  L-BFGS-B: Loss = 6.443886e-03, Grad Norm = 2.700084e-01, nu_pinn_grad = 6.636744e-04
+  L-BFGS-B: Loss = 6.364470e-03, Grad Norm = 2.489040e-01, nu_pinn_grad = 5.992954e-04
+  L-BFGS-B: Loss = 6.240064e-03, Grad Norm = 2.056181e-01, nu_pinn_grad = 4.173377e-04
+  L-BFGS-B: Loss = 6.163571e-03, Grad Norm = 3.235127e-01, nu_pinn_grad = 3.297183e-04
+  L-BFGS-B: Loss = 6.002236e-03, Grad Norm = 2.582576e-01, nu_pinn_grad = 2.491484e-04
+  L-BFGS-B: Loss = 5.845432e-03, Grad Norm = 2.432368e-01, nu_pinn_grad = 3.036465e-04
+  L-BFGS-B: Loss = 5.708413e-03, Grad Norm = 1.801321e-01, nu_pinn_grad = 4.044556e-04
+  L-BFGS-B: Loss = 5.606210e-03, Grad Norm = 1.996789e-01, nu_pinn_grad = 5.499107e-04
+  L-BFGS-B: Loss = 5.465455e-03, Grad Norm = 1.943075e-01, nu_pinn_grad = 5.964542e-04
+  L-BFGS-B: Loss = 5.364313e-03, Grad Norm = 1.970864e-01, nu_pinn_grad = 5.339804e-04
+  L-BFGS-B: Loss = 5.309177e-03, Grad Norm = 1.729486e-01, nu_pinn_grad = 4.474774e-04
+  L-BFGS-B: Loss = 5.234964e-03, Grad Norm = 1.800432e-01, nu_pinn_grad = 3.537842e-04
+  L-BFGS-B: Loss = 5.158603e-03, Grad Norm = 1.565889e-01, nu_pinn_grad = 1.591299e-04
+  L-BFGS-B: Loss = 5.066587e-03, Grad Norm = 2.392589e-01, nu_pinn_grad = 2.166690e-05
+  L-BFGS-B: Loss = 4.995059e-03, Grad Norm = 2.224939e-01, nu_pinn_grad = -1.772806e-05
+  L-BFGS-B: Loss = 4.870560e-03, Grad Norm = 1.601165e-01, nu_pinn_grad = -7.406027e-05
+  L-BFGS-B: Loss = 4.774040e-03, Grad Norm = 1.628999e-01, nu_pinn_grad = -4.656467e-05
+  L-BFGS-B: Loss = 4.673383e-03, Grad Norm = 1.656937e-01, nu_pinn_grad = -1.764503e-05
+  L-BFGS-B: Loss = 4.589172e-03, Grad Norm = 1.314590e-01, nu_pinn_grad = 5.641491e-05
+  L-BFGS-B: Loss = 4.526614e-03, Grad Norm = 1.359793e-01, nu_pinn_grad = 8.399764e-05
+  L-BFGS-B: Loss = 4.498094e-03, Grad Norm = 1.536038e-01, nu_pinn_grad = 1.743574e-05
+  L-BFGS-B: Loss = 4.452049e-03, Grad Norm = 2.162995e-01, nu_pinn_grad = -7.947895e-05
+  L-BFGS-B: Loss = 4.431015e-03, Grad Norm = 1.622548e-01, nu_pinn_grad = -6.500082e-05
+  L-BFGS-B: Loss = 4.377732e-03, Grad Norm = 1.857704e-01, nu_pinn_grad = -1.682388e-05
+  L-BFGS-B: Loss = 4.355391e-03, Grad Norm = 1.139975e-01, nu_pinn_grad = 1.152629e-05
+  L-BFGS-B: Loss = 4.342942e-03, Grad Norm = 2.729812e-01, nu_pinn_grad = 5.450788e-05
+  L-BFGS-B: Loss = 4.316499e-03, Grad Norm = 1.807842e-01, nu_pinn_grad = 4.296753e-05
+  L-BFGS-B: Loss = 4.278787e-03, Grad Norm = 2.023947e-01, nu_pinn_grad = 3.058585e-06
+  L-BFGS-B: Loss = 4.257689e-03, Grad Norm = 2.243703e-01, nu_pinn_grad = 1.136041e-05
+  L-BFGS-B: Loss = 4.229275e-03, Grad Norm = 2.339594e-01, nu_pinn_grad = 2.441262e-05
+  L-BFGS-B: Loss = 4.186215e-03, Grad Norm = 2.121190e-01, nu_pinn_grad = -4.273765e-05
+  L-BFGS-B: Loss = 4.143051e-03, Grad Norm = 1.424214e-01, nu_pinn_grad = -1.360400e-04
+  L-BFGS-B: Loss = 4.103665e-03, Grad Norm = 1.934432e-01, nu_pinn_grad = -3.167814e-04
+  L-BFGS-B: Loss = 4.082005e-03, Grad Norm = 1.475793e-01, nu_pinn_grad = -4.202048e-04
+  L-BFGS-B: Loss = 4.061258e-03, Grad Norm = 1.246531e-01, nu_pinn_grad = -3.964170e-04
+  L-BFGS-B: Loss = 4.024224e-03, Grad Norm = 2.028187e-01, nu_pinn_grad = -2.694045e-04
+  L-BFGS-B: Loss = 3.997401e-03, Grad Norm = 1.024789e-01, nu_pinn_grad = -2.454923e-04
+  L-BFGS-B: Loss = 3.977444e-03, Grad Norm = 1.262100e-01, nu_pinn_grad = -2.252740e-04
+  L-BFGS-B: Loss = 3.969428e-03, Grad Norm = 1.852738e-01, nu_pinn_grad = -2.305125e-04
+  L-BFGS-B: Loss = 3.934151e-03, Grad Norm = 1.263954e-01, nu_pinn_grad = -2.290946e-04
+  L-BFGS-B: Loss = 3.905949e-03, Grad Norm = 2.233698e-01, nu_pinn_grad = -2.871244e-04
+  L-BFGS-B: Loss = 3.854509e-03, Grad Norm = 2.723067e-01, nu_pinn_grad = -2.492963e-04
+  L-BFGS-B: Loss = 3.791020e-03, Grad Norm = 2.790141e-01, nu_pinn_grad = -1.897865e-04
+  L-BFGS-B: Loss = 3.767483e-03, Grad Norm = 2.634627e-01, nu_pinn_grad = -1.818358e-04
+  L-BFGS-B: Loss = 3.734510e-03, Grad Norm = 1.273221e-01, nu_pinn_grad = -1.624828e-05
+  L-BFGS-B: Loss = 3.715272e-03, Grad Norm = 7.884707e-02, nu_pinn_grad = -1.110977e-05
+  L-BFGS-B: Loss = 3.698452e-03, Grad Norm = 2.442957e-01, nu_pinn_grad = 1.599875e-05
+  L-BFGS-B: Loss = 3.687973e-03, Grad Norm = 1.686668e-01, nu_pinn_grad = 4.093375e-06
+  L-BFGS-B: Loss = 3.676413e-03, Grad Norm = 1.194477e-01, nu_pinn_grad = -4.453233e-06
+  L-BFGS-B: Loss = 3.665236e-03, Grad Norm = 1.190423e-01, nu_pinn_grad = 1.905407e-06
+  L-BFGS-B: Loss = 3.629660e-03, Grad Norm = 2.187568e-01, nu_pinn_grad = -2.854286e-05
+  L-BFGS-B: Loss = 3.605689e-03, Grad Norm = 2.254187e-01, nu_pinn_grad = -4.173762e-05
+  L-BFGS-B: Loss = 3.584183e-03, Grad Norm = 4.106992e-01, nu_pinn_grad = -1.184274e-05
+  L-BFGS-B: Loss = 3.556167e-03, Grad Norm = 2.524085e-01, nu_pinn_grad = 3.398161e-05
+  L-BFGS-B: Loss = 3.537060e-03, Grad Norm = 1.342239e-01, nu_pinn_grad = 2.391032e-05
+  L-BFGS-B: Loss = 3.506643e-03, Grad Norm = 1.852218e-01, nu_pinn_grad = 6.655856e-05
+  L-BFGS-B: Loss = 3.471535e-03, Grad Norm = 1.192588e-01, nu_pinn_grad = 4.693148e-05
+  L-BFGS-B: Loss = 3.532167e-03, Grad Norm = 7.408224e-01, nu_pinn_grad = -3.156489e-05
+  L-BFGS-B: Loss = 3.465430e-03, Grad Norm = 3.783990e-01, nu_pinn_grad = 2.189527e-05
+  L-BFGS-B: Loss = 3.446071e-03, Grad Norm = 3.529286e-01, nu_pinn_grad = -1.818059e-06
+  L-BFGS-B: Loss = 3.409282e-03, Grad Norm = 1.717920e-01, nu_pinn_grad = -4.710781e-05
+  L-BFGS-B: Loss = 3.385160e-03, Grad Norm = 1.298199e-01, nu_pinn_grad = -9.428905e-05
+  L-BFGS-B: Loss = 3.350372e-03, Grad Norm = 8.280639e-02, nu_pinn_grad = -2.259764e-04
+  L-BFGS-B: Loss = 3.329580e-03, Grad Norm = 6.916606e-02, nu_pinn_grad = -2.130692e-04
+  L-BFGS-B: Loss = 3.305102e-03, Grad Norm = 1.007730e-01, nu_pinn_grad = -1.385991e-04
+  L-BFGS-B: Loss = 3.282994e-03, Grad Norm = 1.395741e-01, nu_pinn_grad = -5.373375e-05
+  L-BFGS-B: Loss = 3.258119e-03, Grad Norm = 1.547908e-01, nu_pinn_grad = -6.197942e-06
+  L-BFGS-B: Loss = 3.246162e-03, Grad Norm = 3.774370e-01, nu_pinn_grad = 8.380796e-05
+  L-BFGS-B: Loss = 3.217129e-03, Grad Norm = 3.075922e-01, nu_pinn_grad = 6.041268e-05
+  L-BFGS-B: Loss = 3.198344e-03, Grad Norm = 2.359891e-01, nu_pinn_grad = 5.465509e-05
+  L-BFGS-B: Loss = 3.174587e-03, Grad Norm = 9.389525e-02, nu_pinn_grad = -9.992734e-06
+  L-BFGS-B: Loss = 3.159868e-03, Grad Norm = 7.990828e-02, nu_pinn_grad = -1.202024e-05
+  L-BFGS-B: Loss = 3.155869e-03, Grad Norm = 2.354556e-01, nu_pinn_grad = -7.495820e-06
+  L-BFGS-B: Loss = 3.128429e-03, Grad Norm = 1.582733e-01, nu_pinn_grad = 9.121164e-05
+  L-BFGS-B: Loss = 3.101009e-03, Grad Norm = 3.361312e-01, nu_pinn_grad = 1.749679e-04
+  L-BFGS-B: Loss = 3.067181e-03, Grad Norm = 2.958802e-01, nu_pinn_grad = 2.306900e-04
+  L-BFGS-B: Loss = 3.013182e-03, Grad Norm = 3.287845e-01, nu_pinn_grad = 8.513228e-05
+  L-BFGS-B: Loss = 2.971254e-03, Grad Norm = 9.414148e-02, nu_pinn_grad = 1.495545e-04
+  L-BFGS-B: Loss = 2.944601e-03, Grad Norm = 1.594738e-01, nu_pinn_grad = 2.808458e-04
+  L-BFGS-B: Loss = 2.928336e-03, Grad Norm = 1.174931e-01, nu_pinn_grad = 2.715819e-04
+  L-BFGS-B: Loss = 2.904147e-03, Grad Norm = 1.515723e-01, nu_pinn_grad = 2.296779e-04
+  L-BFGS-B: Loss = 2.891013e-03, Grad Norm = 2.080970e-01, nu_pinn_grad = 1.787394e-04
+  L-BFGS-B: Loss = 2.880102e-03, Grad Norm = 1.341233e-01, nu_pinn_grad = 1.101773e-04
+  L-BFGS-B: Loss = 2.864070e-03, Grad Norm = 9.472807e-02, nu_pinn_grad = 6.063428e-05
+  L-BFGS-B: Loss = 2.846671e-03, Grad Norm = 1.025372e-01, nu_pinn_grad = -7.591114e-05
+  L-BFGS-B: Loss = 2.828785e-03, Grad Norm = 7.709838e-02, nu_pinn_grad = -1.726534e-04
+  L-BFGS-B: Loss = 2.808930e-03, Grad Norm = 2.339974e-01, nu_pinn_grad = -2.975563e-04
+  L-BFGS-B: Loss = 2.791813e-03, Grad Norm = 2.357505e-01, nu_pinn_grad = -3.698841e-04
+  L-BFGS-B: Loss = 2.761862e-03, Grad Norm = 1.214543e-01, nu_pinn_grad = -4.572887e-04
+  L-BFGS-B: Loss = 2.755017e-03, Grad Norm = 1.280670e-01, nu_pinn_grad = -4.821664e-04
+  L-BFGS-B: Loss = 2.750809e-03, Grad Norm = 1.074753e-01, nu_pinn_grad = -5.071088e-04
+  L-BFGS-B: Loss = 2.745578e-03, Grad Norm = 1.037035e-01, nu_pinn_grad = -4.853408e-04
+  L-BFGS-B: Loss = 2.740262e-03, Grad Norm = 8.097491e-02, nu_pinn_grad = -4.807581e-04
+  L-BFGS-B: Loss = 2.733215e-03, Grad Norm = 1.103743e-01, nu_pinn_grad = -4.411608e-04
+  L-BFGS-B: Loss = 2.724781e-03, Grad Norm = 1.170388e-01, nu_pinn_grad = -4.285014e-04
+  L-BFGS-B: Loss = 2.734402e-03, Grad Norm = 5.428361e-01, nu_pinn_grad = -3.121879e-04
+  L-BFGS-B: Loss = 2.715042e-03, Grad Norm = 2.623729e-01, nu_pinn_grad = -3.720931e-04
+  L-BFGS-B: Loss = 2.702578e-03, Grad Norm = 3.033437e-01, nu_pinn_grad = -3.779982e-04
+  L-BFGS-B: Loss = 2.682455e-03, Grad Norm = 2.808873e-01, nu_pinn_grad = -4.082536e-04
+  L-BFGS-B: Loss = 2.643148e-03, Grad Norm = 1.473958e-01, nu_pinn_grad = -3.877494e-04
+  L-BFGS-B: Loss = 2.618706e-03, Grad Norm = 3.248438e-01, nu_pinn_grad = -2.964809e-04
+  L-BFGS-B: Loss = 2.595818e-03, Grad Norm = 2.672577e-01, nu_pinn_grad = -2.869877e-04
+  L-BFGS-B: Loss = 2.576865e-03, Grad Norm = 1.614915e-01, nu_pinn_grad = -2.201736e-04
+  L-BFGS-B: Loss = 2.568834e-03, Grad Norm = 1.399507e-01, nu_pinn_grad = -2.024376e-04
+  L-BFGS-B: Loss = 2.553850e-03, Grad Norm = 6.964526e-02, nu_pinn_grad = -2.128089e-04
+  L-BFGS-B: Loss = 2.548498e-03, Grad Norm = 1.256957e-01, nu_pinn_grad = -2.600099e-04
+  L-BFGS-B: Loss = 2.538437e-03, Grad Norm = 1.620452e-01, nu_pinn_grad = -2.356706e-04
+  L-BFGS-B: Loss = 2.523339e-03, Grad Norm = 1.920201e-01, nu_pinn_grad = -2.080744e-04
+  L-BFGS-B: Loss = 2.520116e-03, Grad Norm = 3.301077e-01, nu_pinn_grad = -2.068555e-04
+  L-BFGS-B: Loss = 2.498530e-03, Grad Norm = 2.753345e-01, nu_pinn_grad = -9.804533e-05
+  L-BFGS-B: Loss = 2.472817e-03, Grad Norm = 1.814566e-01, nu_pinn_grad = -4.216722e-05
+  L-BFGS-B: Loss = 2.457226e-03, Grad Norm = 1.783175e-01, nu_pinn_grad = 1.470152e-05
+  L-BFGS-B: Loss = 2.440482e-03, Grad Norm = 6.085665e-02, nu_pinn_grad = 5.843086e-06
+  L-BFGS-B: Loss = 2.433576e-03, Grad Norm = 8.203635e-02, nu_pinn_grad = -1.436973e-05
+  L-BFGS-B: Loss = 2.427216e-03, Grad Norm = 1.058957e-01, nu_pinn_grad = 3.711768e-05
+  L-BFGS-B: Loss = 2.422838e-03, Grad Norm = 9.848937e-02, nu_pinn_grad = 3.653377e-05
+  L-BFGS-B: Loss = 2.413631e-03, Grad Norm = 1.429483e-01, nu_pinn_grad = 6.908813e-06
+  L-BFGS-B: Loss = 2.400138e-03, Grad Norm = 6.862305e-02, nu_pinn_grad = 2.616880e-05
+  L-BFGS-B: Loss = 2.377053e-03, Grad Norm = 6.420004e-02, nu_pinn_grad = 5.695710e-05
+  L-BFGS-B: Loss = 2.354780e-03, Grad Norm = 1.086632e-01, nu_pinn_grad = 1.138452e-04
+  L-BFGS-B: Loss = 2.330500e-03, Grad Norm = 6.840570e-02, nu_pinn_grad = 1.657775e-04
+  L-BFGS-B: Loss = 2.317571e-03, Grad Norm = 5.139329e-02, nu_pinn_grad = 1.722990e-04
+  L-BFGS-B: Loss = 2.310479e-03, Grad Norm = 8.466548e-02, nu_pinn_grad = 1.397450e-04
+  L-BFGS-B: Loss = 2.303759e-03, Grad Norm = 7.748595e-02, nu_pinn_grad = 1.406439e-04
+  L-BFGS-B: Loss = 2.295583e-03, Grad Norm = 7.438597e-02, nu_pinn_grad = 1.465865e-04
+  L-BFGS-B: Loss = 2.271780e-03, Grad Norm = 1.417402e-01, nu_pinn_grad = 2.056638e-04
+  L-BFGS-B: Loss = 2.252746e-03, Grad Norm = 1.188444e-01, nu_pinn_grad = 1.357483e-04
+  L-BFGS-B: Loss = 2.224547e-03, Grad Norm = 1.235389e-01, nu_pinn_grad = 8.674595e-05
+  L-BFGS-B: Loss = 2.213912e-03, Grad Norm = 8.614781e-02, nu_pinn_grad = 5.691617e-05
+  L-BFGS-B: Loss = 2.208598e-03, Grad Norm = 6.685437e-02, nu_pinn_grad = -3.585457e-05
+  L-BFGS-B: Loss = 2.206284e-03, Grad Norm = 5.765169e-02, nu_pinn_grad = -9.143727e-06
+  L-BFGS-B: Loss = 2.204715e-03, Grad Norm = 1.061096e-01, nu_pinn_grad = 8.231269e-05
+  L-BFGS-B: Loss = 2.200002e-03, Grad Norm = 4.439785e-02, nu_pinn_grad = 4.141379e-05
+  L-BFGS-B: Loss = 2.197730e-03, Grad Norm = 5.411512e-02, nu_pinn_grad = 1.785375e-07
+  L-BFGS-B: Loss = 2.191118e-03, Grad Norm = 5.113625e-02, nu_pinn_grad = -3.388130e-05
+  L-BFGS-B: Loss = 2.182181e-03, Grad Norm = 3.884816e-01, nu_pinn_grad = -1.149059e-05
+  L-BFGS-B: Loss = 2.154028e-03, Grad Norm = 2.479848e-01, nu_pinn_grad = -2.558577e-06
+  L-BFGS-B: Loss = 2.128585e-03, Grad Norm = 1.700486e-01, nu_pinn_grad = 1.512211e-06
+  L-BFGS-B: Loss = 2.099601e-03, Grad Norm = 1.201399e-01, nu_pinn_grad = 3.975878e-05
+  L-BFGS-B: Loss = 2.073728e-03, Grad Norm = 1.708350e-01, nu_pinn_grad = 1.092237e-04
+  L-BFGS-B: Loss = 2.063352e-03, Grad Norm = 1.909226e-01, nu_pinn_grad = 1.040995e-04
+  L-BFGS-B: Loss = 2.040775e-03, Grad Norm = 1.321727e-01, nu_pinn_grad = 1.632050e-04
+  L-BFGS-B: Loss = 2.030106e-03, Grad Norm = 7.501620e-02, nu_pinn_grad = 1.771380e-04
+  L-BFGS-B: Loss = 2.026482e-03, Grad Norm = 1.378159e-01, nu_pinn_grad = 1.434039e-04
+  L-BFGS-B: Loss = 2.013595e-03, Grad Norm = 1.044066e-01, nu_pinn_grad = 2.065222e-05
+  L-BFGS-B: Loss = 2.001578e-03, Grad Norm = 7.186843e-02, nu_pinn_grad = 4.846468e-05
+  L-BFGS-B: Loss = 1.979939e-03, Grad Norm = 1.851800e-01, nu_pinn_grad = 1.109473e-04
+  L-BFGS-B: Loss = 1.960660e-03, Grad Norm = 1.902696e-01, nu_pinn_grad = 8.749241e-05
+  L-BFGS-B: Loss = 1.941362e-03, Grad Norm = 1.573000e-01, nu_pinn_grad = -4.439311e-05
+  L-BFGS-B: Loss = 1.935645e-03, Grad Norm = 2.357678e-01, nu_pinn_grad = -7.517044e-05
+  L-BFGS-B: Loss = 1.939871e-03, Grad Norm = 1.960978e-01, nu_pinn_grad = -1.367701e-04
+  L-BFGS-B: Loss = 1.916823e-03, Grad Norm = 1.098102e-01, nu_pinn_grad = -9.546116e-05
+  L-BFGS-B: Loss = 1.916350e-03, Grad Norm = 1.828790e-01, nu_pinn_grad = -6.906072e-05
+  L-BFGS-B: Loss = 1.934151e-03, Grad Norm = 1.364910e-01, nu_pinn_grad = 5.128662e-05
+  L-BFGS-B: Loss = 1.910598e-03, Grad Norm = 8.224548e-02, nu_pinn_grad = -5.165199e-05
+  L-BFGS-B: Loss = 1.910425e-03, Grad Norm = 1.015192e-01, nu_pinn_grad = -7.619873e-06
+  L-BFGS-B: Loss = 1.909867e-03, Grad Norm = 1.528793e-01, nu_pinn_grad = -3.083086e-05
+  L-BFGS-B: Loss = 1.908636e-03, Grad Norm = 5.584959e-02, nu_pinn_grad = -4.384941e-05
+  L-BFGS-B: Loss = 1.905583e-03, Grad Norm = 8.802184e-02, nu_pinn_grad = -6.411080e-05
+  L-BFGS-B: Loss = 1.903214e-03, Grad Norm = 8.646394e-02, nu_pinn_grad = -5.335870e-05
+  L-BFGS-B: Loss = 1.899480e-03, Grad Norm = 8.777236e-02, nu_pinn_grad = -3.567918e-05
+  L-BFGS-B: Loss = 1.899325e-03, Grad Norm = 9.762888e-02, nu_pinn_grad = -9.317787e-05
+  L-BFGS-B: Loss = 1.891794e-03, Grad Norm = 6.472847e-02, nu_pinn_grad = -8.559189e-05
+  L-BFGS-B: Loss = 1.874956e-03, Grad Norm = 1.442615e-01, nu_pinn_grad = -3.161280e-05
+  L-BFGS-B: Loss = 1.859915e-03, Grad Norm = 1.382693e-01, nu_pinn_grad = -2.844225e-05
+  L-BFGS-B: Loss = 1.836819e-03, Grad Norm = 7.847892e-02, nu_pinn_grad = -2.438336e-05
+  L-BFGS-B: Loss = 1.828841e-03, Grad Norm = 5.165864e-02, nu_pinn_grad = 1.981792e-05
+  L-BFGS-B: Loss = 1.821474e-03, Grad Norm = 6.618115e-02, nu_pinn_grad = 5.392231e-05
+  L-BFGS-B: Loss = 1.817380e-03, Grad Norm = 5.017775e-02, nu_pinn_grad = 5.484387e-05
+  L-BFGS-B: Loss = 1.809612e-03, Grad Norm = 1.492413e-01, nu_pinn_grad = 1.848170e-04
+  L-BFGS-B: Loss = 1.798528e-03, Grad Norm = 9.052542e-02, nu_pinn_grad = 1.333984e-04
+  L-BFGS-B: Loss = 1.798019e-03, Grad Norm = 2.336363e-01, nu_pinn_grad = 7.215390e-05
+  L-BFGS-B: Loss = 1.788696e-03, Grad Norm = 1.823957e-01, nu_pinn_grad = 8.041925e-05
+  L-BFGS-B: Loss = 1.772763e-03, Grad Norm = 1.412129e-01, nu_pinn_grad = 1.268600e-04
+  L-BFGS-B: Loss = 1.759987e-03, Grad Norm = 1.127886e-01, nu_pinn_grad = 9.621308e-05
+  L-BFGS-B: Loss = 1.755164e-03, Grad Norm = 1.584453e-01, nu_pinn_grad = 7.771354e-05
+  L-BFGS-B: Loss = 1.740091e-03, Grad Norm = 1.375573e-01, nu_pinn_grad = 4.407779e-06
+  L-BFGS-B: Loss = 1.726125e-03, Grad Norm = 1.036844e-01, nu_pinn_grad = -8.467782e-06
+  L-BFGS-B: Loss = 1.715065e-03, Grad Norm = 1.066493e-01, nu_pinn_grad = 3.549640e-05
+  L-BFGS-B: Loss = 1.707961e-03, Grad Norm = 6.236138e-02, nu_pinn_grad = 7.082133e-05
+  L-BFGS-B: Loss = 1.701138e-03, Grad Norm = 4.471285e-02, nu_pinn_grad = 1.971521e-05
+  L-BFGS-B: Loss = 1.699090e-03, Grad Norm = 6.984627e-02, nu_pinn_grad = -2.217003e-05
+  L-BFGS-B: Loss = 1.696174e-03, Grad Norm = 4.745985e-02, nu_pinn_grad = -2.144793e-05
+  L-BFGS-B: Loss = 1.693665e-03, Grad Norm = 3.942356e-02, nu_pinn_grad = -2.266988e-05
+  L-BFGS-B: Loss = 1.694293e-03, Grad Norm = 8.673510e-02, nu_pinn_grad = 4.435808e-06
+  L-BFGS-B: Loss = 1.692663e-03, Grad Norm = 4.578559e-02, nu_pinn_grad = -1.487203e-05
+  L-BFGS-B: Loss = 1.691429e-03, Grad Norm = 6.930076e-02, nu_pinn_grad = -4.828412e-07
+  L-BFGS-B: Loss = 1.685335e-03, Grad Norm = 7.218208e-02, nu_pinn_grad = 4.288113e-05
+  L-BFGS-B: Loss = 1.675582e-03, Grad Norm = 6.999529e-02, nu_pinn_grad = 7.058451e-05
+  L-BFGS-B: Loss = 1.665721e-03, Grad Norm = 5.347680e-02, nu_pinn_grad = 5.654195e-05
+  L-BFGS-B: Loss = 1.652720e-03, Grad Norm = 5.530682e-02, nu_pinn_grad = -4.831427e-05
+  L-BFGS-B: Loss = 1.642588e-03, Grad Norm = 1.259927e-01, nu_pinn_grad = -9.692770e-05
+  L-BFGS-B: Loss = 1.634589e-03, Grad Norm = 6.607344e-02, nu_pinn_grad = -6.638542e-05
+  L-BFGS-B: Loss = 1.628383e-03, Grad Norm = 1.137277e-01, nu_pinn_grad = -6.630586e-05
+  L-BFGS-B: Loss = 1.624242e-03, Grad Norm = 1.047376e-01, nu_pinn_grad = -3.831533e-05
+  L-BFGS-B: Loss = 1.619885e-03, Grad Norm = 7.167270e-02, nu_pinn_grad = -1.333284e-04
+  L-BFGS-B: Loss = 1.616529e-03, Grad Norm = 7.552378e-02, nu_pinn_grad = -1.447708e-04
+  L-BFGS-B: Loss = 1.613413e-03, Grad Norm = 6.257045e-02, nu_pinn_grad = -1.601860e-04
+  L-BFGS-B: Loss = 1.610701e-03, Grad Norm = 9.917546e-02, nu_pinn_grad = -1.694080e-04
+  L-BFGS-B: Loss = 1.604963e-03, Grad Norm = 4.836242e-02, nu_pinn_grad = -1.194762e-04
+  L-BFGS-B: Loss = 1.603895e-03, Grad Norm = 5.654725e-02, nu_pinn_grad = -1.077753e-04
+  L-BFGS-B: Loss = 1.602133e-03, Grad Norm = 7.835132e-02, nu_pinn_grad = -8.180295e-05
+  L-BFGS-B: Loss = 1.598823e-03, Grad Norm = 9.030590e-02, nu_pinn_grad = -1.746920e-04
+  L-BFGS-B: Loss = 1.595919e-03, Grad Norm = 1.375774e-01, nu_pinn_grad = -1.876869e-04
+  L-BFGS-B: Loss = 1.583639e-03, Grad Norm = 6.839835e-02, nu_pinn_grad = -1.641269e-04
+  L-BFGS-B: Loss = 1.576722e-03, Grad Norm = 8.780620e-02, nu_pinn_grad = -2.109065e-04
+  L-BFGS-B: Loss = 1.567224e-03, Grad Norm = 1.793542e-01, nu_pinn_grad = -4.362882e-04
+  L-BFGS-B: Loss = 1.557143e-03, Grad Norm = 8.867942e-02, nu_pinn_grad = -3.543709e-04
+  L-BFGS-B: Loss = 1.549831e-03, Grad Norm = 7.552779e-02, nu_pinn_grad = -2.794125e-04
+  L-BFGS-B: Loss = 1.550013e-03, Grad Norm = 1.991723e-01, nu_pinn_grad = -1.991429e-04
+  L-BFGS-B: Loss = 1.550649e-03, Grad Norm = 1.589179e-01, nu_pinn_grad = -2.579778e-04
+  L-BFGS-B: Loss = 1.550113e-03, Grad Norm = 1.039336e-01, nu_pinn_grad = -2.792564e-04
+  L-BFGS-B: Loss = 1.549745e-03, Grad Norm = 7.311992e-02, nu_pinn_grad = -2.790194e-04
+  L-BFGS-B: Loss = 1.550054e-03, Grad Norm = 7.937393e-02, nu_pinn_grad = -2.790982e-04
+  L-BFGS-B: Loss = 1.549770e-03, Grad Norm = 7.315698e-02, nu_pinn_grad = -2.789760e-04
+  L-BFGS-B: Loss = 1.549745e-03, Grad Norm = 7.311992e-02, nu_pinn_grad = -2.790194e-04
+  L-BFGS-B: Loss = 1.550118e-03, Grad Norm = 2.023168e-01, nu_pinn_grad = -1.943413e-04
+  L-BFGS-B: Loss = 1.550818e-03, Grad Norm = 1.643886e-01, nu_pinn_grad = -2.610376e-04
+  L-BFGS-B: Loss = 1.550183e-03, Grad Norm = 1.051477e-01, nu_pinn_grad = -2.782360e-04
+  L-BFGS-B: Loss = 1.550082e-03, Grad Norm = 7.969233e-02, nu_pinn_grad = -2.792768e-04
+  L-BFGS-B: Loss = 1.549764e-03, Grad Norm = 7.315334e-02, nu_pinn_grad = -2.789915e-04
+  L-BFGS-B: Loss = 1.549746e-03, Grad Norm = 7.311983e-02, nu_pinn_grad = -2.790152e-04
+  L-BFGS-B: Loss = 1.549745e-03, Grad Norm = 7.311992e-02, nu_pinn_grad = -2.790194e-04
+  L-BFGS-B: Loss = 1.549745e-03, Grad Norm = 7.311992e-02, nu_pinn_grad = -2.790194e-04
+  L-BFGS-B: Loss = 1.549745e-03, Grad Norm = 7.311992e-02, nu_pinn_grad = -2.790194e-04
+L-BFGS-B training finished.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B number of iterations: 231
+L-BFGS-B function evaluations: 288
+--------------------------------------------------
+Final Discovered nu: 0.010506
+True nu: 0.05
+Resultados salvos em pinn_results_03_scipy_test.npz

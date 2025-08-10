@@ -1,0 +1,37 @@
+Running with seed: 1
+Ground truth nu: 0.05
+Initial guess for nu: 0.060000
+Training with: Adam Epochs = 100, Data-Only Epochs = 100, Lambda Data = 1.0, Lambda PDE = 1.0, PDE Points = 60000
+Searching for the best initial nu...
+  Candidate nu: 0.01, Loss: 0.07043441385030746
+  Candidate nu: 0.05, Loss: 0.07049959897994995
+  Candidate nu: 0.1, Loss: 0.07285019010305405
+  Candidate nu: 0.5, Loss: 0.07066890597343445
+Best initial nu found: 0.01
+Starting Data-Only Pre-training for 100 epochs...
+Data-Only Epoch 0: Data Loss = 0.073049
+Data-Only Pre-training finished in 0.42 seconds.
+Starting Adam training (Full Loss)...
+Adam Epoch 0: Loss = 0.480019, Discovered nu = 0.010013, loss_data = 0.006182, loss_pde = 0.473837
+Adam training finished in 15.45 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B Iter 100: Loss = 0.013469, Discovered nu = 0.009042, loss_data = 0.009195, loss_pde = 0.004274
+L-BFGS-B Iter 200: Loss = 0.008573, Discovered nu = 0.008883, loss_data = 0.006465, loss_pde = 0.002108
+L-BFGS-B training finished in 494.23 seconds.
+L-BFGS-B converged: False
+L-BFGS-B message: STOP: TOTAL NO. of f AND g EVALUATIONS EXCEEDS LIMIT
+L-BFGS-B iterations: 198
+--------------------------------------------------
+Final Discovered nu: 0.008882
+Ground Truth nu: 0.05
+Prediction MSE (u): 6.399082e-02
+Prediction MSE (v): 6.409615e-02
+Total Prediction MSE (u+v): 1.280870e-01
+Results saved to results/precision_results_data_1.0_pde_1.0_epochs_100_pdepoints_60000_seed_1.npz
+--- HPC Performance Metrics ---
+Data Preparation Duration: 3.94 seconds
+Model Initialization Duration: 3.98 seconds
+Data-Only Pre-training Duration: 0.42 seconds
+Adam Training Duration: 15.45 seconds
+L-BFGS-B Training Duration: 494.23 seconds
+Total Execution Duration: 822.86 seconds

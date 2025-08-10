@@ -1,0 +1,9 @@
+Running with seed: 1
+Traceback (most recent call last):
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 570, in <module>
+    pinn = PINN_Burgers2D(
+           ^^^^^^^^^^^^^^^
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 88, in __init__
+    self.learning_rate = tf_v1.train.exponential_decay(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: exponential_decay() got an unexpected keyword argument 'initial_learning_rate'

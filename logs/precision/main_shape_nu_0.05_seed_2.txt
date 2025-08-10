@@ -1,0 +1,47 @@
+Running with seed: 2
+Ground truth nu: 0.05
+Initial guess for nu: 0.060000
+Training with: Adam Epochs = 1000, Data-Only Epochs = 10000, Lambda Data = 100.0, Lambda PDE = 1.0, PDE Points = 60000
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Epoch 0: Data Loss = 0.119277
+Data-Only Epoch 1000: Data Loss = 0.000069
+Data-Only Epoch 2000: Data Loss = 0.000051
+Data-Only Epoch 3000: Data Loss = 0.000073
+Data-Only Epoch 4000: Data Loss = 0.000055
+Data-Only Epoch 5000: Data Loss = 0.000042
+Data-Only Epoch 6000: Data Loss = 0.000125
+Data-Only Epoch 7000: Data Loss = 0.000006
+Data-Only Epoch 8000: Data Loss = 0.000030
+Data-Only Epoch 9000: Data Loss = 0.000015
+Data-Only Pre-training finished in 21.10 seconds.
+Starting Adam training (Full Loss)...
+Adam Epoch 0: Loss = 1.383873, Discovered nu = 0.059940
+Adam Epoch 100: Loss = 0.012674, Discovered nu = 0.056470
+Adam Epoch 200: Loss = 0.008708, Discovered nu = 0.054339
+Adam Epoch 300: Loss = 0.006626, Discovered nu = 0.052833
+Adam Epoch 400: Loss = 0.005074, Discovered nu = 0.051725
+Adam Epoch 500: Loss = 0.003665, Discovered nu = 0.050881
+Adam Epoch 600: Loss = 0.005384, Discovered nu = 0.050216
+Adam Epoch 700: Loss = 0.006382, Discovered nu = 0.049679
+Adam Epoch 800: Loss = 0.002294, Discovered nu = 0.049249
+Adam Epoch 900: Loss = 0.002273, Discovered nu = 0.048898
+Adam training finished in 154.73 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B training finished in 23.36 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 18
+--------------------------------------------------
+Final Discovered nu: 0.048603
+Ground Truth nu: 0.05
+Prediction MSE (u): 6.909028e-02
+Prediction MSE (v): 6.908933e-02
+Total Prediction MSE (u+v): 1.381796e-01
+Results saved to results/shape_results_data_100.0_pde_1.0_epochs_1000_pdepoints_60000_seed_2.npz
+--- HPC Performance Metrics ---
+Data Preparation Duration: 3.45 seconds
+Model Initialization Duration: 3.54 seconds
+Data-Only Pre-training Duration: 21.10 seconds
+Adam Training Duration: 154.73 seconds
+L-BFGS-B Training Duration: 23.36 seconds
+Total Execution Duration: 207.19 seconds

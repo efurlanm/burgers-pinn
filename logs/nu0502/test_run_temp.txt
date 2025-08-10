@@ -1,0 +1,18 @@
+--- Starting Run 1 (True nu: 0.05, Learning Rate: 1.000000e-05) ---
+Running with Seed: 1, Learning Rate: 1.000000e-05
+Explicitly setting initial nu to: 0.02
+Starting Data-Only Pre-training for 100 epochs...
+Data-Only Iter 0: Data Loss = 0.133554
+Data-Only Pre-training finished in 0.91 seconds.
+Starting Adam training (Full Loss)...
+Adam Iter 0: Loss = 7.755491, Discovered nu = 0.020000, loss_data = 0.101263, loss_pde = 7.654228
+Adam Iter 9: Loss = 5.964361, Discovered nu = 0.020002, loss_data = 0.100460, loss_pde = 5.863901
+Adam training finished in 1.76 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B Final Iter 64: Loss = 0.071665, Discovered nu = 0.020002, loss_data = 0.071448, loss_pde = 0.000217
+L-BFGS-B training finished in 83.60 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 64
+RESULT_NU0502_RUN,1,0.05,1.000000e-05,0.020002,0.6000,7.166540e-02,7.144815e-02,2.172472e-04,3.573360e-02,3.571455e-02,1.252645e-04,9.198271e-05,0.91,1.76,83.60
+Run 1 Finished. Discovered nu: 0.020002, Relative Error: 0.6000

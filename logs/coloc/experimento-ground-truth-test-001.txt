@@ -1,0 +1,16 @@
+--- Starting Run 1/1 ---
+Running with Seed: 1, Learning Rate: 1.000000e-05
+Explicitly setting initial nu to: 0.02
+Starting Data-Only Pre-training for 500 epochs...
+Data-Only Epoch 0: Data Loss = 0.133554
+Data-Only Pre-training finished in 1.81 seconds.
+Starting Adam training (Full Loss)...
+Adam Epoch 0: Loss = 1.300425, Discovered nu = 0.020000
+Adam training finished in 3.40 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B training finished in 37.04 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 69
+RESULT_RUN,1,1.000000e-05,0.019993,0.6001,7.141825e-02,1.81,3.40,37.04
+Run 1 Finished. Discovered nu: 0.019993, Relative Error: 0.6001

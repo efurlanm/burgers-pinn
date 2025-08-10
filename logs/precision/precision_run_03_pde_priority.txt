@@ -1,0 +1,52 @@
+Ground truth nu: 0.05
+Initial guess for nu: 0.060000
+Training with: Adam Epochs = 200, Lambda Data = 1.0, Lambda PDE = 20.0
+Starting Adam training...
+Adam Epoch 0: Loss = 17.712971, Discovered nu = 0.060060
+Adam Epoch 100: Loss = 0.167061, Discovered nu = 0.060225
+
+Adam training finished.
+Starting L-BFGS-B training with SciPy...
+  L-BFGS-B: Loss = 9.751989e-02, Grad Norm = 1.471735e+00, nu_pinn_grad = 3.656623e-05
+  L-BFGS-B: Loss = 1.381210e+04, Grad Norm = 1.020303e+05, nu_pinn_grad = 6.671557e-01
+  L-BFGS-B: Loss = 9.750466e-02, Grad Norm = 1.315085e+00, nu_pinn_grad = 4.766010e-05
+  L-BFGS-B: Loss = 9.748611e-02, Grad Norm = 1.122308e+00, nu_pinn_grad = 4.964552e-05
+  L-BFGS-B: Loss = 9.736525e-02, Grad Norm = 1.884475e+00, nu_pinn_grad = 5.537884e-05
+  L-BFGS-B: Loss = 9.717941e-02, Grad Norm = 5.463017e+00, nu_pinn_grad = 7.611902e-05
+  L-BFGS-B: Loss = 9.669396e-02, Grad Norm = 7.384302e+00, nu_pinn_grad = 6.562674e-05
+  L-BFGS-B: Loss = 9.541892e-02, Grad Norm = 1.313701e+01, nu_pinn_grad = 9.809620e-05
+  L-BFGS-B: Loss = 9.514726e-02, Grad Norm = 2.338602e+01, nu_pinn_grad = 6.189312e-05
+  L-BFGS-B: Loss = 9.067307e-02, Grad Norm = 1.671842e+01, nu_pinn_grad = 6.382749e-05
+  L-BFGS-B: Loss = 8.752022e-02, Grad Norm = 1.259533e+01, nu_pinn_grad = 1.179253e-05
+  L-BFGS-B: Loss = 8.630225e-02, Grad Norm = 9.935256e-01, nu_pinn_grad = 5.179151e-05
+  L-BFGS-B: Loss = 8.629497e-02, Grad Norm = 1.044581e+00, nu_pinn_grad = 4.929619e-05
+  L-BFGS-B: Loss = 8.627380e-02, Grad Norm = 3.006290e+00, nu_pinn_grad = 2.198570e-05
+  L-BFGS-B: Loss = 8.606246e-02, Grad Norm = 3.224737e+00, nu_pinn_grad = 2.496897e-05
+  L-BFGS-B: Loss = 8.603736e-02, Grad Norm = 8.812604e+00, nu_pinn_grad = -2.406884e-06
+  L-BFGS-B: Loss = 8.560479e-02, Grad Norm = 8.156323e+00, nu_pinn_grad = 1.211782e-05
+  L-BFGS-B: Loss = 8.403704e-02, Grad Norm = 5.488605e+00, nu_pinn_grad = 4.800757e-05
+  L-BFGS-B: Loss = 7.890582e-02, Grad Norm = 9.311121e+00, nu_pinn_grad = 1.076052e-04
+  L-BFGS-B: Loss = 7.863530e-02, Grad Norm = 1.234824e+01, nu_pinn_grad = 1.286736e-04
+  L-BFGS-B: Loss = 7.766643e-02, Grad Norm = 6.670712e+00, nu_pinn_grad = 8.925402e-05
+  L-BFGS-B: Loss = 7.745160e-02, Grad Norm = 4.020751e+00, nu_pinn_grad = 6.743427e-05
+  L-BFGS-B: Loss = 7.737800e-02, Grad Norm = 3.539062e+00, nu_pinn_grad = 1.684581e-05
+  L-BFGS-B: Loss = 7.731646e-02, Grad Norm = 1.600728e+00, nu_pinn_grad = 2.756081e-05
+  L-BFGS-B: Loss = 7.729950e-02, Grad Norm = 6.516673e-01, nu_pinn_grad = 3.160698e-05
+  L-BFGS-B: Loss = 7.732040e-02, Grad Norm = 1.941372e+00, nu_pinn_grad = 3.292310e-05
+  L-BFGS-B: Loss = 7.730447e-02, Grad Norm = 1.056876e+00, nu_pinn_grad = 3.710627e-05
+  L-BFGS-B: Loss = 7.729974e-02, Grad Norm = 6.504694e-01, nu_pinn_grad = 3.160305e-05
+  L-BFGS-B: Loss = 7.729957e-02, Grad Norm = 6.518180e-01, nu_pinn_grad = 3.161687e-05
+  L-BFGS-B: Loss = 7.729950e-02, Grad Norm = 6.516759e-01, nu_pinn_grad = 3.160692e-05
+  L-BFGS-B: Loss = 7.729950e-02, Grad Norm = 6.516753e-01, nu_pinn_grad = 3.160661e-05
+  L-BFGS-B: Loss = 7.729950e-02, Grad Norm = 6.516673e-01, nu_pinn_grad = 3.160698e-05
+  L-BFGS-B: Loss = 7.729950e-02, Grad Norm = 6.516673e-01, nu_pinn_grad = 3.160698e-05
+
+L-BFGS-B training finished.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 23
+--------------------------------------------------
+Final Discovered nu: 0.060007
+Ground Truth nu: 0.05
+
+Results saved to results/precision_results_data_1.0_pde_20.0_epochs_200.npz

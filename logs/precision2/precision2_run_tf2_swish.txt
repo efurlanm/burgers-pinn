@@ -1,0 +1,46 @@
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+Running with seed: 1
+Ground truth nu: 0.05
+Initial guess for nu: 0.060000
+Training with: Adam Epochs = 2000, Data-Only Epochs = 10000, Lambda Data = 1.0, Lambda PDE = 1.0, PDE Points = 60000
+Searching for the best initial nu...
+Traceback (most recent call last):
+  File "/home/x/inpe/burgers2d-tf-dis/main_precision2.py", line 466, in <module>
+    duration_data_only, adam_duration, lbfgs_duration = pinn.train(epochs_adam=adam_epochs, epochs_data_only=epochs_data_only)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/inpe/burgers2d-tf-dis/main_precision2.py", line 233, in train
+    best_initial_nu = self.find_best_initial_nu([0.01, 0.05, 0.1, 0.5], adam_optimizer)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/inpe/burgers2d-tf-dis/main_precision2.py", line 301, in find_best_initial_nu
+    loss = self.train_step_adam(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/inpe/burgers2d-tf-dis/main_precision2.py", line 155, in train_step_adam
+    loss = self.compute_loss(x_data, y_data, t_data, u_data, v_data, x_pde, y_pde, t_pde)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/inpe/burgers2d-tf-dis/main_precision2.py", line 142, in compute_loss
+    f_u_pred, f_v_pred = self.compute_pde_residual(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/inpe/burgers2d-tf-dis/main_precision2.py", line 114, in compute_pde_residual
+    v_y = tape.gradient(v, y)
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/eager/backprop.py", line 1066, in gradient
+    flat_grad = imperative_grad.imperative_grad(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/eager/imperative_grad.py", line 67, in imperative_grad
+    return pywrap_tfe.TFE_Py_TapeGradient(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/custom_gradient.py", line 583, in actual_grad_fn
+    input_grads = grad_fn(*result_grads)
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/nn_impl.py", line 474, in grad
+    sigmoid_features * (1.0 + (beta * features) *
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/util/traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/framework/ops.py", line 5983, in raise_from_not_ok_status
+    raise core._status_to_exception(e) from None  # pylint: disable=protected-access
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tensorflow.python.framework.errors_impl.ResourceExhaustedError: {{function_node __wrapped__Mul_device_/job:localhost/replica:0/task:0/device:GPU:0}} failed to allocate memory [Op:Mul] name: 

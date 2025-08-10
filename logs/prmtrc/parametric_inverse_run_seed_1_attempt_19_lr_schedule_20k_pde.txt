@@ -1,0 +1,163 @@
+Running with seed: 1
+--- Stage 1: Parametric PINN Training ---
+Training with: Adam Epochs = 1000, Data-Only Epochs = 10000, Lambda Data = 1.0, Lambda PDE = 1.0, PDE Points = 20000, Nu Range = [0.01, 0.1])
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Epoch 0: Data Loss = 0.086210
+Data-Only Epoch 1000: Data Loss = 0.000024
+Data-Only Epoch 2000: Data Loss = 0.000016
+Data-Only Epoch 3000: Data Loss = 0.000007
+Data-Only Epoch 4000: Data Loss = 0.000008
+Data-Only Epoch 5000: Data Loss = 0.000053
+Data-Only Epoch 6000: Data Loss = 0.000003
+Data-Only Epoch 7000: Data Loss = 0.000004
+Data-Only Epoch 8000: Data Loss = 0.000002
+Data-Only Epoch 9000: Data Loss = 0.000036
+Data-Only Pre-training finished in 20.85 seconds.
+Starting Adam training (Full Loss)...
+Adam Epoch 0: Loss = 0.114497
+Adam Epoch 100: Loss = 0.001150
+Adam Epoch 200: Loss = 0.000533
+Adam Epoch 300: Loss = 0.000376
+Adam Epoch 400: Loss = 0.000268
+Adam Epoch 500: Loss = 0.000234
+Adam Epoch 600: Loss = 0.000174
+Adam Epoch 700: Loss = 0.000152
+Adam Epoch 800: Loss = 0.000135
+Adam Epoch 900: Loss = 0.000130
+
+Adam training finished in 130.25 seconds.
+Starting L-BFGS-B training with SciPy...
+Traceback (most recent call last):
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/client/session.py", line 1401, in _do_call
+    return fn(*args)
+           ^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/client/session.py", line 1384, in _run_fn
+    return self._call_tf_sessionrun(options, feed_dict, fetch_list,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/client/session.py", line 1477, in _call_tf_sessionrun
+    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tensorflow.python.framework.errors_impl.ResourceExhaustedError: 2 root error(s) found.
+  (0) RESOURCE_EXHAUSTED: OOM when allocating tensor with shape[20000,60] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+	 [[{{node gradients_10/gradients_5/Sigmoid_5_grad/SigmoidGrad_grad/SigmoidGrad}}]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. This isn't available when running in Eager mode.
+
+	 [[gradients_10/AddN_148/_71]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. This isn't available when running in Eager mode.
+
+  (1) RESOURCE_EXHAUSTED: OOM when allocating tensor with shape[20000,60] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+	 [[{{node gradients_10/gradients_5/Sigmoid_5_grad/SigmoidGrad_grad/SigmoidGrad}}]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. This isn't available when running in Eager mode.
+
+0 successful operations.
+0 derived errors ignored.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 584, in <module>
+    duration_data_only_stage1, adam_duration_stage1, lbfgs_duration_stage1 = pinn.train(
+                                                                             ^^^^^^^^^^^
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 357, in train
+    scipy_results = scipy.optimize.minimize(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/scipy/optimize/_minimize.py", line 731, in minimize
+    res = _minimize_lbfgsb(fun, x0, args, jac, bounds,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/scipy/optimize/_lbfgsb_py.py", line 407, in _minimize_lbfgsb
+    f, g = func_and_grad(x)
+           ^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/scipy/optimize/_differentiable_functions.py", line 343, in fun_and_grad
+    self._update_fun()
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/scipy/optimize/_differentiable_functions.py", line 294, in _update_fun
+    fx = self._wrapped_fun(self.x)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/scipy/optimize/_differentiable_functions.py", line 20, in wrapped
+    fx = fun(np.copy(x), *args)
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/scipy/optimize/_optimize.py", line 79, in __call__
+    self._compute_if_needed(x, *args)
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/scipy/optimize/_optimize.py", line 73, in _compute_if_needed
+    fg = self.fun(x, *args)
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 308, in loss_and_grads_scipy
+    loss_value, grads_value = self.session.run([self.loss_op, self.gradient_op], feed_dict=feed_dict)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/client/session.py", line 971, in run
+    result = self._run(None, fetches, feed_dict, options_ptr,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/client/session.py", line 1214, in _run
+    results = self._do_run(handle, final_targets, final_fetches,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/client/session.py", line 1394, in _do_run
+    return self._do_call(_run_fn, feeds, fetches, targets, options,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/client/session.py", line 1420, in _do_call
+    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tensorflow.python.framework.errors_impl.ResourceExhaustedError: Graph execution error:
+
+Detected at node 'gradients_10/gradients_5/Sigmoid_5_grad/SigmoidGrad_grad/SigmoidGrad' defined at (most recent call last):
+    File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 570, in <module>
+    File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 80, in __init__
+Node: 'gradients_10/gradients_5/Sigmoid_5_grad/SigmoidGrad_grad/SigmoidGrad'
+Detected at node 'gradients_10/gradients_5/Sigmoid_5_grad/SigmoidGrad_grad/SigmoidGrad' defined at (most recent call last):
+    File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 570, in <module>
+    File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 80, in __init__
+Node: 'gradients_10/gradients_5/Sigmoid_5_grad/SigmoidGrad_grad/SigmoidGrad'
+2 root error(s) found.
+  (0) RESOURCE_EXHAUSTED: OOM when allocating tensor with shape[20000,60] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+	 [[{{node gradients_10/gradients_5/Sigmoid_5_grad/SigmoidGrad_grad/SigmoidGrad}}]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. This isn't available when running in Eager mode.
+
+	 [[gradients_10/AddN_148/_71]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. This isn't available when running in Eager mode.
+
+  (1) RESOURCE_EXHAUSTED: OOM when allocating tensor with shape[20000,60] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+	 [[{{node gradients_10/gradients_5/Sigmoid_5_grad/SigmoidGrad_grad/SigmoidGrad}}]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. This isn't available when running in Eager mode.
+
+0 successful operations.
+0 derived errors ignored.
+
+Original stack trace for 'gradients_10/gradients_5/Sigmoid_5_grad/SigmoidGrad_grad/SigmoidGrad':
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 570, in <module>
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 80, in __init__
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/gradients_impl.py", line 181, in gradients
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/gradients_util.py", line 733, in _GradientsHelper
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/gradients_util.py", line 365, in _MaybeCompile
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/gradients_util.py", line 734, in <lambda>
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/math_grad.py", line 1250, in _SigmoidGradGrad
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/gen_math_ops.py", line 10276, in sigmoid_grad
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/framework/op_def_library.py", line 796, in _apply_op_helper
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/framework/ops.py", line 2682, in _create_op_internal
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/framework/ops.py", line 1177, in from_node_def
+
+...which was originally created as op 'gradients_5/Sigmoid_5_grad/SigmoidGrad', defined at:
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 570, in <module>
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 79, in __init__
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 232, in compute_loss
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 208, in compute_pde_residual
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/gradients_impl.py", line 181, in gradients
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/gradients_util.py", line 733, in _GradientsHelper
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/gradients_util.py", line 365, in _MaybeCompile
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/gradients_util.py", line 734, in <lambda>
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/math_grad.py", line 1241, in _SigmoidGrad
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/gen_math_ops.py", line 10276, in sigmoid_grad
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/framework/op_def_library.py", line 796, in _apply_op_helper
+
+...which was originally created as op 'Sigmoid_5', defined at:
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 570, in <module>
+[elided 1 identical lines from previous traceback]
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 232, in compute_loss
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 200, in compute_pde_residual
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 182, in predict_velocity
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 172, in neural_network_model
+  File "/home/x/inpe/burgers2d-tf-dis/main_prmtrc.py", line 39, in swish_activation
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/weak_tensor_ops.py", line 88, in wrapper
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/util/traceback_utils.py", line 150, in error_handler
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/util/dispatch.py", line 1260, in op_dispatch_handler
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/math_ops.py", line 4125, in sigmoid
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/ops/gen_math_ops.py", line 10216, in sigmoid
+  File "/home/x/conda/envs/tf2/lib/python3.12/site-packages/tensorflow/python/framework/op_def_library.py", line 796, in _apply_op_helper
+

@@ -1,0 +1,34 @@
+Running with Seed: 1, Learning Rate: 2.154435e-03
+Explicitly setting initial nu to: 0.02
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Epoch 0: Data Loss = 0.078988
+Data-Only Epoch 1000: Data Loss = 0.000189
+Data-Only Epoch 2000: Data Loss = 0.000041
+Data-Only Epoch 3000: Data Loss = 0.000064
+Data-Only Epoch 4000: Data Loss = 0.000056
+Data-Only Epoch 5000: Data Loss = 0.000040
+Data-Only Epoch 6000: Data Loss = 0.000011
+Data-Only Epoch 7000: Data Loss = 0.000010
+Data-Only Epoch 8000: Data Loss = 0.000015
+Data-Only Epoch 9000: Data Loss = 0.000024
+Data-Only Pre-training finished in 20.69 seconds. Final Data Loss = 0.000028
+Starting Adam training (Full Loss)...
+Adam Epoch 0: Loss = 10.003204, Discovered nu = 0.020043
+Adam Epoch 200: Loss = 0.025628, Discovered nu = 0.019513
+Adam Epoch 400: Loss = 0.010700, Discovered nu = 0.020074
+Adam Epoch 600: Loss = 0.006504, Discovered nu = 0.020331
+Adam Epoch 800: Loss = 0.004884, Discovered nu = 0.020453
+Adam Epoch 1000: Loss = 0.004117, Discovered nu = 0.020525
+Adam Epoch 1200: Loss = 0.005001, Discovered nu = 0.020558
+Adam Epoch 1400: Loss = 0.002960, Discovered nu = 0.020544
+Adam Epoch 1600: Loss = 0.015838, Discovered nu = 0.020512
+Adam Epoch 1800: Loss = 0.005765, Discovered nu = 0.020439
+Adam training finished in 48.36 seconds. Final Loss = 0.008573, Discovered nu = 0.020325
+Starting L-BFGS-B training with SciPy...
+  L-BFGS-B Iter 100: Loss = 1.563477e-03, Grad Norm = 5.285237e-02, nu_pinn_grad = -3.804132e-04
+L-BFGS-B training finished in 41.10 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 86
+RESULT_RUN,1,2.154435e-03,0.020325,0.5935,1.563477e-03,20.69,48.36,41.10
+Run 1 Finished. Discovered nu: 0.020325, Relative Error: 0.5935
