@@ -1,0 +1,44 @@
+# Last edited: 2026-01-21
+site_name: Burgers PINN
+site_author: Eduardo Furlan
+site_description: Parameter Discovery in the 2D Burgers' Equation via Physics-Informed Neural Networks
+site_url: https://efurlanm.github.io/burgers-pinn/
+copyright: CC BY 4.0 License
+repo_name: "burgers-pinn"
+repo_url: http://github.com/efurlanm/burgers-pinn/
+site_dir: docs              # Github standard convention
+docs_dir: docs_src
+##use_directory_urls: false  # offline functionality (creates file.html)
+theme:
+    name: material
+    # squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
+    palette:
+        primary: green
+        accent:  green
+    font:                   # provides uniformity between platforms
+        text: Roboto
+        code: Roboto Mono
+    features:
+        - header.autohide
+plugins:
+    - autorefs              # enables global reference resolution
+extra_css:
+    - assets/extra.css
+    - https://unpkg.com/katex@0/dist/katex.min.css
+extra_javascript:
+    - assets/katex.js
+    - https://unpkg.com/katex@0/dist/katex.min.js
+    - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+markdown_extensions:
+    - tables
+    - md_in_html            # allows for writing Markdown inside of HTML
+    - attr_list             # required to define manual IDs {#id}
+    - pymdownx.magiclink    # autolinks
+    - pymdownx.arithmatex:
+        generic: true       # for Katex
+validation:
+    links:
+        anchors: warn       # detects broken links in the compilation
+exclude_docs: |
+    .*
+    *§*

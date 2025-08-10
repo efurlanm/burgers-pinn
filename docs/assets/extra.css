@@ -1,0 +1,127 @@
+/* efurlanm.github.io - Last edited: 2026-01-17 */
+
+/* AVATAR */
+.md-typeset img[src$="img/avatar-200x150.jpg"] {
+  float: right;
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+
+/* Remove the Site Name/Title from the top of the left sidebar */
+.md-nav--primary .md-nav__title {
+  display: none;
+}
+
+/* Remove the border from the directory icon */
+[dir="ltr"] .md-nav__link .md-icon:last-child {
+  margin-left: 0;
+}
+
+/* A responsive container that aligns content to the right */
+.align-right-container {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  font-size: .7rem;
+}
+  
+/* Applies only to large screens. Min-width: 60, 76.25 */
+@media (min-width: 60em) {
+  /* A responsive container that aligns content to the right */
+  .align-right-container {
+    font-size: .8rem;
+  }
+    /* Left sidebar width */
+  .md-sidebar--primary {
+    padding-left: 1rem;
+  } 
+  /* Rigth sidebar margin */
+  .md-sidebar--secondary {
+    padding-left: 3rem;
+    padding-top: 2.2rem;  /* std: 1.2rem */
+  }
+}
+
+/* Rigth sidebar tex color */
+.md-nav--secondary a {
+  color: var(--md-default-fg-color--light);
+}
+
+/* BEGIN LIST */
+
+/* Zero bottom margin for all li - CRUCIAL TO AVOID RESIDUAL SPACING */
+.md-typeset ul li,
+.md-typeset ol li {
+  margin-bottom: 0;
+}
+
+/* Spacing BETWEEN list items (using MARGIN on li) - CONDITIONAL: Only if there is another li BEFORE AND IF the *FIRST CHILD* of THIS li is a <p> */
+.md-typeset li + li > p:first-of-type { 
+  /* Adjacent sibling selector (+) AND direct child selector (>) AND :first-of-type selector - CRUCIAL */
+  margin-top: 0rem; /* Spacing between items WITH <p> - Adjust this value to control "one line" spacing */
+}
+
+/* Spacing ONLY for the FIRST sublist WITHIN a parent list item THAT HAS A PARAGRAPH */
+.md-typeset li > p + ul,
+.md-typeset li > p + ol {
+  margin-top: 0rem;
+}
+
+/* Remove internal padding of paragraphs WITHIN LIs */
+.md-typeset li > p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Spacing between paragraphs WITHIN THE SAME list item */
+.md-typeset li > p + p {
+  margin-top: 0.5rem;
+}
+
+/* Remove extra margin on lists immediately after a paragraph outside the list */
+.md-typeset > p + ul,
+.md-typeset > p + ol {
+  margin-top: 0.8rem;
+}
+
+/* END LIST */
+
+/* Main text link color */
+.md-typeset a {
+  color: var(--md-default-fg-color--light);
+}
+
+/* CODE */
+.md-typeset code:not([class]) {
+  font-size: .875em;
+}
+
+/* FIGCAPTION */
+.md-typeset figcaption:not([class]) {
+  font-size: .875em;
+  font-style: normal;
+}
+
+/* TABLE */
+.md-typeset table:not([class]) {
+  font-size: .875em;
+  line-height: 1;
+  border: none;
+  border-collapse: collapse;
+}
+.md-typeset table:not([class]) td,
+.md-typeset table:not([class]) th {
+  border: 1px solid var(--md-typeset-table-color);
+  vertical-align: middle;
+}
+.md-typeset table:not([class]) th {
+  background-color: WhiteSmoke;
+}
+
+/* BLOG "Continue reading" link color */
+.md-typeset .md-post__action a {
+  color: var(--md-typeset-a-color);
+}
+.md-typeset .md-post__action a:hover {
+  color: var(--md-accent-fg-color);
+}

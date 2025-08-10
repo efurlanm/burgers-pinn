@@ -1,0 +1,13 @@
+python scripts/main_latin.py \
+  --run_id "lhs2_best_repro" \
+  --seed 2 \
+  --adam_epochs_stage1 15000 \
+  --epochs_data_only_stage1 1500 \
+  --num_pde_points_stage1 15000 \
+  --epochs_inverse_adam_pretrain 2000 \
+  --learning_rate 0.000229 \
+  --neurons 50 \
+  --layers 4 \
+  --num_datasets_gene 19 \
+  --noise_level 0.0399 \
+  --results_dir "results/lhs2_repro"

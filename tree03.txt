@@ -1,0 +1,67 @@
+.
+├── burgers2d-exact
+│   ├── burgers2d-exact.py
+│   ├── burgers_2d_solution.png
+│   ├── burgers_slices.png
+│   └── README.md
+├── configs
+│   ├── config.template.yaml
+│   └── lhs2_best.yaml
+├── docs_src
+│   ├── assets
+│   │   ├── extra.css
+│   │   └── katex.js
+│   ├── img
+│   │   ├── 01.webp
+│   │   └── 02.webp
+│   ├── index.md
+│   └── research_update_appendix.md
+├── environment
+│   ├── base_environment.yml
+│   └── environment.yml
+├── experiments
+│   ├── hopt
+│   │   └── README.md
+│   └── plateau
+│       └── README.md
+├── HOW-IT-WORKS.md
+├── LICENSE
+├── mkdocs.yml
+├── presentation
+│   └── slides-CIACA2025.pdf
+├── README.md
+├── reports
+│   ├── analise_comparativa_rastreavel.md
+│   ├── base_specialist
+│   │   └── CIACA_2025_RESULTADOS.md
+│   └── generalist_lhs
+│       └── latin_analysis_results.md
+├── scripts
+│   ├── analyze_ensemble_results.py
+│   ├── analyze_latin_results.py
+│   ├── collect_results.py
+│   ├── compare_results.py
+│   ├── find_best_lhs_seed.py
+│   ├── find_best_trial.py
+│   ├── generate_timing_report.py
+│   ├── generate_validation.py
+│   ├── main_hopt_unified.py
+│   ├── main_latin.py
+│   ├── main_plateau.py
+│   ├── main_validation.py
+│   ├── pinn_model.py
+│   ├── plot_results.py
+│   ├── results
+│   │   ├── ensemble
+│   │   │   ├── ensemble_seed_1.npz
+│   │   │   ├── ensemble_seed_2.npz
+│   │   │   └── ensemble_seed_3.npz
+│   │   └── plateau
+│   ├── run_ensemble.sh
+│   ├── run_hopt.sh
+│   ├── run_latin.sh
+│   ├── run_lhs2_repro.sh
+│   └── run_plateau.sh
+└── tree03.txt
+
+17 directories, 47 files

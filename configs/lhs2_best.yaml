@@ -1,0 +1,53 @@
+# Configuração do Experimento "lhs2" (Melhor Resultado: Erro ~2.53%)
+# Baseado no log: logs/lhs2/extended_run_seed_2.log
+# Reconstruído a partir de fontes primárias do experimento.
+
+# Seed 2 foi identificada como a melhor semente na análise de ensemble LHS
+seed: 2
+
+# Parâmetros de Dados e Física
+data:
+  # Valor de nu usado no conjunto de teste/validação (problema inverso)
+  nu_true: 0.05 
+  # Ruído Gaussiano adicionado aos dados (Valor otimizado: ~4%)
+  noise_level: 0.0399
+  # Número de datasets usados no treino (amostragem LHS)
+  num_datasets_gene: 19
+  # Intervalo de treino para nu (Currículo)
+  nu_min: 0.01
+  nu_max: 0.1
+
+# Arquitetura da Rede Neural (Otimizada via Hyperopt)
+model:
+  layers: 4
+  neurons: 50
+  activation: 'swish'
+
+# Hiperparâmetros de Treinamento
+training:
+  # Estágio 1: Treinamento do Surrogate Paramétrico
+  stage1:
+    # Pré-treino apenas com dados (Data-Only)
+    epochs_data_only: 1500
+    # Treino principal com Adam (AUMENTADO de 6000 para 15000 no lhs2)
+    adam_epochs: 15000
+    # Taxa de aprendizado otimizada
+    learning_rate: 0.000229
+    # Número de pontos de colocação da PDE
+    num_pde_points: 15000
+    # Tamanho do lote para pontos da PDE (Otimização de memória)
+    pde_batch_size: 4096
+
+  # Estágio 2: Problema Inverso (Descoberta de nu)
+  stage2:
+    # Pré-treino do parâmetro nu (Adam)
+    epochs_inverse_adam_pretrain: 2000
+    # Refino final do nu (L-BFGS-B)
+    # Nota: L-BFGS-B roda até convergir ou atingir maxiter definido no código
+    epochs_inverse_adam: 5000 
+    learning_rate: 0.001
+
+# Configuração de Saída
+output:
+  run_id: "lhs2_best_reproduction"
+  results_dir: "results/lhs2_repro"

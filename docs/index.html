@@ -1,0 +1,1059 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Parameter Discovery in the 2D Burgers' Equation via Physics-Informed Neural Networks">
+      
+      
+        <meta name="author" content="Eduardo Furlan">
+      
+      
+        <link rel="canonical" href="https://efurlanm.github.io/burgers-pinn/index.html">
+      
+      
+      
+        <link rel="next" href="research_update_appendix.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Burgers PINN</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/extra.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#parameter-discovery-in-the-2d-burgers-equation-via-physics-informed-neural-networks" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Burgers PINN" class="md-header__button md-logo" aria-label="Burgers PINN" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Burgers PINN
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Parameter Discovery in the 2D Burgers' Equation via Physics-Informed Neural Networks
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="http://github.com/efurlanm/burgers-pinn/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    burgers-pinn
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Burgers PINN" class="md-nav__button md-logo" aria-label="Burgers PINN" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Burgers PINN
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="http://github.com/efurlanm/burgers-pinn/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    burgers-pinn
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parameter Discovery in the 2D Burgers' Equation via Physics-Informed Neural Networks
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="index.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parameter Discovery in the 2D Burgers' Equation via Physics-Informed Neural Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abstract
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-related-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Related Work
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-the-2d-burgers-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. The 2D Burgers' Equation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-methodology-and-pinn-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Methodology and PINN Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Methodology and PINN Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-model-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Model Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-synthetic-data-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Synthetic Data Generation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-training-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. Training Strategy
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-methodological-refinements-and-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Methodological Refinements and Challenges
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-results-and-discussion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Results and Discussion
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Results and Discussion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-precision-and-robustness-in-parameter-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Precision and Robustness in Parameter Discovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-impact-of-data-noise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2. Impact of Data Noise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-qualitative-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3. Qualitative Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Conclusion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-future-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Future Work
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Future Work">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acknowledgments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acknowledgments
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="research_update_appendix.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appendix A: Methodological Advances - From Specialist to Generalist Surrogate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abstract
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-related-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Related Work
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-the-2d-burgers-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. The 2D Burgers' Equation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-methodology-and-pinn-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Methodology and PINN Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Methodology and PINN Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-model-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Model Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-synthetic-data-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Synthetic Data Generation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-training-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. Training Strategy
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-methodological-refinements-and-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Methodological Refinements and Challenges
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-results-and-discussion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Results and Discussion
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Results and Discussion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-precision-and-robustness-in-parameter-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Precision and Robustness in Parameter Discovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-impact-of-data-noise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2. Impact of Data Noise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-qualitative-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3. Qualitative Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Conclusion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-future-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Future Work
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Future Work">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acknowledgments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acknowledgments
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="parameter-discovery-in-the-2d-burgers-equation-via-physics-informed-neural-networks">Parameter Discovery in the 2D Burgers' Equation via Physics-Informed Neural Networks</h1>
+<p><strong>Eduardo Furlan Miranda</strong><span class="arithmatex">\(^{1}\)</span>, <strong>Roberto Pinto Souto</strong><span class="arithmatex">\(^{2}\)</span>, <strong>Stephan Stephany</strong><span class="arithmatex">\(^{1}\)</span><br />
+<em><span class="arithmatex">\(^1\)</span>National Institute for Space Research (INPE), São José dos Campos - SP</em><br />
+<em><span class="arithmatex">\(^2\)</span>National Laboratory for Scientific Computing (LNCC), Petrópolis - RJ</em></p>
+<h2 id="abstract">Abstract</h2>
+<p>A Physics-Informed Neural Network (PINN) is proposed for the discovery of the kinematic viscosity parameter (<span class="arithmatex">\(\nu\)</span>) in the 2D Burgers' equation. The methodology employs a hybrid optimization strategy, combining the Adam optimizer with L-BFGS-B, and incorporates advanced techniques such as adaptive loss weighting, curriculum learning for the parameter <span class="arithmatex">\(\nu\)</span>, and range-based regularization to enhance convergence and stability. The results demonstrate the model's high precision in the inverse problem, achieving the discovery of <span class="arithmatex">\(\nu\)</span> with consistently low relative errors, ranging from 0.0% to 1.7% across multiple test scenarios. The study also reveals the model's robustness to the addition of Gaussian noise in the training data. Although the parameter discovery is accurate, the generalization of the parametric model to a wider range of <span class="arithmatex">\(\nu\)</span> values remains a challenge. This work emphasizes the effectiveness of specific training strategies for the application of PINNs in inverse problems in science and engineering.</p>
+<p><strong>Keywords:</strong> Physics-Informed Neural Networks, Burgers’ Equation, Parameter Discovery, Inverse Problems, Finite Difference Method.</p>
+<h2 id="1-introduction">1. Introduction</h2>
+<p>Partial differential equations (PDEs) are fundamental to many scientific and engineering disciplines, classically resolved by numerical methods such as the Finite Element Method (FEM) [Zienkiewicz et al., 2013] and the Finite Difference Method (FDM) [LeVeque, 2007], which form the basis of these methods. Burgers' equation [Burgers, 1948] is a nonlinear PDE of particular interest, as it appears in various fields such as fluid mechanics, nonlinear acoustics, and traffic flow. The so-called "direct problem" solves the PDE using known parameters utilizing one of the well-known methods, whereas the "inverse problem" estimates PDE parameters from observed or synthetic data, representing an open challenge due to its frequently ill-posed nature and sensitivity to noise or limitations in input data. In this context, PINNs emerge as a computationally attractive machine learning approach, primarily because they do not depend on high-resolution discretization meshes, one of the main cost factors in large-scale simulations used in both direct and inverse problems.</p>
+<p>This work explores the inverse problem of the 2D Burgers' equation for estimating the kinematic viscosity parameter via a PINN [Raissi et al., 2019], detailing refinements applied to the training of this neural network. Practical implementation challenges are addressed, and methodological improvements are presented for a robust and accurate determination of kinematic viscosity. Key improvements include the implementation of Weighted Curriculum Learning, the integration of callbacks, and Range-Based Regularization. Furthermore, we highlight the implemented hybrid optimization approach, which combines the Adam algorithm [Kingma and Ba, 2014] for a global search, and L-BFGS-B [Zhu et al., 1997] for a local search. The source code for this work is publicly available at <a href="https://github.com/efurlanm/burgers-pinn">https://github.com/efurlanm/burgers-pinn</a>.</p>
+<h2 id="2-related-work">2. Related Work</h2>
+<p>The use of machine learning, specifically deep learning, to solve differential equations has shown growing interest, with Physics-Informed Neural Networks (PINNs) emerging as a highlight. A pioneering study by Raissi, Perdikaris, and Karniadakis (2019) presented the fundamental framework for PINNs, demonstrating their effectiveness in solving direct and inverse problems involving nonlinear PDEs. Subsequent studies and reviews, such as Cuomo et al. (2022), provided a comprehensive overview of the field, consolidating the importance of PINNs in machine learning applied to scientific problems.</p>
+<p>PINNs have been successfully applied to some fluid dynamics problems, including the Burgers and Navier-Stokes equations (Raissi, Perdikaris, and Karniadakis, 2019). Although these applications demonstrate the potential of PINNs, solving inverse problems, such as parameter discovery, remains a significant challenge. The literature in the field frequently notes that identifying unknown physical parameters is significantly more difficult than solving the direct problem, often due to the use of limited or noisy observational data.</p>
+<p>Many studies have focused on the challenges associated with the training of PINNs, which involves the minimization of a loss function whose gradients may assume near-zero or excessively high values. Furthermore, the proposed PINN utilizes a composite loss function that can lead to an imbalanced optimization problem, where one of its terms may dominate the gradients, hindering convergence; this can be circumvented by using an adaptive weighting scheme that dynamically adjusts the weights of the loss terms during training. The choice of optimizer is also a critical factor, with many studies employing a hybrid approach, such as the one proposed in the implemented PINN: an initial global search using a standard neural network, in this case with the Adam optimizer (Kingma and Ba, 2014), followed by a local search employing a quasi-Newton method, in this case, the L-BFGS-B method (Wang, Teng, and Perdikaris, 2021).</p>
+<p>This work adopts a two-stage optimization strategy, separating the training of the parametric network from the subsequent parameter discovery. In Stage 1, a standard neural network is employed with the Adam optimizer utilizing a standard <em>data loss</em> calculated from the difference between the observed data and the data estimated by the network. In Stage 2, related to the discovery of the parameter <span class="arithmatex">\(\nu\)</span>, the network pre-trained in the previous stage is retrained with a composite loss function, which considers the previous <em>dataloss</em> term and a second <em>PDEloss</em> term relative to the residuals of the application of the PDE to a set of collocation points. However, Stage 2 utilizes a hybrid approach, where its training begins using the Adam optimizer for a global search and then proceeds with the L-BFGS-B optimizer for a local search.</p>
+<p>Despite the literature's focus on new architectures, there is a scarcity of studies detailing practical implementation difficulties, such as execution instabilities of optimizers or interactions with JIT compilers, which are critical for reproducibility. This work aims to fill this gap, offering insights into the choice of optimizers and the configuration of the software environment to obtain reliable results.</p>
+<h2 id="3-the-2d-burgers-equation">3. The 2D Burgers' Equation</h2>
+<p>The 2D Burgers' equation is a system of two coupled, nonlinear partial differential equations (PDEs) that describe the velocity field of a fluid. The equations are given by:
+$$
+\frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} = \nu \left( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} \right) \quad
+$$
+and
+$$
+\quad \frac{\partial v}{\partial t} + u \frac{\partial v}{\partial x} + v \frac{\partial v}{\partial y} = \nu \left( \frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2} \right) \quad (1)
+$$
+Above, <span class="arithmatex">\(u(x, y, t)\)</span> and <span class="arithmatex">\(v(x, y, t)\)</span> are the velocity components in the <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> directions, respectively, and <span class="arithmatex">\(\nu\)</span> represents the kinematic viscosity of the fluid. For this study, a benchmark configuration was defined with a spatial domain <span class="arithmatex">\(\Omega = \times\)</span> and a temporal domain <span class="arithmatex">\(T = [0, 0.05]\)</span>. The discretization for the generation of reference data utilizes a grid of <span class="arithmatex">\(41 \times 41\)</span> spatial points and 50 time steps. This configuration was chosen for being sufficiently refined to capture the nonlinear dynamics of Burgers' equation, while remaining computationally tractable, serving as a clear and reproducible validation problem for the proposed method.</p>
+<p>At any instant <span class="arithmatex">\(t\)</span>, the complete set of velocity components <span class="arithmatex">\(u\)</span> and <span class="arithmatex">\(v\)</span> for the spatial domain is denoted as the velocity field. The initial condition for the velocity components at <span class="arithmatex">\(t = 0\)</span> is given below by a Gaussian pulse of amplitude 1.0 centered at <span class="arithmatex">\((1, 1)\)</span>, chosen for being a well-known non-trivial solution of Burgers' equation and, therefore, easily evaluated.
+$$
+u(x, y, 0) = v(x, y, 0) = \exp \left( - \frac{(x - 1)^2}{0.125} - \frac{(y - 1)^2}{0.125} \right) \quad (2)
+$$
+Compared to the one-dimensional implementation of Burgers' equation, the implementation of its two-dimensional version presents significant challenges. In terms of conceptual complexity, the problem shifts from a single Partial Differential Equation (PDE) to a system of two coupled PDEs. The velocity field is now expressed as a two-dimensional vector, and the interactions between its components <span class="arithmatex">\(u\)</span> and <span class="arithmatex">\(v\)</span> (e.g., <span class="arithmatex">\(v \cdot [\partial u/\partial y]\)</span> and <span class="arithmatex">\(u \cdot [\partial v/\partial x]\)</span>) must be accurately modeled. Another challenge is the dimensionality of the neural network. The input domain of the neural network increases from <span class="arithmatex">\((x, t)\)</span> to <span class="arithmatex">\((x, y, t)\)</span>, requiring a much larger number of collocation points to effectively apply the PDE residual throughout the spatiotemporal domain. Finally, in the 2D case, the implementation complexity also increases, since the neural network needs two outputs (<span class="arithmatex">\(u\)</span> and <span class="arithmatex">\(v\)</span>) instead of one, and the calculation of PDE residuals becomes more complex due to the higher number of partial derivatives, including cross-partial derivatives.</p>
+<p>Collocation points are specific points within the spatiotemporal domain where the neural network is constrained to satisfy the governing PDE, typically used to compute the PDE residual term in the loss function. These points are generated using random sampling within the domain. In the methodology presented here, the kinematic viscosity (<span class="arithmatex">\(\nu\)</span>) for these points is dynamically sampled from a curriculum range during training, as detailed in Section 4.3. Achieving convergence of the loss function does not inherently guarantee an accurate estimation of <span class="arithmatex">\(\nu\)</span>, as the optimizer may converge to a local minimum in the parameter search space.</p>
+<h2 id="4-methodology-and-pinn-model">4. Methodology and PINN Model</h2>
+<p>This section details the PINN model architecture, which constitutes Stage 2 of the proposed methodology and utilizes the standard neural network from Stage 1, which was trained with observational velocity data using the Adam optimizer.</p>
+<h3 id="41-model-architecture">4.1. Model Architecture</h3>
+<p>As mentioned, in Stage 2, the PINN model employs a hybrid approach in training, composed of iterations with the Adam optimizer followed by iterations with the L-BFGS-B optimizer. The PINN neural network has an input layer with 4 neurons (<span class="arithmatex">\(x, y, t, \nu\)</span>), followed by 5 hidden layers, each containing 60 neurons, and an output layer with 2 neurons (<span class="arithmatex">\(u, v\)</span>), totaling 7 layers. The input and output layers do not use an activation function, while the hidden layers use the Swish activation function (Ramachandran, Zoph and Le, 2017), chosen for two reasons. The first reason is its smooth and continuously differentiable nature, which is advantageous for the calculation of high-order derivatives required by the PDE residual, in contrast to functions with discontinuous gradient such as the ReLU function. The second reason is its better performance in nonlinear problems and its ability to avoid the "dead neuron" (<em>dying ReLU</em>) problem, common in deep networks. The Glorot method (Glorot and Bengio, 2010) was used for the initialization of the network weights and biases, improving training stability. Another refinement is the employment of L2 regularization, which adds a penalty term to the loss function, proportional to the square of the hidden layer weights, to avoid overfitting. All inputs (<span class="arithmatex">\(x, y, t, \nu\)</span>) are normalized to the interval <span class="arithmatex">\([-1, 1]\)</span>.</p>
+<p>A schematic view of this architecture is presented in Figure 1. The neural network receives as input the set of spatiotemporal coordinates (<span class="arithmatex">\(x, y, t\)</span>), inferring the velocity components (<span class="arithmatex">\(u, v\)</span>), in addition to a candidate value for the kinematic viscosity (<span class="arithmatex">\(\nu\)</span>). The loss function expresses the error corresponding to the difference between the input velocities and those inferred by the network (<em>dataloss</em> term) and the error corresponding to the PDE residual (<em>PDEloss</em> term).</p>
+<p>This architecture was defined based on common practices in PINN literature and empirically adjusted for the problem in question. An exhaustive sensitivity analysis of hyperparameters is outside the scope of this work.</p>
+<p><img alt="" src="img/01.webp" /></p>
+<p><strong>Figure 1.</strong> Schematic view of the PINN architecture proposed for Stage 2.</p>
+<h3 id="42-synthetic-data-generation">4.2. Synthetic Data Generation</h3>
+<p>In place of observed data, synthetic velocity field data generated by a Finite Difference Method (FDM) implementation is used for the 2D Burgers' equation. The adopted 2D grid has <span class="arithmatex">\(41 \times 41\)</span> points covering a spatial domain <span class="arithmatex">\([0, 2]\)</span> in both dimensions, while the temporal domain spans 50 time steps <span class="arithmatex">\(t\)</span> with intervals of 0.001. The initial conditions for the velocity components <span class="arithmatex">\(u\)</span> and <span class="arithmatex">\(v\)</span> at <span class="arithmatex">\(t=0\)</span> are given by a Gaussian pulse of amplitude 1.00 centered at the point <span class="arithmatex">\((1.0, 1.0)\)</span> with standard deviations of 0.25 in both dimensions. Synthetic velocity data were generated for the following time instants: <span class="arithmatex">\(nt/4\)</span>, <span class="arithmatex">\(nt/2\)</span>, <span class="arithmatex">\(3nt/4\)</span>, and <span class="arithmatex">\(nt\)</span>. Test cases were executed for true kinematic viscosity of 0.05 or 0.02, and a third test case with Gaussian noise for this latter viscosity.</p>
+<h3 id="43-training-strategy">4.3. Training Strategy</h3>
+<p>The model training process is divided into two main stages. Stage 1 is dedicated to the training of the parametric PINN, so that the network adjusts its weights and biases to infer velocities, thus making the resolution of Burgers' equation unnecessary. Stage 2 resolves the inverse problem, i.e., it performs the discovery of the true viscosity from the same observational data regarding velocities, but also from the inference of velocities for a set of collocation points. This multifaceted approach was adopted to overcome known optimization challenges in PINNs, such as gradient balancing and convergence to inadequate local minima, which frequently arise in inverse problems (Wang, Teng and Perdikaris, 2021).</p>
+<p>Stage 1 constitutes a pre-training of 500 epochs, utilizing the Adam optimizer, where the network is adjusted exclusively based on the loss function calculated from the difference between observed and estimated data. This initializes the network weights and biases in a promising region of the space of these network parameters. Stage 2 follows, utilizing the neural network pre-trained in Stage 1, but estimating the viscosity parameter and utilizing a loss function that characterizes it as a PINN. In this stage, 1,000 epochs with the Adam optimizer succeed, followed by another 5,000 with the L-BFGS-B optimizer. In both, a composite loss function is utilized, constituted by the data error term (<em>dataloss</em>) and by the PDE residual term (<em>PDEloss</em>). The first term is equal to the loss function of Stage 1, while the second term is calculated for the 10,000 collocation points for which the neural network itself infers velocities, with the PDE residual being calculated for these velocities and their derivatives considering the candidate viscosity being estimated by the PINN.</p>
+<p>The SciPy L-BFGS-B optimizer (Virtanen et al., 2020) is a quasi-Newton method that performs an in-depth local search to find the value of <span class="arithmatex">\(\nu\)</span> that minimizes the loss function. The choice of the "B" variant (<em>bound-constrained</em>) is deliberate, as it allows the imposition of box constraints, i.e., lower and upper bounds for the parameters. Although the code utilizes range-based regularization, the optimizer's ability to inherently handle such constraints is fundamental for physical parameter discovery problems, ensuring that the solution remains in a plausible domain (e.g., <span class="arithmatex">\(\nu &gt; 0\)</span>). To stabilize training, several techniques are applied. A <em>curriculum learning</em> scheme (Bengio et al., 2009) is adopted for the parameter <span class="arithmatex">\(\nu\)</span>, where the range of viscosity values sampled for the collocation points increases gradually over the epochs. Specifically, a linear schedule is utilized, in which the upper limit of the sampling range expands from an initial value to the defined maximum, varying linearly with the training epochs. Additionally, an adaptive weighting, based on an <em>annealing</em> algorithm, dynamically adjusts the influence of each term of the loss function (Wang, Teng and Perdikaris, 2021). An extra weighting, dependent on <span class="arithmatex">\(\nu\)</span>, is applied to the PDE residuals to prioritize accuracy in low-viscosity regimes. The learning rate of the Adam optimizer is managed dynamically by a reduction on <em>plateau</em> mechanism (<em>learning rate scheduling</em>), which decreases the optimizer step if the loss function suffers stagnation, allowing for finer adjustment in promising regions of the search space.</p>
+<h2 id="5-methodological-refinements-and-challenges">5. Methodological Refinements and Challenges</h2>
+<p>Achieving an accurate and robust solution required several methodological refinements. This section details the training strategy, the challenges encountered with optimizers and model generalization, and how they were overcome.</p>
+<p>This study required a low-level implementation to investigate the stability of the L-BFGS-B optimizer and its interaction with just-in-time (JIT) compilation. This fine-grained control is often obscured by abstractions in high-level PINN libraries, leading to the implementation of new neural networks in TensorFlow in this study (Abadi et al., 2015). This framework was chosen for its mature automatic differentiation engine, essential for the calculation of derivatives in the PINN loss function. Furthermore, previous experience with TensorFlow simplified development, allowing a focus on the training dynamics rather than on implementation details. This straightforward approach was crucial for revealing practical insights that, otherwise, would be hidden by specialized libraries.</p>
+<p>The main implementation challenge was achieving stable convergence during training using the L-BFGS-B optimizer, which led to the investigation of two different library implementations for this specific optimizer. The first implementation is a hybrid approach using TensorFlow with the SciPy optimizer, which proved robust after resolving an instability in its linear search, even introducing a significant performance bottleneck in data transfer from CPU to GPU. In contrast, the second implementation, a native TensorFlow Probability (TFP) optimizer, although theoretically having better computational performance, failed to converge due to a subtle interaction with the JIT compiler (@tf.function). Disabling the JIT decorator stabilized the TFP optimizer but severely degraded its performance. This investigation reveals a critical trade-off between robustness and speed in current second-order optimizers, leading to the selection of the first implementation, the hybrid TensorFlow/SciPy.</p>
+<h2 id="6-results-and-discussion">6. Results and Discussion</h2>
+<p>To evaluate the robustness and precision of the proposed model, a systematic experimental study was conducted. The PINN's capability to solve the inverse problem was tested under different conditions, varying the true kinematic viscosity (<span class="arithmatex">\(\nu_{true}\)</span>), the initial value for curriculum learning (<span class="arithmatex">\(\nu_{initial}\)</span>), and the randomness seed to ensure reproducibility. Additionally, the impact of adding Gaussian noise to the training data on the precision of parameter discovery was investigated.</p>
+<h3 id="61-precision-and-robustness-in-parameter-discovery">6.1. Precision and Robustness in Parameter Discovery</h3>
+<p>The results of the viscosity parameter discovery, summarized in Table 1, demonstrate the high precision of the method. In multiple trials with different randomness seeds and initial values, the relative error between the discovered <span class="arithmatex">\(\nu\)</span> value and the true value remained consistently low, generally below 1%. For example, for a true value <span class="arithmatex">\(\nu_{true} = 0.05\)</span>. This value, with six decimal places of precision, corresponds to an effective relative error of 0.0%, demonstrating the high accuracy of the method with <span class="arithmatex">\(\nu_{initial} = 0.09\)</span> and seed 53. The low Mean Squared Error (MSE) of prediction for the Stage 2 model (on the order of <span class="arithmatex">\(10^{-5}\)</span> to <span class="arithmatex">\(10^{-6}\)</span>) corroborates the precision of the found solution. The total execution time for each trial was approximately 500 seconds on a single GPU, indicating the computational viability of the approach.</p>
+<p>From the computational cost point of view, Table 1 shows that the total execution time is consistent, with an average of approximately 500 seconds per trial. Detailed analysis of the execution reveals that the majority of this time (more than 90%) is consumed during the training of the parametric network in Stage 1, which utilizes the Adam optimizer. Stage 2, although numerically sensitive, is computationally faster due to the smaller number of epochs and the fact that it optimizes a single parameter. This performance profile suggests that future optimizations should focus on accelerating the training of the main network.</p>
+<p><strong>Table 1.</strong> Results of <span class="arithmatex">\(\nu\)</span> discovery for different configurations.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><span class="arithmatex">\(\nu_{true}\)</span></th>
+<th style="text-align: left;"><span class="arithmatex">\(\nu_{initial}\)</span></th>
+<th style="text-align: left;">Seed</th>
+<th style="text-align: left;"><span class="arithmatex">\(\nu_{discovered}\)</span></th>
+<th style="text-align: left;">Total Prediction MSE (<span class="arithmatex">\(u+v\)</span>)</th>
+<th style="text-align: left;">Relative Error (%)</th>
+<th style="text-align: left;">Time (s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">0.02</td>
+<td style="text-align: left;">0.2</td>
+<td style="text-align: left;">17</td>
+<td style="text-align: left;">0.019949</td>
+<td style="text-align: left;">2.03E-05</td>
+<td style="text-align: left;">0.255</td>
+<td style="text-align: left;">496.81</td>
+</tr>
+<tr>
+<td style="text-align: left;">0.02</td>
+<td style="text-align: left;">0.2</td>
+<td style="text-align: left;">53</td>
+<td style="text-align: left;">0.019868</td>
+<td style="text-align: left;">5.62E-05</td>
+<td style="text-align: left;">0.66</td>
+<td style="text-align: left;">496.93</td>
+</tr>
+<tr>
+<td style="text-align: left;">0.02</td>
+<td style="text-align: left;">0.2</td>
+<td style="text-align: left;">89</td>
+<td style="text-align: left;">0.020337</td>
+<td style="text-align: left;">1.46E-05</td>
+<td style="text-align: left;">1.685</td>
+<td style="text-align: left;">495.95</td>
+</tr>
+<tr>
+<td style="text-align: left;">0.02</td>
+<td style="text-align: left;">0.09</td>
+<td style="text-align: left;">17</td>
+<td style="text-align: left;">0.020169</td>
+<td style="text-align: left;">2.90E-05</td>
+<td style="text-align: left;">0.845</td>
+<td style="text-align: left;">499.67</td>
+</tr>
+<tr>
+<td style="text-align: left;">0.02</td>
+<td style="text-align: left;">0.09</td>
+<td style="text-align: left;">53</td>
+<td style="text-align: left;">0.01999</td>
+<td style="text-align: left;">2.04E-05</td>
+<td style="text-align: left;">0.05</td>
+<td style="text-align: left;">506.97</td>
+</tr>
+<tr>
+<td style="text-align: left;">0.02</td>
+<td style="text-align: left;">0.09</td>
+<td style="text-align: left;">89</td>
+<td style="text-align: left;">0.020023</td>
+<td style="text-align: left;">2.38E-05</td>
+<td style="text-align: left;">0.115</td>
+<td style="text-align: left;">500.63</td>
+</tr>
+<tr>
+<td style="text-align: left;">0.05</td>
+<td style="text-align: left;">0.2</td>
+<td style="text-align: left;">17</td>
+<td style="text-align: left;">0.050223</td>
+<td style="text-align: left;">1.03E-05</td>
+<td style="text-align: left;">0.446</td>
+<td style="text-align: left;">501.36</td>
+</tr>
+<tr>
+<td style="text-align: left;">0.05</td>
+<td style="text-align: left;">0.2</td>
+<td style="text-align: left;">53</td>
+<td style="text-align: left;">0.050163</td>
+<td style="text-align: left;">6.08E-06</td>
+<td style="text-align: left;">0.326</td>
+<td style="text-align: left;">512.1</td>
+</tr>
+<tr>
+<td style="text-align: left;">0.05</td>
+<td style="text-align: left;">0.2</td>
+<td style="text-align: left;">89</td>
+<td style="text-align: left;">0.050562</td>
+<td style="text-align: left;">1.31E-05</td>
+<td style="text-align: left;">1.124</td>
+<td style="text-align: left;">507.8</td>
+</tr>
+<tr>
+<td style="text-align: left;">0.05</td>
+<td style="text-align: left;">0.09</td>
+<td style="text-align: left;">17</td>
+<td style="text-align: left;">0.050018</td>
+<td style="text-align: left;">1.50E-05</td>
+<td style="text-align: left;">0.036</td>
+<td style="text-align: left;">521.27</td>
+</tr>
+<tr>
+<td style="text-align: left;">0.05</td>
+<td style="text-align: left;">0.09</td>
+<td style="text-align: left;">53</td>
+<td style="text-align: left;">0.05</td>
+<td style="text-align: left;">1.37E-05</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">516.84</td>
+</tr>
+<tr>
+<td style="text-align: left;">0.05</td>
+<td style="text-align: left;">0.09</td>
+<td style="text-align: left;">89</td>
+<td style="text-align: left;">0.049917</td>
+<td style="text-align: left;">1.06E-04</td>
+<td style="text-align: left;">0.166</td>
+<td style="text-align: left;">524.42</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-impact-of-data-noise">6.2. Impact of Data Noise</h3>
+<p>To evaluate the robustness of the model in more realistic scenarios, where observational data may contain inaccuracies, an experiment was conducted by adding different levels of Gaussian noise to the training data. The results indicate a non-trivial relationship between noise and error. Although the error increases when introducing 1% noise, it surprisingly decreases for higher noise levels (5% and 10%), as seen in Table 2. Even in these scenarios, the PINN is still able to discover a value of <span class="arithmatex">\(\nu\)</span> close to the true one, demonstrating the effectiveness of the regularization imposed by the physics of the PDE to mitigate the impact of imperfect data.</p>
+<p><strong>Table 2.</strong> Results of <span class="arithmatex">\(\nu\)</span> discovery (<span class="arithmatex">\(\nu_{true} = 0.02\)</span>) with different noise levels.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Noise Level</th>
+<th style="text-align: left;"><span class="arithmatex">\(\nu_{discovered}\)</span></th>
+<th style="text-align: left;">Total Prediction MSE (<span class="arithmatex">\(u+v\)</span>)</th>
+<th style="text-align: left;">Relative Error (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">0.0%</td>
+<td style="text-align: left;">0.019170</td>
+<td style="text-align: left;">5.46e-05</td>
+<td style="text-align: left;">4.15</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.0%</td>
+<td style="text-align: left;">0.022487</td>
+<td style="text-align: left;">9.78e-06</td>
+<td style="text-align: left;">12.43</td>
+</tr>
+<tr>
+<td style="text-align: left;">5.0%</td>
+<td style="text-align: left;">0.019700</td>
+<td style="text-align: left;">3.24e-05</td>
+<td style="text-align: left;">1.50</td>
+</tr>
+<tr>
+<td style="text-align: left;">10.0%</td>
+<td style="text-align: left;">0.019934</td>
+<td style="text-align: left;">2.39e-05</td>
+<td style="text-align: left;">0.33</td>
+</tr>
+</tbody>
+</table>
+<h3 id="63-qualitative-analysis">6.3. Qualitative Analysis</h3>
+<p>In addition to the quantitative analysis, the quality of the solution learned by the PINN was evaluated visually,. Figure 2 compares the velocity field predicted by the PINN in Stage 2 with the reference solution generated by the Finite Difference Method (FDM),. The comparison shows excellent qualitative agreement between the PINN solution and the numerical reference solution, correctly capturing the shape and dynamics of the flow,. This confirms that the neural network not only discovers the correct physical parameter, but also learns a faithful representation of the PDE solution throughout the spatiotemporal domain,.</p>
+<p><img alt="" src="img/02.webp" /></p>
+<p><strong>Figure 2.</strong> Visual comparison between the FDM reference solution (left) and the solution predicted by the PINN (right) for the final velocity field (<span class="arithmatex">\(t=0.05\)</span>) with <span class="arithmatex">\(\nu=0.05\)</span> and with <span class="arithmatex">\(\nu=0.02\)</span>. The similarity between the solutions demonstrates the PINN's capability to learn the fluid dynamics with fidelity.</p>
+<h2 id="7-conclusion">7. Conclusion</h2>
+<p>The present work demonstrated the successful implementation of a robust PINN for the discovery of kinematic viscosity in the 2D Burgers' equation. The methodology, which combines a hybrid optimization approach, adaptive loss function weighting, and curriculum learning, proved to be effective, resulting in estimates of <span class="arithmatex">\(\nu\)</span> with high precision and low relative error in various scenarios, including noisy data. The quantitative and qualitative results confirm that the PINN not only solves the inverse problem accurately but also learns a faithful representation of the PDE solution,. Although Stage 2 demonstrated excellent performance, the generalization capability of the parametric model (Stage 1) over a wider range of <span class="arithmatex">\(\nu\)</span> values remains a point for future investigation.</p>
+<h2 id="8-future-work">8. Future Work</h2>
+<p>Future work will focus on three main axes of high-performance computing. First, the scalability of the model will be investigated for higher-dimensional problems, such as the 3D Burgers' equation or domains with more complex geometries, evaluating the growth of computational cost and memory demand,. Second, to overcome the identified CPU-GPU communication bottleneck, the implementation of native GPU second-order optimizers, which have become more stable in recent versions of deep learning libraries, will be explored. Third, distributed training strategies will be applied, utilizing multiple GPUs (<em>multi-GPU</em>) and multiple nodes (<em>multi-node</em>) with <em>tf.distribute.Strategy</em>, to reduce the training time of the parametric network, allowing the approach of inverse problems at larger scales.</p>
+<h3 id="acknowledgments">Acknowledgments</h3>
+<p>The authors thank the *oordination for the Improvement of Higher Education Personnel, Brazil (CAPES) and the LNCC (National Laboratory for Scientific Computing) for access to the Santos Dumont supercomputer through the AMPEMI project. The authors also thank the Ministry of Science, Technology and Innovation and the Brazilian Space Agency.</p>
+<h2 id="references">References</h2>
+<ul>
+<li>Abadi, M. <em>et al.</em> (2015) “TensorFlow: Large-scale machine learning on heterogeneous distributed systems”, <em>arXiv preprint arXiv:1603.04467</em> [Preprint].</li>
+<li>Bengio, Y. <em>et al.</em> (2009) “Curriculum learning”, <strong>in</strong> <em>Proceedings of the 26th Annual International Conference on Machine Learning</em>. <em>ICML ’09: The 26th Annual International Conference on Machine Learning held in conjunction with the 2007 International Conference on Inductive Logic Programming</em>, Montreal Quebec Canada: ACM, p. 41–48. <strong>Available at:</strong> <a href="https://doi.org/10.1145/1553374.1553380">https://doi.org/10.1145/1553374.1553380</a>.</li>
+<li>Burgers, J.M. (1948) “A mathematical model illustrating the theory of turbulence”, <em>Advances in applied mechanics</em>, 1, p. 171–199. <strong>Available at:</strong> <a href="https://www.sciencedirect.com/science/article/pii/S0065215608701005">https://www.sciencedirect.com/science/article/pii/S0065215608701005</a> (<strong>Accessed on:</strong> October 3, 2025).</li>
+<li>Cuomo, S. <em>et al.</em> (2022) “Scientific Machine Learning Through Physics–Informed Neural Networks: Where we are and What’s Next”, <em>Journal of Scientific Computing</em>, 92(3), p. 88. <strong>Available at:</strong> <a href="https://doi.org/10.1007/s10915-022-01939-z">https://doi.org/10.1007/s10915-022-01939-z</a>.</li>
+<li>Glorot, X. <strong>and</strong> Bengio, Y. (2010) “Understanding the difficulty of training deep feedforward neural networks”, <strong>in</strong> <em>Proceedings of the thirteenth international conference on artificial intelligence and statistics</em>. JMLR Workshop and Conference Proceedings, p. 249–256. <strong>Available at:</strong> <a href="http://proceedings.mlr.press/v9/glorot10a">http://proceedings.mlr.press/v9/glorot10a</a> (<strong>Accessed on:</strong> October 3, 2025).</li>
+<li>Kingma, D.P. <strong>and</strong> Ba, J. (2014) “Adam: A method for stochastic optimization”, <em>arXiv preprint arXiv:1412.6980</em> [Preprint].</li>
+<li>LeVeque, R.J. (2007) <em>Finite difference methods for ordinary and partial differential equations: Steady-state and time-dependent problems</em>. SIAM.</li>
+<li>Raissi, M., Perdikaris, P. <strong>and</strong> Karniadakis, G.E. (2019) “Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations”, <em>Journal of Computational Physics</em>, 378, p. 686–707. <strong>Available at:</strong> <a href="https://doi.org/10.1016/j.jcp.2018.10.045">https://doi.org/10.1016/j.jcp.2018.10.045</a>.</li>
+<li>Ramachandran, P., Zoph, B. <strong>and</strong> Le, Q.V. (2017) “Searching for Activation Functions”. arXiv. <strong>Available at:</strong> <a href="https://doi.org/10.48550/arXiv.1710.05941">https://doi.org/10.48550/arXiv.1710.05941</a>.</li>
+<li>Virtanen, P. <em>et al.</em> (2020) “SciPy 1.0: fundamental algorithms for scientific computing in Python”, <em>Nature methods</em>, 17(3), p. 261–272.</li>
+<li>Wang, S., Teng, Y. <strong>and</strong> Perdikaris, P. (2021) “Understanding and mitigating gradient flow pathologies in physics-informed neural networks”, <em>SIAM Journal on Scientific Computing</em>, 43(5), p. A3055–A3081.</li>
+<li>Zhu, C. <em>et al.</em> (1997) “Algorithm 778: L-BFGS-B: Fortran subroutines for large-scale bound-constrained optimization”, <em>ACM Trans. Math. Softw.</em>, 23(4), p. 550–560. <strong>Available at:</strong> <a href="https://doi.org/10.1145/279232.279236">https://doi.org/10.1145/279232.279236</a>.</li>
+<li>Zienkiewicz, O.C., Taylor, R.L. <strong>and</strong> Zhu, J.Z. (2013) <em>The finite element method: Its basis and fundamentals</em>. Butterworth-Heinemann.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      CC BY 4.0 License
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["header.autohide"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="assets/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
