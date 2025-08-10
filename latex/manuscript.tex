@@ -1,0 +1,258 @@
+\documentclass[12pt,fleqn]{article}
+\usepackage{xiiiemc}
+\usepackage{natbib}
+%\usepackage{fancyhdr}
+\usepackage{fancyhdr, graphicx}
+\usepackage{color}
+\usepackage{wallpaper}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{float}
+\let\OLDthebibliography\thebibliography
+\renewcommand\thebibliography[1]{\OLDthebibliography{#1} \setlength{\parskip}{0pt}\setlength{\itemsep}{0pt plus 0.3ex}}
+\title{A PHYSICS-INFORMED NEURAL NETWORK FOR SOLVING THE 2D BURGERS' EQUATION}
+\author
+    {\rm \begin{tabular}{l}
+    \textbf{Eduardo Furlan Miranda}$^{1}$ - {\textnormal efurlanm@gmail.com}\\
+    \textbf{Roberto Pinto Souto}$^{2}$ - {\textnormal rpsouto@lncc.br}\\
+    \textbf{Stephan Stephany}$^{3}$ - {\textnormal stephan.stephany@inpe.br}\\
+    {\fontsize{11}{0}\selectfont $^{1}$Universidade Estadual de Montes Claros – Montes Claros – MG}\vspace*{-0.05cm} \\
+    {\fontsize{11}{0}\selectfont $^{2}$Instituto Federal do Norte de Minas Gerais – Montes Claros – MG}\vspace*{-0.05cm}\\
+    {\fontsize{11}{0}\selectfont $^{3}$Universidade Federal dos Vales do Jequititinhonha e Mucuri – Janaúba – MG}
+  \end{tabular}}
+\fancypagestyle{firspagetstyle}
+{
+	\renewcommand{\headrulewidth}{0.0pt}
+	\fancyfoot[C]{\footnotesize \parbox{15cm} {\centering  \fontsize{7.5}{0}\selectfont \it XXVIII ENMC – Encontro Nacional de Modelagem Computacional\\XVI ECTM – Encontro de Ciência e Tecnologia de Materiais \\ 21 a 24 de outubro de 2025}} % \ttfamil
+	%\rhead{}
+}
+\begin{document}
+
+\pretolerance10000
+
+\begin{figure}   
+\centering
+
+\begin{minipage}[c]{\textwidth}
+\centering
+    \includegraphics[width=6.25in]{logo.png}
+\end{minipage}
+\end{figure}
+
+\vspace{-3cm}
+
+\maketitle
+
+\pagestyle{empty}
+
+\thispagestyle{firspagetstyle}
+
+\begin{abstract}
+
+\em{\textcolor{red}{This paper presents a detailed case study of the application of Physics-Informed Neural Networks (PINNs) to the inverse problem of kinematic viscosity discovery in the 2D Burgers equation. We focus on the practical implementation challenges and the methodological refinements required to achieve robust and accurate results. Key contributions include the successful application of a data-driven PINN training strategy (DG-PINN) and a thorough investigation of the stability of second-order optimizers, comparing a hybrid SciPy-based approach with a native TensorFlow Probability implementation. We demonstrate that, while the hybrid approach is more stable, it introduces performance overhead. Furthermore, we address the critical issue of model generalization by introducing an automated first-guess search mechanism, which significantly improves the model's ability to discover a wide range of parameter values without manual tuning. This work serves as a practical guide, documenting the specific challenges and actionable solutions that are crucial for the successful application of PINNs to inverse science problems.}}
+
+\end{abstract}
+
+\keywords{\em{Physics-Informed Neural Networks, Burgers' equation, Parameter discovery, Finite difference method}} % até 5 palavras-chaves
+
+\fancyhead[L]{\footnotesize{\fontsize{7.5}{0}\selectfont \it XXVIII ENMC, XVI ECTM\\
+	21 a 24 de outubro de 2025\\}}
+
+\renewcommand{\headrulewidth}{0.0pt}
+\fancyfoot[C]{\footnotesize \parbox{15cm} {\centering  \fontsize{7.5}{0}\selectfont \it  XXVIII ENMC – Encontro Nacional de Modelagem Computacional\\
+XVI ECTM – Encontro de Ciência e Tecnologia de Materiais \\ 21 a 24 de outubro de 2025}} % \ttfamil
+\rhead{}
+
+\pagestyle{fancy}
+
+
+\section{INTRODUCTION}
+
+The study of partial differential equations (PDEs) is fundamental to many scientific and engineering disciplines, with classical numerical methods like the Finite Element Method (FEM) \citep{zienkiewicz2013} and the Finite Difference Method (FDM) \citep{leveque2007} forming the bedrock of computational solutions. Burgers' equation \citep{burgers1948}, a nonlinear PDE, is of particular interest because it appears in various fields, such as fluid mechanics, nonlinear acoustics, and traffic flow. While solving the "direct problem" (i.e., finding the solution to the PDE, given all parameters) is a well-established area, the "inverse problem" of determining the PDE parameters from observed data presents a greater challenge.
+
+This paper explores the inverse problem of the 2D Burgers equation, focusing on finding the kinematic viscosity coefficient. We use a Physics-Informed Neural Networks (PINN) approach, inspired by the work of \cite{raissi2019}. The main contribution of this work is a detailed account of the practical challenges and solutions related to training PINNs for inverse problems, with particular emphasis on the choice and implementation of the L-BFGS-B optimizer \citep{Zhu97}.
+\textcolor{blue}{This optimizer is a limited-memory ($L$) version of the quasi-Newton Broyden–Fletcher–Goldfarb–Shanno algorithm (BFGS) that uses a limited amount of computer memory, while the $B$ suffix stands for a L-BFGS version for large-scale bound-constrained optimization. The source code for this work is publicly available at {\small \url{https://github.com/efurlanm/burgers-pinn}}.}
+
+\section{RELATED WORK}
+
+The use of deep learning to solve differential equations has shown a growing interest, with Physics-Informed Neural Networks (PINNs) emerging as a prominent methodology. \cite{raissi2019} presented the fundamental framework for PINNs, demonstrating their effectiveness in solving direct and inverse problems involving nonlinear PDEs. Subsequent studies and reviews, such as \cite{cuomo2022}, have provided a comprehensive overview of the field, consolidating the importance of PINNs in machine learning applied to scientific problems.
+
+PINNs have been successfully applied to a wide range of fluid dynamics problems, including the Burgers and Navier-Stokes equations \citep{raissi2019}. Although these applications demonstrate the potential of PINNs, solving inverse problems, such as the parameter discovery problem addressed in this paper, remains a significant challenge. The literature in this area frequently notes that identifying unknown physical parameters is substantially more difficult than solving the direct problem, often due to issues with limited or noisy data.
+
+Many studies have focused on the challenges associated with the training of PINNs. The compound nature of the loss function often leads to an imbalanced optimization problem, where one term may dominate the gradients, hindering convergence. To address this, several techniques have been proposed, such as adaptive weighting schemes that dynamically adjust the influence of loss terms during training \citep{wang2021}. The choice of optimizer is also a critical factor, with many studies employing a two-stage approach, using a common neural network that employs a the gradient-based Adam optimizer for an initial exploration of the search space, followed by the application of a PINN that employs a quasi-Newton method, such as L-BFGS-B, for a local search \citep{wang2021}. This approach was adopted in this work, denoting the stages as stage-1 and stage-2.
+
+However, while much of the literature focuses on proposing new PINN architectures or algorithms, there is a relative scarcity of detailed case studies documenting practical implementation hurdles. Some issues are critical for the reproducibility of the experiment, but are rarely reported. These issues include the numerical instability of specific library optimizers and subtle interactions with components of the deep-learning framework, as in the case of using just-in-time (JIT) compilers. This work aims to provide a more transparent description of a PINN-based inverse problem, offering clues about the critical choice of the optimizer, and the configuration of the underlying software environment in order to achieve reliable and accurate results.
+
+\section{THE 2D BURGERS' EQUATION AND ITS CHALLENGES}
+
+The 2D Burgers' equation is a system of two coupled, nonlinear PDEs that describe the velocity field of a fluid. The equations are given by:
+\begin{equation}
+    \frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} = \nu \left( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} \right) \quad  \text{and} \quad
+    \frac{\partial v}{\partial t} + u \frac{\partial v}{\partial x} + v \frac{\partial v}{\partial y} = \nu \left( \frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2} \right) \quad
+\end{equation}
+
+\textcolor{red}{\noindent Above, $u(x, y, t)$ and $v(x, y, t)$ are the velocity components in the x and y directions, respectively, representing the fluid state that the neural network predicts. The symbol $\nu$ represents the kinematic viscosity of the fluid, a single scalar physical parameter of the equation that PINN aims to discover in this inverse problem. Unlike $u$ and $v$, which are functions of space and time, $\nu$ is a constant coefficient within the PDE. We consider a spatial domain defined by $\Omega = [0, 2] \times [0, 2]$, corresponding to a grid $41 \times 41$, and a temporal domain $T = [0, 0.05]$ divided into 50 time steps.}
+The initial conditions for the velocity components at $t=0$ are given by a Gaussian pulse centered at $(1,1)$ that was chosen as the initial condition because it is a well-established nontrivial solution in the literature for the Burgers equation, allowing a clear evaluation of the model's ability to capture convection and diffusion: 
+
+\begin{equation}
+    u(x, y, 0) = v(x, y, 0) = \exp\left(-\frac{(x - 1)^2}{0.125} - \frac{(y - 1)^2}{0.125}\right)
+\end{equation}
+
+\textcolor{red}{\noindent Dirichlet boundary conditions are applied, where the velocity components at the boundaries of the spatial domain, $\partial\Omega$, are held constant at their initial values for all $t \in T$. These initial values are derived from the Gaussian pulse defined in Equation 2, meaning that the boundary velocities are generally nonzero and are part of the ground truth data that PINN is trained to match.}
+
+
+
+In comparison to the implementation of the 1D Burgers' equation, the implementation of its 2D version poses significant challenges. In terms of conceptual complexity, the problem shifts from a single Partial Differential Equation (PDE) to a system of two coupled PDEs. The velocity field is now expressed by a 2D vector, and the interactions between its components $u$ and $v$ (e.g. $v \cdot [{\partial u}/{\partial y}]$ and $u \cdot [{\partial v}/{\partial x}]$) must be accurately modeled. Another challenge is the dimensionality of the neural network. The input domain of the neural network increases from $(x, t)$ to $(x, y, t)$, which requires a much larger number of collocation points to effectively apply the PDE residual throughout the spatiotemporal domain. 
+Collocation points are specific points within the spatiotemporal domain where the neural network is forced to satisfy the governing PDE, typically used to compute the residual term of the PDE in the loss function. 
+Finally, in the 2D case, the complexity of the implementation also increases, since the neural network needs two outputs ($u$ and $v$) instead of one, and the calculation of the PDE residuals becomes more complex due to the higher number of partial derivatives, including cross partial derivatives.
+
+
+\section{THE PROPOSED PARAMETER DISCOVERY PROBLEM}
+
+A standard data-driven machine learning approach typically uses a neural network to estimate the 2D velocity field from a set of known collocation points, and using a loss function based on the error between estimated and exact values. This approach often requires a large number of collocation points to be effective. As an alternative, the Physics-Informed Neural Network (PINN) approach, adopted here, embeds the 2D Burgers' PDE directly into the loss function, which accelerates network convergence by incorporating physical knowledge. In the scope of PDE solving, PINNs allow for (i) solving the direct problem by estimating the velocity field for a given time step, (ii) solving the inverse problem by estimating the kinematic viscosity, or (iii) solving both direct and inverse problems simultaneously. The second case is known as parameter discovery problem. In this work, the Finite Difference Method (FDM) is used to generate the ground truth data, i.e., the exact velocity field, which serves as reference data for PINN training.
+
+The FDM is a classical numerical technique for approximating solutions to differential equations by discretizing the domain into a finite grid and approximating derivatives with finite differences. This method was initially used in this work to solve the forward/direct problem of Burgers' 2D equation, generating a solution that serves as a reference for solving the inverse problem. The direct problem was solved using a known/predefined kinematic viscosity denoted as "exact" ($\nu$ = 0.05).
+
+\textcolor{red}{The velocity fields generated by the FDM at five specific time snapshots (t = 0.0, 0.0125, 0.025, 0.0375, and 0.050) constitute the supervised training data. This is a sparse set of 8,405 labeled points (a 41x41 grid per snapshot) used to compute the data loss term ($\mathcal{L}_{data}$), anchoring the model to the observed reality. This "expensive" ground truth dataset should be clearly distinguished from the 60,000 collocation points, which are "cheap" because they are unlabeled points randomly sampled from the entire spatiotemporal domain. The goal of these collocation points is not to match a known solution, but to enforce the physical constraints of the Burgers equation through the PDE residual loss ($\mathcal{L}_{pde}$). Therefore, PINN uses a large number of unlabeled points to learn the governing physics, allowing it to effectively generalize from a much smaller set of labeled reference data. This highlights the model's main advantage: its data efficiency lies in the reduced need for labeled ground truth, not in the total number of points used to train the network.}
+
+
+In this work, the Finite Difference Method (FDM) is primarily used to generate the ground truth data for the 2D Burgers' equation. The proposed PINN, on the other hand, is used for either (i) solving the inverse problem by inferring the kinematic viscosity parameter, or (ii) solving the direct problem analogously, but inferring the velocity field in a given timestep. In both cases, the neural network leverages the physical constraints imposed by the PDE residual in its loss function to accelerate the convergence of the network in the training phase. In any case, the input and output of the neural network is the velocity field (velocity shape).
+
+\textcolor{red}{In the proposed PINN architecture, shown in \autoref{fig:pinn_architecture}, a fully connected neural network maps spatiotemporal coordinates $(x, y, t)$ to the components of the velocity field $(u, v)$. The network consists of an input layer, four hidden layers with 60 neurons each, and an output layer. The hyperbolic tangent ({\it tanh}) is used as the activation function for the hidden layers. This configuration was determined through numerical experimentation to provide a balance between model expressiveness and computational cost, as simpler architectures struggled to capture the dynamics of the solution, while more complex ones did not offer significant improvements in accuracy.}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth, keepaspectratio]{images/nn.pdf}
+    \caption{Schematic view of the proposed PINN architecture. The network receives spatiotemporal coordinates $(x, y, t)$ as input and outputs the components of the velocity field $(u, v)$. The kinematic viscosity, $\nu$, is a trainable parameter optimized along with the network weights and biases.}
+    \label{fig:pinn_architecture}
+\end{figure}
+
+
+
+
+\section{METHODOLOGICAL REFINEMENTS AND CHALLENGES}
+
+Achieving an accurate and robust solution required several methodological refinements. This section details the training strategy, the challenges encountered with optimizers and model generalization, and how they were overcome.
+
+\subsection{Framework and library choices}
+\textcolor{red}{Choosing a software framework is crucial, as it directly impacts the reproducibility, performance, and ability to analyze the underlying model's behavior. For this study, we intentionally built the model using TensorFlow directly, rather than adopting a specialized PINN library.}
+\textcolor{blue}{TensorFlow \citep{abadi2015} was chosen as the framework due to its mature and robust automatic differentiation engine, which computes the necessary derivatives of the PDE loss term, which is essential for the PINN methodology. Furthermore, previous experience and the reuse of existing TensorFlow code made the choice of this framework convenient, allowing us to focus on specific aspects of the training process.}
+
+\textcolor{blue}{Therefore, other general-purpose frameworks, such as PyTorch or JAX, offer comparable capabilities, and specialized libraries, such as DeepXDE or PINA, which may provide abstractions to speed up implementations, were not employed. Instead, the training process was analyzed, particularly the stability and performance of the L-BFGS-B optimizer.} 
+\textcolor{red}{This low-level implementation provided the transparency and fine-grained control needed to diagnose and troubleshoot the subtle optimizer stability and just-in-time (JIT) compilation issues that motivated this study. This straightforward approach was essential for revealing practical insights that would likely be obscured by the abstractions of high-level PINN libraries.}
+
+\subsection{Definition of Loss Function and Training Strategy}
+
+\textcolor{red}{In the second phase, the adopted loss function is a weighted sum of two terms: the data loss, $\mathcal{L}_{data}$, and the PDE residual loss, $\mathcal{L}_{pde}$. The total loss $\mathcal{L}$ is defined as $\mathcal{L} = \lambda_{data} \mathcal{L}_{data} + \lambda_{pde} \mathcal{L}_{pde}$. The term $\mathcal{L}_{data}$ is the mean squared error (MSE) between the network predictions and the ground truth data, while $\mathcal{L}_{pde}$ is the MSE of the PDE residuals computed at the collocation points, enforcing the physical constraints of Burgers' equation.}
+
+\textcolor{red}{For the main training phase (Phase 2), after pre-training with data only, the loss weights were tuned using numerical experimentation. For the uncovered parameter estimation $\nu$, we used $\lambda_{data}=1.0$, $\lambda_{pde}=1.0$, and 2000 Adam runs or gradient updates. In the case of shape estimation, we used $\lambda_{data}=100.0$, $\lambda_{pde}=1.0$, and 1000 Adam runs or gradient updates.}
+
+
+
+\textcolor{blue}{A key challenge in PINN-based inverse problems is the parameter identifiability. Training on data from a single time snapshot often allows the network to find a visually correct solution shape, but without accurately identifying the physical parameters. To overcome this, we employ a multi-time-step training strategy, using data from four temporal snapshots, i.e. four velocity shapes, to better constrain the problem.}
+
+
+\textcolor{red}{As mentioned, network training is performed in two main phases, following the Data-Driven PINN (DG-PINN) approach. The first phase consists of data-only pre-training, where the network is trained for 10,000 epochs using the Adam optimizer on the data-only loss term ($\mathcal{L}_{data}$). This phase initializes the network to fit the observed data. The second phase involves fine-tuning the network on the composite loss function ($\mathcal{L}$), which includes the data and the PDE residual terms. This phase begins with 2,000 epochs using the Adam optimization, followed by the L-BFGS-B optimizer, which runs until convergence. It is important to note that for both optimizers, training is performed in full batches, that is, each batch corresponds to one epoch, with the entire set of 60,000 collocation points, the full training dataset. Thus, only after each epoch are the loss function and gradients computed, completing an optimization step.}
+
+\textcolor{red}{While mini-batch training is a common technique for accelerating convergence and providing a regularizing effect in deep learning \citep{goodfellow2016}, our methodology deliberately employs a full-batch approach. This decision is dictated by the requirements of the L-BFGS-B optimizer, which is critical to achieving high-accuracy parameter discovery. As a quasi-Newton method, L-BFGS-B relies on accurate approximations of the curvature of the loss function, which requires consistent and deterministic gradient computation across the entire dataset. The stochastic gradients produced by mini-batch training are incompatible with this process and can impede convergence, a well-documented challenge in the field of stochastic optimization \citep{byrd2016}. Therefore, we accept a potential reduction in the convergence speed of the initial Adam phase to ensure the stability and effectiveness of the subsequent fine-tuning of L-BFGS-B, which was critical to the success of the inverse problem.}
+
+\subsection{Optimizer Stability and Performance}
+
+\textcolor{red}{A two-stage optimization strategy, using Adam for initial exploration followed by L-BFGS-B for fine-tuning, is standard for training PINNs. Our main implementation challenge was achieving stable convergence during the L-BFGS-B stage, which led us to investigate two different library implementations for this specific optimizer. A hybrid approach using TensorFlow with the SciPy optimizer proved robust after resolving an instability in its linear search, but introduces a significant performance bottleneck in data transfer from the CPU to the GPU. In contrast, the native TensorFlow Probability (TFP) optimizer, while theoretically more performant, failed to converge due to a subtle interaction with the JIT compiler (\texttt{@tf.function}). Disabling the JIT decorator stabilized the TFP optimizer but severely degraded its performance. This investigation reveals a critical trade-off between robustness and speed in current second-order optimizers, leading us to select SciPy's stable, albeit slower, hybrid approach for our final methodology.}
+
+\subsection{Robustness and Generalizability}
+
+\textcolor{red}{A major challenge was the limited generalization of the proposed model. When trying to discover values of $\nu$ that differed from the training baseline (e.g., $\nu=0.01$), the model consistently converged to values close to its original training target of $\nu=0.05$. This problem stemmed from the optimizer getting stuck in local minima due to a fixed initial estimate for $\nu$.}
+
+\textcolor{red}{To address this issue, particularly in parameter discovery (accuracy) experiments, we implement an automated initial guess generator that evaluates a set of candidate values $\nu$ (e.g., [0.01, 0.05, 0.1, 0.5]) by performing short pre-training runs, each with 500 epochs, with Adam optimization. The resulting best candidate is then selected as the optimal initial guess for the full two-phase optimization. This strategy significantly improves the selection of an initial guess for $\nu$ in a robust and automated manner, especially when the true parameter value is unknown or varies significantly.}
+
+
+
+
+
+
+
+
+
+
+\section{A REVIEW OF PINN LIBRARIES}
+
+The implementation of PINNs is facilitated by a growing ecosystem of libraries and frameworks. These can be broadly categorized into general-purpose deep learning frameworks, specialized PINN libraries, and interoperability Tools.
+
+
+Deep learning libraries provide the fundamental tools for building and training neural networks, including the automatic differentiation capabilities required for PINNs.
+
+\begin{itemize}
+\item \textbf{TensorFlow:} An open-source machine learning platform developed by Google. It offers a comprehensive ecosystem of tools, libraries, and community resources. Its automatic differentiation feature is a key component for implementing PINNs.
+\item \textbf{PyTorch:} A popular open-source machine learning library known for its flexibility and imperative programming style. It is widely used in the research community and has strong support for automatic differentiation.
+\item \textbf{JAX:} A high-performance numerical computing library from Google that is gaining traction in the machine learning community. It combines NumPy syntax with just-in-time (JIT) compilation and advanced automatic differentiation capabilities, making it a powerful tool for PINN implementations.
+\end{itemize}
+
+
+Specialized PINN libraries are built on top of general-purpose frameworks and provide high-level abstractions and tools specifically designed to solve PDE-based problems with PINNs.
+
+\begin{itemize}
+\item \textbf{DeepXDE:} A versatile library that supports TensorFlow, PyTorch, and JAX as backends. It's known for its user-friendly interface and its ability to solve a wide range of problems, including progression and inversion problems, and problems with complex geometries.
+\item \textbf{PINA (Physics-Informed Neural networks for Advanced modeling):} A modular and scalable library built in PyTorch. It's designed to be easily customizable and support a wide range of PDE-based problems.
+\item \textbf{IDRLnet:} A Python toolkit that provides a structured approach to modeling and solving PINN problems. Includes features for handling noisy inverse problems and variational minimization.
+\item \textbf{JINNS:} A JAX-based library focused on inverse problems and metamodeling. It's designed for high performance, especially for inverse problems.
+\item \textbf{Modulus (NVIDIA):} A framework for developing PINN models optimized for NVIDIA GPUs. It's designed for scalability and performance.
+\item \textbf{PiNN:} A Python library built on TensorFlow for creating atomic neural networks for molecules and materials.
+
+\end{itemize}
+
+%\subsection{Interoperability tools}
+Interoperability tools are essential, since they bridge the gap between traditional scientific computing code bases and modern deep learning frameworks.  
+
+\begin{itemize}
+    \item \textbf{TorchFort:} Developed by NVIDIA, TorchFort \citep{torchfort2021} is a library that creates a link between Fortran/C++ applications and PyTorch. It allows HPC codes to call PyTorch models directly, enabling the integration of deep learning capabilities into existing, well-validated simulation environments without requiring a complete rewrite. This is particularly relevant for PINNs, as it facilitates the use of established Fortran-based solvers as part of the training or validation loop. It is important to note, however, that TorchFort relies on the optimizers available in PyTorch's native `torch.optim` module, which does not include the L-BFGS-B variant, a common requirement for constrained parameter discovery problems.
+\end{itemize}
+
+\textcolor{red}{This analysis highlights the rich ecosystem available for PINN development. While specialized libraries like DeepXDE or PINA accelerate prototyping, our work highlights the value of foundational frameworks like TensorFlow or PyTorch when the research objective is to investigate and solve subtle low-level implementation challenges in the training process, as demonstrated in our analysis of the L-BFGS-B optimizer.}
+
+
+
+
+
+\section{RESULTS AND DISCUSSION}
+
+\textcolor{red}{The experiments demonstrated a clear trade-off between parameter accuracy and data fidelity. In the "parameter" focus, where loss weights were balanced ($\lambda_{data}=1.0, \lambda_{pde}=1.0$), the model achieved high parameter accuracy, with an average discovered viscosity of 0.05027 across multiple runs. This corresponds to an average relative error of only 0.54\% relative to the ground truth of 0.05, with an average total Mean Squared Error (MSE) of 0.137. Conversely, in the "shape" focus, which strongly prioritized data fidelity ($\lambda_{data}=100.0, \lambda_{pde}=1.0$), the average discovered viscosity was 0.04827 (3.46\% relative error) with an average total MSE of 0.138. This highlights that while the difference in MSE between the two approaches is minimal, the error in the discovered parameter is substantially larger in the "shape" approach.}
+
+\textcolor{red}{The \autoref{fig:pinn_results} compares the FDM ground truth with representative solutions from both focuses. Panel (a) shows the ground truth for $\nu=0.05$. Panel (b) presents a result from the "parameter" focus, while Panel (c) displays a result from the "shape" focus. Both approaches yield visually plausible solutions that closely match the reference, confirming that the DG-PINN strategy is effective. The quantitative results show that while both models fit the data well (with negligible MSE differences), the "parameter" configuration is superior for the inverse problem of parameter discovery.}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth, keepaspectratio]{images/fig_main_comparison.jpg}
+    \caption{Comparison of the FDM reference solution (a) and representative PINN-predicted solutions for the u-velocity component from the "parameter" (b) and "shape" (c) experiments.}
+    \label{fig:pinn_results}
+\end{figure}
+
+\textcolor{red}{While the PINN approach has been successful, it's important to consider the tradeoffs. For this well-formulated problem with clean, structured data, a traditional FDM-based optimization would likely be more straightforward. PINN's value lies in its flexibility as a meshless method, making it better suited for problems with complex geometries or sparse, scattered data, where traditional methods fail. This study highlights that leveraging this flexibility requires overcoming the practical training and optimization hurdles we've documented.}
+
+\textcolor{red}{Computationally, training the "parameters" model took approximately 20 minutes on a workstation with a 14-core Intel Xeon E5-2680 v4 CPU and a single NVIDIA GeForce RTX 3050 GPU. The most intensive operations are the large matrix multiplications during forward pass and the automatic differentiation required to compute the PDE residuals for the 60,000 collocation points. These are highly parallelizable on a GPU, but the SciPy hybrid optimization strategy introduces a performance bottleneck due to the constant data transfer between the GPU and CPU.
+}
+
+
+
+
+
+
+
+
+
+\section{CONCLUSION}
+
+\textcolor{red}{This paper presented a detailed case study of the application of PINNs for parameter discovery in the 2D Burgers equation, focusing on the practical challenges and methodological refinements required for a robust implementation. Our main contribution is a transparent documentation of the debugging process and the solutions developed to overcome significant obstacles in training and optimization. We demonstrated that a data-driven PINN (DG-PINN) strategy, combined with multi-timestep training data, is effective in both achieving visual accuracy and accurately identifying parameters. Investigation of optimizer performance revealed that a hybrid approach based on SciPy L-BFGS-B, although computationally more expensive, provided the most stable convergence. Furthermore, we introduced an automated initial guess search mechanism as a critical component to improve model generalization and robustness. The solutions detailed in this work serve as a practical guide, highlighting that the successful application of PINNs to inverse problems requires significant empirical investigation and tailored strategies to navigate the complexities of the optimization landscape.}
+
+
+
+\section{FUTURE WORK}
+
+\textcolor{red}{Future research will focus on three main areas. First, we will refine the model and training process by investigating dynamic loss weighting schemes, analyzing the optimization loss landscape to develop more robust training strategies, and systematically studying the impact of neural network architecture on performance. Second, to address larger and more complex problems, we will explore advanced computational techniques, including distributed training and mixed-precision computing, along with a formal cost analysis compared to traditional numerical methods. Finally, we will expand the scope and reliability of the methodology by applying it to more challenging physical systems, such as 3D equations and irregular geometries, and assess its robustness to noisy data through uncertainty quantification techniques.}
+
+\bibliographystyle{apalike}% ou outro .bst, dependendo da exigência
+\fontsize{11}{0}\selectfont\bibliography{thebibliography}
+
+
+\end{document}

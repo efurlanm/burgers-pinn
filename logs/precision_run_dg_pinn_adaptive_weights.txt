@@ -1,0 +1,78 @@
+Ground truth nu: 0.05
+Initial guess for nu: 0.060000
+Training with: Adam Epochs = 1000, Data-Only Epochs = 10000, Lambda Data = 1.0, Lambda PDE = 1.0, PDE Points = 40000
+
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Epoch 0: Data Loss = 0.099572
+Data-Only Epoch 1000: Data Loss = 0.000135
+Data-Only Epoch 2000: Data Loss = 0.000029
+Data-Only Epoch 3000: Data Loss = 0.000040
+Data-Only Epoch 4000: Data Loss = 0.000013
+Data-Only Epoch 5000: Data Loss = 0.000061
+Data-Only Epoch 6000: Data Loss = 0.000019
+Data-Only Epoch 7000: Data Loss = 0.000014
+Data-Only Epoch 8000: Data Loss = 0.000019
+Data-Only Epoch 9000: Data Loss = 0.000020
+Data-Only Pre-training finished in 18.73 seconds.
+
+Starting Adam training (Full Loss)...
+  Adaptive Weights Update (Epoch 0): 
+    Loss Data: 2.276130e-05, Loss PDE: 3.670821e-02
+    New Lambda Data: 0.999380, New Lambda PDE: 0.000620
+Adam Epoch 0: Loss = 0.023178, Discovered nu = 0.059940
+  Adaptive Weights Update (Epoch 100): 
+    Loss Data: 5.496581e-06, Loss PDE: 2.640532e-02
+    New Lambda Data: 0.999792, New Lambda PDE: 0.000208
+Adam Epoch 100: Loss = 0.000011, Discovered nu = 0.054846
+  Adaptive Weights Update (Epoch 200): 
+    Loss Data: 4.712187e-06, Loss PDE: 2.393739e-02
+    New Lambda Data: 0.999803, New Lambda PDE: 0.000197
+Adam Epoch 200: Loss = 0.000009, Discovered nu = 0.053096
+  Adaptive Weights Update (Epoch 300): 
+    Loss Data: 4.685498e-06, Loss PDE: 2.178184e-02
+    New Lambda Data: 0.999784, New Lambda PDE: 0.000216
+Adam Epoch 300: Loss = 0.000009, Discovered nu = 0.051584
+  Adaptive Weights Update (Epoch 400): 
+    Loss Data: 5.178345e-06, Loss PDE: 1.972721e-02
+    New Lambda Data: 0.999737, New Lambda PDE: 0.000263
+Adam Epoch 400: Loss = 0.000010, Discovered nu = 0.050056
+  Adaptive Weights Update (Epoch 500): 
+    Loss Data: 4.659478e-06, Loss PDE: 1.780833e-02
+    New Lambda Data: 0.999738, New Lambda PDE: 0.000262
+Adam Epoch 500: Loss = 0.000009, Discovered nu = 0.048481
+  Adaptive Weights Update (Epoch 600): 
+    Loss Data: 4.365448e-06, Loss PDE: 1.633534e-02
+    New Lambda Data: 0.999732, New Lambda PDE: 0.000268
+Adam Epoch 600: Loss = 0.000009, Discovered nu = 0.047184
+  Adaptive Weights Update (Epoch 700): 
+    Loss Data: 6.496181e-06, Loss PDE: 1.514090e-02
+    New Lambda Data: 0.999570, New Lambda PDE: 0.000430
+Adam Epoch 700: Loss = 0.000013, Discovered nu = 0.046115
+  Adaptive Weights Update (Epoch 800): 
+    Loss Data: 5.336071e-06, Loss PDE: 1.366412e-02
+    New Lambda Data: 0.999609, New Lambda PDE: 0.000391
+Adam Epoch 800: Loss = 0.000010, Discovered nu = 0.044846
+  Adaptive Weights Update (Epoch 900): 
+    Loss Data: 4.946473e-06, Loss PDE: 1.268356e-02
+    New Lambda Data: 0.999609, New Lambda PDE: 0.000391
+Adam Epoch 900: Loss = 0.000009, Discovered nu = 0.044019
+Adam training finished in 113.82 seconds.
+
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B training finished in 13.57 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 9
+--------------------------------------------------
+Final Discovered nu: 0.043442
+Ground Truth nu: 0.05
+
+Results saved to results/precision_results_data_1.0_pde_1.0_epochs_1000_pdepoints_40000.npz
+
+--- HPC Performance Metrics ---
+Data Preparation Duration: 3.60 seconds
+Model Initialization Duration: 3.65 seconds
+Data-Only Pre-training Duration: 18.73 seconds
+Adam Training Duration: 113.82 seconds
+L-BFGS-B Training Duration: 13.57 seconds
+Total Execution Duration: 154.33 seconds

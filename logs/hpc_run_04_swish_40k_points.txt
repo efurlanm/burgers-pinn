@@ -1,0 +1,4 @@
+Ground truth nu: 0.05
+Initial guess for nu: 0.060000
+Training with: Adam Epochs = 1000, Lambda Data = 1.0, Lambda PDE = 1.0, PDE Points = 100000
+Starting Adam training...

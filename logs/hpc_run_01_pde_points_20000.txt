@@ -1,0 +1,33 @@
+Ground truth nu: 0.05
+Initial guess for nu: 0.060000
+Training with: Adam Epochs = 1000, Lambda Data = 1.0, Lambda PDE = 1.0, PDE Points = 20000
+Starting Adam training...
+Adam Epoch 0: Loss = 0.997111, Discovered nu = 0.060060
+Adam Epoch 100: Loss = 0.075252, Discovered nu = 0.060027
+Adam Epoch 200: Loss = 0.072140, Discovered nu = 0.059928
+Adam Epoch 300: Loss = 0.071519, Discovered nu = 0.059880
+Adam Epoch 400: Loss = 0.071183, Discovered nu = 0.059832
+Adam Epoch 500: Loss = 0.070903, Discovered nu = 0.059785
+Adam Epoch 600: Loss = 0.070614, Discovered nu = 0.059742
+Adam Epoch 700: Loss = 0.070279, Discovered nu = 0.059701
+Adam Epoch 800: Loss = 0.069866, Discovered nu = 0.059657
+Adam Epoch 900: Loss = 0.069331, Discovered nu = 0.059603
+Adam training finished in 60.76 seconds.
+
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B training finished in 4020.50 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 1342
+--------------------------------------------------
+Final Discovered nu: 0.045974
+Ground Truth nu: 0.05
+
+Results saved to results/precision_results_data_1.0_pde_1.0_epochs_1000_pdepoints_20000.npz
+
+--- HPC Performance Metrics ---
+Data Preparation Duration: 3.57 seconds
+Model Initialization Duration: 3.37 seconds
+Adam Training Duration: 60.76 seconds
+L-BFGS-B Training Duration: 4020.50 seconds
+Total Execution Duration: 4098.22 seconds

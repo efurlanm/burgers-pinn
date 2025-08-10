@@ -1,0 +1,239 @@
+True nu: 0.05
+Initial nu_pinn guess: 0.060000
+Starting Adam training...
+Adam Epoch 0: Loss = 999.309143, Discovered nu = 0.059940
+Adam Epoch 10: Loss = 181.360855, Discovered nu = 0.059557
+Adam Epoch 20: Loss = 62.609699, Discovered nu = 0.059492
+Adam Epoch 30: Loss = 33.249603, Discovered nu = 0.059554
+Adam Epoch 40: Loss = 14.020033, Discovered nu = 0.059669
+Adam Epoch 50: Loss = 10.024031, Discovered nu = 0.059709
+Adam Epoch 60: Loss = 6.510022, Discovered nu = 0.059761
+Adam Epoch 70: Loss = 4.769963, Discovered nu = 0.059795
+Adam Epoch 80: Loss = 3.527133, Discovered nu = 0.059836
+Adam Epoch 90: Loss = 2.653512, Discovered nu = 0.059860
+Adam Epoch 100: Loss = 2.209570, Discovered nu = 0.059883
+Adam Epoch 110: Loss = 1.955833, Discovered nu = 0.059903
+Adam Epoch 120: Loss = 1.757459, Discovered nu = 0.059921
+Adam Epoch 130: Loss = 1.605606, Discovered nu = 0.059937
+Adam Epoch 140: Loss = 1.488796, Discovered nu = 0.059950
+Adam Epoch 150: Loss = 1.392936, Discovered nu = 0.059962
+Adam Epoch 160: Loss = 1.317888, Discovered nu = 0.059973
+Adam Epoch 170: Loss = 1.251498, Discovered nu = 0.059983
+Adam Epoch 180: Loss = 1.197830, Discovered nu = 0.059994
+Adam Epoch 190: Loss = 1.148563, Discovered nu = 0.060004
+Adam Epoch 200: Loss = 1.107941, Discovered nu = 0.060013
+Adam Epoch 210: Loss = 1.069909, Discovered nu = 0.060023
+Adam Epoch 220: Loss = 1.036452, Discovered nu = 0.060033
+Adam Epoch 230: Loss = 1.007082, Discovered nu = 0.060042
+Adam Epoch 240: Loss = 0.981508, Discovered nu = 0.060052
+Adam Epoch 250: Loss = 0.955777, Discovered nu = 0.060060
+Adam Epoch 260: Loss = 0.935120, Discovered nu = 0.060069
+Adam Epoch 270: Loss = 0.914984, Discovered nu = 0.060078
+Adam Epoch 280: Loss = 0.897314, Discovered nu = 0.060086
+Adam Epoch 290: Loss = 0.882099, Discovered nu = 0.060094
+Adam Epoch 300: Loss = 0.866262, Discovered nu = 0.060101
+Adam Epoch 310: Loss = 0.853584, Discovered nu = 0.060109
+Adam Epoch 320: Loss = 0.841905, Discovered nu = 0.060116
+Adam Epoch 330: Loss = 0.831114, Discovered nu = 0.060122
+Adam Epoch 340: Loss = 0.821872, Discovered nu = 0.060129
+Adam Epoch 350: Loss = 0.812986, Discovered nu = 0.060134
+Adam Epoch 360: Loss = 0.805266, Discovered nu = 0.060140
+Adam Epoch 370: Loss = 0.797797, Discovered nu = 0.060145
+Adam Epoch 380: Loss = 0.791427, Discovered nu = 0.060150
+Adam Epoch 390: Loss = 0.785949, Discovered nu = 0.060154
+Adam Epoch 400: Loss = 0.780768, Discovered nu = 0.060158
+Adam Epoch 410: Loss = 0.776462, Discovered nu = 0.060162
+Adam Epoch 420: Loss = 0.772268, Discovered nu = 0.060165
+Adam Epoch 430: Loss = 0.768365, Discovered nu = 0.060168
+Adam Epoch 440: Loss = 0.765048, Discovered nu = 0.060171
+Adam Epoch 450: Loss = 0.762010, Discovered nu = 0.060174
+Adam Epoch 460: Loss = 0.759275, Discovered nu = 0.060176
+Adam Epoch 470: Loss = 0.756688, Discovered nu = 0.060178
+Adam Epoch 480: Loss = 0.754834, Discovered nu = 0.060180
+Adam Epoch 490: Loss = 0.752598, Discovered nu = 0.060181
+Adam Epoch 500: Loss = 0.750632, Discovered nu = 0.060183
+Adam Epoch 510: Loss = 0.748886, Discovered nu = 0.060184
+Adam Epoch 520: Loss = 0.747462, Discovered nu = 0.060185
+Adam Epoch 530: Loss = 0.746078, Discovered nu = 0.060185
+Adam Epoch 540: Loss = 0.744816, Discovered nu = 0.060186
+Adam Epoch 550: Loss = 0.743641, Discovered nu = 0.060186
+Adam Epoch 560: Loss = 0.742595, Discovered nu = 0.060186
+Adam Epoch 570: Loss = 0.741618, Discovered nu = 0.060186
+Adam Epoch 580: Loss = 0.740683, Discovered nu = 0.060187
+Adam Epoch 590: Loss = 0.739827, Discovered nu = 0.060187
+Adam Epoch 600: Loss = 0.739046, Discovered nu = 0.060187
+Adam Epoch 610: Loss = 0.738203, Discovered nu = 0.060187
+Adam Epoch 620: Loss = 0.737474, Discovered nu = 0.060186
+Adam Epoch 630: Loss = 0.736831, Discovered nu = 0.060186
+Adam Epoch 640: Loss = 0.736163, Discovered nu = 0.060185
+Adam Epoch 650: Loss = 0.735480, Discovered nu = 0.060185
+Adam Epoch 660: Loss = 0.734903, Discovered nu = 0.060184
+Adam Epoch 670: Loss = 0.734393, Discovered nu = 0.060183
+Adam Epoch 680: Loss = 0.733729, Discovered nu = 0.060183
+Adam Epoch 690: Loss = 0.733215, Discovered nu = 0.060182
+Adam Epoch 700: Loss = 0.732707, Discovered nu = 0.060182
+Adam Epoch 710: Loss = 0.732285, Discovered nu = 0.060181
+Adam Epoch 720: Loss = 0.731642, Discovered nu = 0.060180
+Adam Epoch 730: Loss = 0.731124, Discovered nu = 0.060179
+Adam Epoch 740: Loss = 0.730665, Discovered nu = 0.060179
+Adam Epoch 750: Loss = 0.730197, Discovered nu = 0.060178
+Adam Epoch 760: Loss = 0.729732, Discovered nu = 0.060177
+Adam Epoch 770: Loss = 0.729416, Discovered nu = 0.060176
+Adam Epoch 780: Loss = 0.728836, Discovered nu = 0.060175
+Adam Epoch 790: Loss = 0.728383, Discovered nu = 0.060174
+Adam Epoch 800: Loss = 0.727993, Discovered nu = 0.060173
+Adam Epoch 810: Loss = 0.727560, Discovered nu = 0.060172
+Adam Epoch 820: Loss = 0.727115, Discovered nu = 0.060171
+Adam Epoch 830: Loss = 0.726694, Discovered nu = 0.060170
+Adam Epoch 840: Loss = 0.726317, Discovered nu = 0.060170
+Adam Epoch 850: Loss = 0.725892, Discovered nu = 0.060169
+Adam Epoch 860: Loss = 0.725512, Discovered nu = 0.060168
+Adam Epoch 870: Loss = 0.725080, Discovered nu = 0.060167
+Adam Epoch 880: Loss = 0.724695, Discovered nu = 0.060167
+Adam Epoch 890: Loss = 0.724373, Discovered nu = 0.060166
+Adam Epoch 900: Loss = 0.723898, Discovered nu = 0.060165
+Adam Epoch 910: Loss = 0.723567, Discovered nu = 0.060165
+Adam Epoch 920: Loss = 0.723151, Discovered nu = 0.060164
+Adam Epoch 930: Loss = 0.722764, Discovered nu = 0.060163
+Adam Epoch 940: Loss = 0.722456, Discovered nu = 0.060162
+Adam Epoch 950: Loss = 0.722091, Discovered nu = 0.060162
+Adam Epoch 960: Loss = 0.721725, Discovered nu = 0.060161
+Adam Epoch 970: Loss = 0.721454, Discovered nu = 0.060161
+Adam Epoch 980: Loss = 0.721101, Discovered nu = 0.060160
+Adam Epoch 990: Loss = 0.720735, Discovered nu = 0.060159
+Adam Epoch 1000: Loss = 0.720407, Discovered nu = 0.060159
+Adam Epoch 1010: Loss = 0.720053, Discovered nu = 0.060158
+Adam Epoch 1020: Loss = 0.719752, Discovered nu = 0.060158
+Adam Epoch 1030: Loss = 0.719462, Discovered nu = 0.060157
+Adam Epoch 1040: Loss = 0.719040, Discovered nu = 0.060157
+Adam Epoch 1050: Loss = 0.718714, Discovered nu = 0.060156
+Adam Epoch 1060: Loss = 0.718391, Discovered nu = 0.060156
+Adam Epoch 1070: Loss = 0.718153, Discovered nu = 0.060155
+Adam Epoch 1080: Loss = 0.717822, Discovered nu = 0.060155
+Adam Epoch 1090: Loss = 0.717456, Discovered nu = 0.060155
+Adam Epoch 1100: Loss = 0.717357, Discovered nu = 0.060154
+Adam Epoch 1110: Loss = 0.716900, Discovered nu = 0.060154
+Adam Epoch 1120: Loss = 0.716591, Discovered nu = 0.060153
+Adam Epoch 1130: Loss = 0.716384, Discovered nu = 0.060153
+Adam Epoch 1140: Loss = 0.716113, Discovered nu = 0.060152
+Adam Epoch 1150: Loss = 0.715769, Discovered nu = 0.060152
+Adam Epoch 1160: Loss = 0.715492, Discovered nu = 0.060152
+Adam Epoch 1170: Loss = 0.715242, Discovered nu = 0.060151
+Adam Epoch 1180: Loss = 0.714917, Discovered nu = 0.060151
+Adam Epoch 1190: Loss = 0.714692, Discovered nu = 0.060151
+Adam Epoch 1200: Loss = 0.714436, Discovered nu = 0.060151
+Adam Epoch 1210: Loss = 0.714107, Discovered nu = 0.060150
+Adam Epoch 1220: Loss = 0.713923, Discovered nu = 0.060150
+Adam Epoch 1230: Loss = 0.713595, Discovered nu = 0.060149
+Adam Epoch 1240: Loss = 0.713336, Discovered nu = 0.060149
+Adam Epoch 1250: Loss = 0.713126, Discovered nu = 0.060149
+Adam Epoch 1260: Loss = 0.712907, Discovered nu = 0.060149
+Adam Epoch 1270: Loss = 0.712656, Discovered nu = 0.060149
+Adam Epoch 1280: Loss = 0.712490, Discovered nu = 0.060148
+Adam Epoch 1290: Loss = 0.712149, Discovered nu = 0.060148
+Adam Epoch 1300: Loss = 0.711991, Discovered nu = 0.060148
+Adam Epoch 1310: Loss = 0.711688, Discovered nu = 0.060147
+Adam Epoch 1320: Loss = 0.711590, Discovered nu = 0.060147
+Adam Epoch 1330: Loss = 0.711278, Discovered nu = 0.060147
+Adam Epoch 1340: Loss = 0.711005, Discovered nu = 0.060147
+Adam Epoch 1350: Loss = 0.710796, Discovered nu = 0.060147
+Adam Epoch 1360: Loss = 0.710588, Discovered nu = 0.060146
+Adam Epoch 1370: Loss = 0.710369, Discovered nu = 0.060146
+Adam Epoch 1380: Loss = 0.710159, Discovered nu = 0.060146
+Adam Epoch 1390: Loss = 0.710058, Discovered nu = 0.060146
+Adam Epoch 1400: Loss = 0.709726, Discovered nu = 0.060146
+Adam Epoch 1410: Loss = 0.709624, Discovered nu = 0.060146
+Adam Epoch 1420: Loss = 0.709276, Discovered nu = 0.060146
+Adam Epoch 1430: Loss = 0.709117, Discovered nu = 0.060145
+Adam Epoch 1440: Loss = 0.708931, Discovered nu = 0.060145
+Adam Epoch 1450: Loss = 0.708693, Discovered nu = 0.060145
+Adam Epoch 1460: Loss = 0.708464, Discovered nu = 0.060145
+Adam Epoch 1470: Loss = 0.708292, Discovered nu = 0.060145
+Adam Epoch 1480: Loss = 0.708126, Discovered nu = 0.060145
+Adam Epoch 1490: Loss = 0.707987, Discovered nu = 0.060145
+Adam Epoch 1500: Loss = 0.707744, Discovered nu = 0.060144
+Adam Epoch 1510: Loss = 0.707557, Discovered nu = 0.060144
+Adam Epoch 1520: Loss = 0.707378, Discovered nu = 0.060144
+Adam Epoch 1530: Loss = 0.707204, Discovered nu = 0.060144
+Adam Epoch 1540: Loss = 0.707043, Discovered nu = 0.060143
+Adam Epoch 1550: Loss = 0.706898, Discovered nu = 0.060143
+Adam Epoch 1560: Loss = 0.706648, Discovered nu = 0.060143
+Adam Epoch 1570: Loss = 0.706486, Discovered nu = 0.060142
+Adam Epoch 1580: Loss = 0.706319, Discovered nu = 0.060142
+Adam Epoch 1590: Loss = 0.706254, Discovered nu = 0.060142
+Adam Epoch 1600: Loss = 0.705976, Discovered nu = 0.060141
+Adam Epoch 1610: Loss = 0.705825, Discovered nu = 0.060141
+Adam Epoch 1620: Loss = 0.705645, Discovered nu = 0.060141
+Adam Epoch 1630: Loss = 0.705513, Discovered nu = 0.060141
+Adam Epoch 1640: Loss = 0.705367, Discovered nu = 0.060141
+Adam Epoch 1650: Loss = 0.705203, Discovered nu = 0.060141
+Adam Epoch 1660: Loss = 0.705066, Discovered nu = 0.060140
+Adam Epoch 1670: Loss = 0.704972, Discovered nu = 0.060140
+Adam Epoch 1680: Loss = 0.704777, Discovered nu = 0.060140
+Adam Epoch 1690: Loss = 0.704612, Discovered nu = 0.060139
+Adam Epoch 1700: Loss = 0.704529, Discovered nu = 0.060139
+Adam Epoch 1710: Loss = 0.704335, Discovered nu = 0.060138
+Adam Epoch 1720: Loss = 0.704238, Discovered nu = 0.060138
+Adam Epoch 1730: Loss = 0.704195, Discovered nu = 0.060137
+Adam Epoch 1740: Loss = 0.703893, Discovered nu = 0.060137
+Adam Epoch 1750: Loss = 0.703825, Discovered nu = 0.060136
+Adam Epoch 1760: Loss = 0.703637, Discovered nu = 0.060136
+Adam Epoch 1770: Loss = 0.703483, Discovered nu = 0.060135
+Adam Epoch 1780: Loss = 0.703341, Discovered nu = 0.060135
+Adam Epoch 1790: Loss = 0.703216, Discovered nu = 0.060134
+Adam Epoch 1800: Loss = 0.703196, Discovered nu = 0.060134
+Adam Epoch 1810: Loss = 0.702973, Discovered nu = 0.060133
+Adam Epoch 1820: Loss = 0.702764, Discovered nu = 0.060132
+Adam Epoch 1830: Loss = 0.702657, Discovered nu = 0.060132
+Adam Epoch 1840: Loss = 0.702570, Discovered nu = 0.060131
+Adam Epoch 1850: Loss = 0.702436, Discovered nu = 0.060131
+Adam Epoch 1860: Loss = 0.702303, Discovered nu = 0.060130
+Adam Epoch 1870: Loss = 0.702209, Discovered nu = 0.060130
+Adam Epoch 1880: Loss = 0.702300, Discovered nu = 0.060129
+Adam Epoch 1890: Loss = 0.703225, Discovered nu = 0.060128
+Adam Epoch 1900: Loss = 0.701811, Discovered nu = 0.060127
+Adam Epoch 1910: Loss = 0.701703, Discovered nu = 0.060127
+Adam Epoch 1920: Loss = 0.701598, Discovered nu = 0.060126
+Adam Epoch 1930: Loss = 0.701475, Discovered nu = 0.060125
+Adam Epoch 1940: Loss = 0.701342, Discovered nu = 0.060124
+Adam Epoch 1950: Loss = 0.701256, Discovered nu = 0.060123
+Adam Epoch 1960: Loss = 0.701230, Discovered nu = 0.060122
+Adam Epoch 1970: Loss = 0.701010, Discovered nu = 0.060122
+Adam Epoch 1980: Loss = 0.700992, Discovered nu = 0.060121
+Adam Epoch 1990: Loss = 0.700994, Discovered nu = 0.060120
+Adam training finished.
+Starting L-BFGS-B training with SciPy...
+  L-BFGS-B: Loss = 7.006859e-01, Grad Norm = 4.417122e+00, nu_pinn_grad = 4.009325e-06
+  L-BFGS-B: Loss = 3.328840e+05, Grad Norm = 1.477149e+06, nu_pinn_grad = 7.361108e+00
+  L-BFGS-B: Loss = 7.006786e-01, Grad Norm = 2.678288e+00, nu_pinn_grad = 6.284227e-06
+  L-BFGS-B: Loss = 7.006966e-01, Grad Norm = 4.626843e+00, nu_pinn_grad = -6.612880e-06
+  L-BFGS-B: Loss = 7.006774e-01, Grad Norm = 1.593459e+00, nu_pinn_grad = 3.974359e-06
+  L-BFGS-B: Loss = 7.006752e-01, Grad Norm = 1.211741e+00, nu_pinn_grad = 5.646404e-06
+  L-BFGS-B: Loss = 7.007043e-01, Grad Norm = 7.904620e+00, nu_pinn_grad = 5.385378e-05
+  L-BFGS-B: Loss = 7.006731e-01, Grad Norm = 4.510809e-01, nu_pinn_grad = 6.095567e-06
+  L-BFGS-B: Loss = 7.006730e-01, Grad Norm = 3.694288e-01, nu_pinn_grad = 5.856174e-06
+  L-BFGS-B: Loss = 7.006857e-01, Grad Norm = 4.793405e+00, nu_pinn_grad = 5.000717e-05
+  L-BFGS-B: Loss = 7.006719e-01, Grad Norm = 3.670059e-01, nu_pinn_grad = 5.911393e-06
+  L-BFGS-B: Loss = 7.006719e-01, Grad Norm = 3.670032e-01, nu_pinn_grad = 5.911404e-06
+  L-BFGS-B: Loss = 7.006842e-01, Grad Norm = 4.611188e+00, nu_pinn_grad = 4.885735e-05
+  L-BFGS-B: Loss = 7.006721e-01, Grad Norm = 3.651305e-01, nu_pinn_grad = 5.915367e-06
+  L-BFGS-B: Loss = 7.006719e-01, Grad Norm = 3.669569e-01, nu_pinn_grad = 5.911022e-06
+  L-BFGS-B: Loss = 7.006722e-01, Grad Norm = 3.660135e-01, nu_pinn_grad = 5.910448e-06
+  L-BFGS-B: Loss = 7.006719e-01, Grad Norm = 3.669569e-01, nu_pinn_grad = 5.911022e-06
+  L-BFGS-B: Loss = 7.006719e-01, Grad Norm = 3.669569e-01, nu_pinn_grad = 5.911022e-06
+  L-BFGS-B: Loss = 7.006721e-01, Grad Norm = 3.661175e-01, nu_pinn_grad = 5.914768e-06
+  L-BFGS-B: Loss = 7.006719e-01, Grad Norm = 3.669569e-01, nu_pinn_grad = 5.911022e-06
+  L-BFGS-B: Loss = 7.007223e-01, Grad Norm = 9.844848e+00, nu_pinn_grad = 7.128375e-05
+  L-BFGS-B: Loss = 7.006829e-01, Grad Norm = 4.444055e+00, nu_pinn_grad = 4.820921e-05
+  L-BFGS-B: Loss = 7.006720e-01, Grad Norm = 3.662421e-01, nu_pinn_grad = 5.916632e-06
+  L-BFGS-B: Loss = 7.006719e-01, Grad Norm = 3.669569e-01, nu_pinn_grad = 5.911022e-06
+  L-BFGS-B: Loss = 7.006719e-01, Grad Norm = 3.669569e-01, nu_pinn_grad = 5.911022e-06
+L-BFGS-B training finished.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B number of iterations: 7
+L-BFGS-B function evaluations: 36
+--------------------------------------------------
+Final Discovered nu: 0.060119
+True nu: 0.05
+Resultados salvos em pinn_results_03_scipy_test.npz
