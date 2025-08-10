@@ -1,0 +1,105 @@
+Running with seed: 1
+Ground truth nu: 0.05
+Initial guess for nu: 0.060000
+Training with: Adam Epochs = 2000, Data-Only Epochs = 10000, Lambda Data = 1.0, Lambda PDE = 1.0, PDE Points = 20000
+Searching for the best initial nu among 10 random candidates...
+
+--- Evaluating Candidate 1/10: nu_candidate = 0.151083 ---
+  Candidate nu: 0.151083, Initial Train Loss: 7.044282e-02, Discovered nu (initial train): 0.150307, Relative Error: 200.61%
+
+--- Evaluating Candidate 2/10: nu_candidate = 0.334714 ---
+  Candidate nu: 0.334714, Initial Train Loss: 7.045280e-02, Discovered nu (initial train): 0.334318, Relative Error: 568.64%
+
+--- Evaluating Candidate 3/10: nu_candidate = 0.069570 ---
+  Candidate nu: 0.069570, Initial Train Loss: 7.071321e-02, Discovered nu (initial train): 0.069754, Relative Error: 39.51%
+
+--- Evaluating Candidate 4/10: nu_candidate = 0.214881 ---
+  Candidate nu: 0.214881, Initial Train Loss: 7.055186e-02, Discovered nu (initial train): 0.212226, Relative Error: 324.45%
+
+--- Evaluating Candidate 5/10: nu_candidate = 0.384852 ---
+  Candidate nu: 0.384852, Initial Train Loss: 7.141241e-02, Discovered nu (initial train): 0.385417, Relative Error: 670.83%
+
+--- Evaluating Candidate 6/10: nu_candidate = 0.021782 ---
+  Candidate nu: 0.021782, Initial Train Loss: 7.083841e-02, Discovered nu (initial train): 0.021738, Relative Error: 56.52%
+
+--- Evaluating Candidate 7/10: nu_candidate = 0.171536 ---
+  Candidate nu: 0.171536, Initial Train Loss: 7.125191e-02, Discovered nu (initial train): 0.170984, Relative Error: 241.97%
+
+--- Evaluating Candidate 8/10: nu_candidate = 0.390646 ---
+  Candidate nu: 0.390646, Initial Train Loss: 7.084083e-02, Discovered nu (initial train): 0.385659, Relative Error: 671.32%
+
+--- Evaluating Candidate 9/10: nu_candidate = 0.059312 ---
+  Candidate nu: 0.059312, Initial Train Loss: 7.105625e-02, Discovered nu (initial train): 0.057839, Relative Error: 15.68%
+
+--- Evaluating Candidate 10/10: nu_candidate = 0.282010 ---
+  Candidate nu: 0.282010, Initial Train Loss: 7.120612e-02, Discovered nu (initial train): 0.279068, Relative Error: 458.14%
+
+Best initial nu found from candidates: 0.151083 with initial loss: 7.044282e-02
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Epoch 0: Data Loss = 0.073112
+Data-Only Epoch 1000: Data Loss = 0.000040
+Data-Only Epoch 2000: Data Loss = 0.000017
+Data-Only Epoch 3000: Data Loss = 0.000064
+Data-Only Epoch 4000: Data Loss = 0.000023
+Data-Only Epoch 5000: Data Loss = 0.000017
+Data-Only Epoch 6000: Data Loss = 0.000009
+Data-Only Epoch 7000: Data Loss = 0.000037
+Data-Only Epoch 8000: Data Loss = 0.000013
+Data-Only Epoch 9000: Data Loss = 0.000007
+Data-Only Pre-training finished in 19.88 seconds.
+Starting Adam training (Full Loss)...
+Adam Epoch 0: Loss = 0.556322, Discovered nu = 0.150784
+Adam Epoch 100: Loss = 0.023235, Discovered nu = 0.136869
+Adam Epoch 200: Loss = 0.016715, Discovered nu = 0.134703
+Adam Epoch 300: Loss = 0.013751, Discovered nu = 0.133071
+Adam Epoch 400: Loss = 0.011877, Discovered nu = 0.131672
+Adam Epoch 500: Loss = 0.010509, Discovered nu = 0.130403
+Adam Epoch 600: Loss = 0.009435, Discovered nu = 0.129218
+Adam Epoch 700: Loss = 0.008547, Discovered nu = 0.128092
+Adam Epoch 800: Loss = 0.007789, Discovered nu = 0.127012
+Adam Epoch 900: Loss = 0.007127, Discovered nu = 0.125966
+Adam Epoch 1000: Loss = 0.006538, Discovered nu = 0.124947
+Adam Epoch 1100: Loss = 0.006006, Discovered nu = 0.123949
+Adam Epoch 1200: Loss = 0.005522, Discovered nu = 0.122967
+Adam Epoch 1300: Loss = 0.005082, Discovered nu = 0.121998
+Adam Epoch 1400: Loss = 0.004678, Discovered nu = 0.121040
+Adam Epoch 1500: Loss = 0.004308, Discovered nu = 0.120089
+Adam Epoch 1600: Loss = 0.003968, Discovered nu = 0.119146
+Adam Epoch 1700: Loss = 0.003658, Discovered nu = 0.118208
+Adam Epoch 1800: Loss = 0.003374, Discovered nu = 0.117279
+Adam Epoch 1900: Loss = 0.003115, Discovered nu = 0.116357
+Adam training finished in 121.14 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B training finished in 324.04 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 254
+--------------------------------------------------
+Final Discovered nu: 0.088204
+Ground Truth nu: 0.05
+Prediction MSE (u): 6.727265e-02
+Prediction MSE (v): 6.745569e-02
+Total Prediction MSE (u+v): 1.347283e-01
+
+--- Initial Guess Candidates and Their Initial Training Results ---
+Candidate nu         Discovered nu (Initial)   Relative Error (%)   MSE (Initial)       
+-------------------------------------------------------------------------------------
+0.151083             0.150307                  200.61               7.044282e-02        
+0.334714             0.334318                  568.64               7.045280e-02        
+0.069570             0.069754                  39.51                7.071321e-02        
+0.214881             0.212226                  324.45               7.055186e-02        
+0.384852             0.385417                  670.83               7.141241e-02        
+0.021782             0.021738                  56.52                7.083841e-02        
+0.171536             0.170984                  241.97               7.125191e-02        
+0.390646             0.385659                  671.32               7.084083e-02        
+0.059312             0.057839                  15.68                7.105625e-02        
+0.282010             0.279068                  458.14               7.120612e-02        
+-------------------------------------------------------------------------------------
+Results saved to results/precision_results_data_1.0_pde_1.0_epochs_2000_pdepoints_20000_seed_1.npz
+--- HPC Performance Metrics ---
+Data Preparation Duration: 3.60 seconds
+Model Initialization Duration: 3.80 seconds
+Data-Only Pre-training Duration: 19.88 seconds
+Adam Training Duration: 121.14 seconds
+L-BFGS-B Training Duration: 324.04 seconds
+Total Execution Duration: 759.36 seconds

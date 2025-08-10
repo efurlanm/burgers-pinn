@@ -1,0 +1,57 @@
+Running with seed: 5
+Ground truth nu: 0.05
+Initial guess for nu: 0.060000
+Training with: Adam Epochs = 2000, Data-Only Epochs = 10000, Lambda Data = 1.0, Lambda PDE = 1.0, PDE Points = 60000
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Epoch 0: Data Loss = 0.083028
+Data-Only Epoch 1000: Data Loss = 0.000201
+Data-Only Epoch 2000: Data Loss = 0.000042
+Data-Only Epoch 3000: Data Loss = 0.000152
+Data-Only Epoch 4000: Data Loss = 0.000016
+Data-Only Epoch 5000: Data Loss = 0.000028
+Data-Only Epoch 6000: Data Loss = 0.000036
+Data-Only Epoch 7000: Data Loss = 0.000031
+Data-Only Epoch 8000: Data Loss = 0.000008
+Data-Only Epoch 9000: Data Loss = 0.000015
+Data-Only Pre-training finished in 21.63 seconds.
+Starting Adam training (Full Loss)...
+Adam Epoch 0: Loss = 0.240075, Discovered nu = 0.059940
+Adam Epoch 100: Loss = 0.006907, Discovered nu = 0.058221
+Adam Epoch 200: Loss = 0.004045, Discovered nu = 0.057058
+Adam Epoch 300: Loss = 0.002835, Discovered nu = 0.056102
+Adam Epoch 400: Loss = 0.002129, Discovered nu = 0.055350
+Adam Epoch 500: Loss = 0.001935, Discovered nu = 0.054759
+Adam Epoch 600: Loss = 0.001425, Discovered nu = 0.054219
+Adam Epoch 700: Loss = 0.001966, Discovered nu = 0.053788
+Adam Epoch 800: Loss = 0.000964, Discovered nu = 0.053376
+Adam Epoch 900: Loss = 0.000898, Discovered nu = 0.052999
+Adam Epoch 1000: Loss = 0.001009, Discovered nu = 0.052640
+Adam Epoch 1100: Loss = 0.000733, Discovered nu = 0.052324
+Adam Epoch 1200: Loss = 0.000659, Discovered nu = 0.052080
+Adam Epoch 1300: Loss = 0.000502, Discovered nu = 0.051720
+Adam Epoch 1400: Loss = 0.000489, Discovered nu = 0.051505
+Adam Epoch 1500: Loss = 0.000409, Discovered nu = 0.051204
+Adam Epoch 1600: Loss = 0.000684, Discovered nu = 0.050980
+Adam Epoch 1700: Loss = 0.000355, Discovered nu = 0.050732
+Adam Epoch 1800: Loss = 0.000314, Discovered nu = 0.050485
+Adam Epoch 1900: Loss = 0.002734, Discovered nu = 0.050255
+Adam training finished in 309.02 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B training finished in 15.86 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 8
+--------------------------------------------------
+Final Discovered nu: 0.050018
+Ground Truth nu: 0.05
+Prediction MSE (u): 6.858337e-02
+Prediction MSE (v): 6.854009e-02
+Total Prediction MSE (u+v): 1.371235e-01
+Results saved to results/precision_results_data_1.0_pde_1.0_epochs_2000_pdepoints_60000_seed_5.npz
+--- HPC Performance Metrics ---
+Data Preparation Duration: 3.50 seconds
+Model Initialization Duration: 3.59 seconds
+Data-Only Pre-training Duration: 21.63 seconds
+Adam Training Duration: 309.02 seconds
+L-BFGS-B Training Duration: 15.86 seconds
+Total Execution Duration: 354.54 seconds

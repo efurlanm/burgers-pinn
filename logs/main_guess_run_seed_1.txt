@@ -1,0 +1,445 @@
+Running with seed: 1
+Ground truth nu: 0.05
+Training with: Adam Epochs = 2000, Data-Only Epochs = 10000, Lambda Data = 1.0, Lambda PDE = 1.0, PDE Points = 20000
+Starting full training for 10 random nu candidates...
+
+--- Training Candidate 1/10: nu_candidate = 0.151083 ---
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Epoch 0: Data Loss = 0.102711
+Data-Only Epoch 1000: Data Loss = 0.000053
+Data-Only Epoch 2000: Data Loss = 0.000083
+Data-Only Epoch 3000: Data Loss = 0.000074
+Data-Only Epoch 4000: Data Loss = 0.000037
+Data-Only Epoch 5000: Data Loss = 0.000025
+Data-Only Epoch 6000: Data Loss = 0.000012
+Data-Only Epoch 7000: Data Loss = 0.000025
+Data-Only Epoch 8000: Data Loss = 0.000053
+Data-Only Epoch 9000: Data Loss = 0.000022
+Data-Only Pre-training finished in 15.27 seconds.
+Starting Adam training (Full Loss)...
+Adam Epoch 0: Loss = 1.656492, Discovered nu = 0.150932
+Adam Epoch 100: Loss = 0.015673, Discovered nu = 0.146622
+Adam Epoch 200: Loss = 0.010867, Discovered nu = 0.145650
+Adam Epoch 300: Loss = 0.008638, Discovered nu = 0.144807
+Adam Epoch 400: Loss = 0.007173, Discovered nu = 0.143985
+Adam Epoch 500: Loss = 0.006088, Discovered nu = 0.143150
+Adam Epoch 600: Loss = 0.005667, Discovered nu = 0.142279
+Adam Epoch 700: Loss = 0.004744, Discovered nu = 0.141372
+Adam Epoch 800: Loss = 0.004297, Discovered nu = 0.140437
+Adam Epoch 900: Loss = 0.003612, Discovered nu = 0.139469
+Adam Epoch 1000: Loss = 0.004207, Discovered nu = 0.138490
+Adam Epoch 1100: Loss = 0.002724, Discovered nu = 0.137486
+Adam Epoch 1200: Loss = 0.002563, Discovered nu = 0.136517
+Adam Epoch 1300: Loss = 0.002265, Discovered nu = 0.135549
+Adam Epoch 1400: Loss = 0.002193, Discovered nu = 0.134606
+Adam Epoch 1500: Loss = 0.001673, Discovered nu = 0.133626
+Adam Epoch 1600: Loss = 0.001929, Discovered nu = 0.132716
+Adam Epoch 1700: Loss = 0.001328, Discovered nu = 0.131814
+Adam Epoch 1800: Loss = 0.001605, Discovered nu = 0.130959
+Adam Epoch 1900: Loss = 0.001157, Discovered nu = 0.130094
+Adam training finished in 123.77 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B training finished in 18.82 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 9
+  Final Discovered nu: 0.129235, Relative Error: 158.47%, Total MSE: 1.316823e-01
+
+--- Training Candidate 2/10: nu_candidate = 0.334714 ---
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Epoch 0: Data Loss = 0.082388
+Data-Only Epoch 1000: Data Loss = 0.000127
+Data-Only Epoch 2000: Data Loss = 0.000042
+Data-Only Epoch 3000: Data Loss = 0.000055
+Data-Only Epoch 4000: Data Loss = 0.000028
+Data-Only Epoch 5000: Data Loss = 0.000027
+Data-Only Epoch 6000: Data Loss = 0.000009
+Data-Only Epoch 7000: Data Loss = 0.000028
+Data-Only Epoch 8000: Data Loss = 0.000007
+Data-Only Epoch 9000: Data Loss = 0.000007
+Data-Only Pre-training finished in 15.59 seconds.
+Starting Adam training (Full Loss)...
+Adam Epoch 0: Loss = 3.470087, Discovered nu = 0.334380
+Adam Epoch 100: Loss = 0.038517, Discovered nu = 0.328485
+Adam Epoch 200: Loss = 0.027345, Discovered nu = 0.327653
+Adam Epoch 300: Loss = 0.022534, Discovered nu = 0.326943
+Adam Epoch 400: Loss = 0.019933, Discovered nu = 0.326265
+Adam Epoch 500: Loss = 0.018446, Discovered nu = 0.325572
+Adam Epoch 600: Loss = 0.018805, Discovered nu = 0.324830
+Adam Epoch 700: Loss = 0.016755, Discovered nu = 0.324022
+Adam Epoch 800: Loss = 0.014656, Discovered nu = 0.323163
+Adam Epoch 900: Loss = 0.013543, Discovered nu = 0.322221
+Adam Epoch 1000: Loss = 0.012763, Discovered nu = 0.321193
+Adam Epoch 1100: Loss = 0.011869, Discovered nu = 0.320108
+Adam Epoch 1200: Loss = 0.014983, Discovered nu = 0.318923
+Adam Epoch 1300: Loss = 0.010646, Discovered nu = 0.317666
+Adam Epoch 1400: Loss = 0.009971, Discovered nu = 0.316310
+Adam Epoch 1500: Loss = 0.009573, Discovered nu = 0.314886
+Adam Epoch 1600: Loss = 0.009240, Discovered nu = 0.313386
+Adam Epoch 1700: Loss = 0.010231, Discovered nu = 0.311804
+Adam Epoch 1800: Loss = 0.007872, Discovered nu = 0.310168
+Adam Epoch 1900: Loss = 0.008288, Discovered nu = 0.308492
+Adam training finished in 130.13 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B training finished in 554.90 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 364
+  Final Discovered nu: 0.126401, Relative Error: 152.80%, Total MSE: 1.335342e-01
+
+--- Training Candidate 3/10: nu_candidate = 0.069570 ---
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Epoch 0: Data Loss = 0.082083
+Data-Only Epoch 1000: Data Loss = 0.000050
+Data-Only Epoch 2000: Data Loss = 0.000117
+Data-Only Epoch 3000: Data Loss = 0.000031
+Data-Only Epoch 4000: Data Loss = 0.000046
+Data-Only Epoch 5000: Data Loss = 0.000037
+Data-Only Epoch 6000: Data Loss = 0.000010
+Data-Only Epoch 7000: Data Loss = 0.000046
+Data-Only Epoch 8000: Data Loss = 0.000015
+Data-Only Epoch 9000: Data Loss = 0.000085
+Data-Only Pre-training finished in 29.46 seconds.
+Starting Adam training (Full Loss)...
+Adam Epoch 0: Loss = 1.003569, Discovered nu = 0.069500
+Adam Epoch 100: Loss = 0.008398, Discovered nu = 0.067029
+Adam Epoch 200: Loss = 0.005088, Discovered nu = 0.065898
+Adam Epoch 300: Loss = 0.003573, Discovered nu = 0.065041
+Adam Epoch 400: Loss = 0.002701, Discovered nu = 0.064366
+Adam Epoch 500: Loss = 0.002138, Discovered nu = 0.063790
+Adam Epoch 600: Loss = 0.001752, Discovered nu = 0.063268
+Adam Epoch 700: Loss = 0.001476, Discovered nu = 0.062778
+Adam Epoch 800: Loss = 0.001272, Discovered nu = 0.062311
+Adam Epoch 900: Loss = 0.001114, Discovered nu = 0.061867
+Adam Epoch 1000: Loss = 0.000988, Discovered nu = 0.061444
+Adam Epoch 1100: Loss = 0.000885, Discovered nu = 0.061041
+Adam Epoch 1200: Loss = 0.000797, Discovered nu = 0.060657
+Adam Epoch 1300: Loss = 0.000731, Discovered nu = 0.060291
+Adam Epoch 1400: Loss = 0.000655, Discovered nu = 0.059938
+Adam Epoch 1500: Loss = 0.000600, Discovered nu = 0.059588
+Adam Epoch 1600: Loss = 0.000552, Discovered nu = 0.059255
+Adam Epoch 1700: Loss = 0.000505, Discovered nu = 0.058922
+Adam Epoch 1800: Loss = 0.000557, Discovered nu = 0.058617
+Adam Epoch 1900: Loss = 0.000429, Discovered nu = 0.058309
+Adam training finished in 231.21 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B training finished in 68.06 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 8
+  Final Discovered nu: 0.058011, Relative Error: 16.02%, Total MSE: 1.364362e-01
+
+--- Training Candidate 4/10: nu_candidate = 0.214881 ---
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Epoch 0: Data Loss = 0.082862
+Data-Only Epoch 1000: Data Loss = 0.000071
+Data-Only Epoch 2000: Data Loss = 0.000036
+Data-Only Epoch 3000: Data Loss = 0.000023
+Data-Only Epoch 4000: Data Loss = 0.000025
+Data-Only Epoch 5000: Data Loss = 0.000145
+Data-Only Epoch 6000: Data Loss = 0.000020
+Data-Only Epoch 7000: Data Loss = 0.000019
+Data-Only Epoch 8000: Data Loss = 0.000011
+Data-Only Epoch 9000: Data Loss = 0.000083
+Data-Only Pre-training finished in 18.37 seconds.
+Starting Adam training (Full Loss)...
+Adam Epoch 0: Loss = 1.734238, Discovered nu = 0.214666
+Adam Epoch 100: Loss = 0.019793, Discovered nu = 0.209984
+Adam Epoch 200: Loss = 0.014111, Discovered nu = 0.209189
+Adam Epoch 300: Loss = 0.011661, Discovered nu = 0.208527
+Adam Epoch 400: Loss = 0.009987, Discovered nu = 0.207862
+Adam Epoch 500: Loss = 0.008660, Discovered nu = 0.207144
+Adam Epoch 600: Loss = 0.008461, Discovered nu = 0.206349
+Adam Epoch 700: Loss = 0.006833, Discovered nu = 0.205469
+Adam Epoch 800: Loss = 0.006311, Discovered nu = 0.204504
+Adam Epoch 900: Loss = 0.005378, Discovered nu = 0.203539
+Adam Epoch 1000: Loss = 0.004850, Discovered nu = 0.202478
+Adam Epoch 1100: Loss = 0.017165, Discovered nu = 0.201378
+Adam Epoch 1200: Loss = 0.003986, Discovered nu = 0.200235
+Adam Epoch 1300: Loss = 0.003567, Discovered nu = 0.199192
+Adam Epoch 1400: Loss = 0.004481, Discovered nu = 0.198102
+Adam Epoch 1500: Loss = 0.003728, Discovered nu = 0.196940
+Adam Epoch 1600: Loss = 0.002812, Discovered nu = 0.195844
+Adam Epoch 1700: Loss = 0.004360, Discovered nu = 0.194625
+Adam Epoch 1800: Loss = 0.002360, Discovered nu = 0.193543
+Adam Epoch 1900: Loss = 0.001997, Discovered nu = 0.192473
+Adam training finished in 182.29 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B training finished in 91.12 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 8
+  Final Discovered nu: 0.191152, Relative Error: 282.30%, Total MSE: 1.277465e-01
+
+--- Training Candidate 5/10: nu_candidate = 0.384852 ---
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Epoch 0: Data Loss = 0.085189
+Data-Only Epoch 1000: Data Loss = 0.000120
+Data-Only Epoch 2000: Data Loss = 0.000043
+Data-Only Epoch 3000: Data Loss = 0.000049
+Data-Only Epoch 4000: Data Loss = 0.000012
+Data-Only Epoch 5000: Data Loss = 0.000045
+Data-Only Epoch 6000: Data Loss = 0.000012
+Data-Only Epoch 7000: Data Loss = 0.000014
+Data-Only Epoch 8000: Data Loss = 0.000024
+Data-Only Epoch 9000: Data Loss = 0.000010
+Data-Only Pre-training finished in 17.28 seconds.
+Starting Adam training (Full Loss)...
+Adam Epoch 0: Loss = 4.460960, Discovered nu = 0.384467
+Adam Epoch 100: Loss = 0.036274, Discovered nu = 0.378000
+Adam Epoch 200: Loss = 0.027683, Discovered nu = 0.377467
+Adam Epoch 300: Loss = 0.023514, Discovered nu = 0.376938
+Adam Epoch 400: Loss = 0.021749, Discovered nu = 0.376395
+Adam Epoch 500: Loss = 0.019454, Discovered nu = 0.375814
+Adam Epoch 600: Loss = 0.020082, Discovered nu = 0.375185
+Adam Epoch 700: Loss = 0.017571, Discovered nu = 0.374494
+Adam Epoch 800: Loss = 0.017741, Discovered nu = 0.373749
+Adam Epoch 900: Loss = 0.015544, Discovered nu = 0.372934
+Adam Epoch 1000: Loss = 0.014938, Discovered nu = 0.372042
+Adam Epoch 1100: Loss = 0.014560, Discovered nu = 0.371076
+Adam Epoch 1200: Loss = 0.013932, Discovered nu = 0.370059
+Adam Epoch 1300: Loss = 0.013022, Discovered nu = 0.368948
+Adam Epoch 1400: Loss = 0.012384, Discovered nu = 0.367746
+Adam Epoch 1500: Loss = 0.011761, Discovered nu = 0.366495
+Adam Epoch 1600: Loss = 0.011270, Discovered nu = 0.365133
+Adam Epoch 1700: Loss = 0.011956, Discovered nu = 0.363755
+Adam Epoch 1800: Loss = 0.010379, Discovered nu = 0.362280
+Adam Epoch 1900: Loss = 0.009821, Discovered nu = 0.360697
+Adam training finished in 187.09 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B training finished in 2211.73 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 456
+  Final Discovered nu: 0.125341, Relative Error: 150.68%, Total MSE: 1.336213e-01
+
+--- Training Candidate 6/10: nu_candidate = 0.021782 ---
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Epoch 0: Data Loss = 0.081384
+Data-Only Epoch 1000: Data Loss = 0.000160
+Data-Only Epoch 2000: Data Loss = 0.000046
+Data-Only Epoch 3000: Data Loss = 0.000056
+Data-Only Epoch 4000: Data Loss = 0.000017
+Data-Only Epoch 5000: Data Loss = 0.000011
+Data-Only Epoch 6000: Data Loss = 0.000012
+Data-Only Epoch 7000: Data Loss = 0.000010
+Data-Only Epoch 8000: Data Loss = 0.000037
+Data-Only Epoch 9000: Data Loss = 0.000029
+Data-Only Pre-training finished in 22.72 seconds.
+Starting Adam training (Full Loss)...
+Adam Epoch 0: Loss = 2.401897, Discovered nu = 0.021804
+Adam Epoch 100: Loss = 0.010123, Discovered nu = 0.022092
+Adam Epoch 200: Loss = 0.005683, Discovered nu = 0.022292
+Adam Epoch 300: Loss = 0.004090, Discovered nu = 0.022315
+Adam Epoch 400: Loss = 0.003254, Discovered nu = 0.022283
+Adam Epoch 500: Loss = 0.002709, Discovered nu = 0.022243
+Adam Epoch 600: Loss = 0.002317, Discovered nu = 0.022206
+Adam Epoch 700: Loss = 0.002015, Discovered nu = 0.022173
+Adam Epoch 800: Loss = 0.001772, Discovered nu = 0.022143
+Adam Epoch 900: Loss = 0.001570, Discovered nu = 0.022114
+Adam Epoch 1000: Loss = 0.001401, Discovered nu = 0.022086
+Adam Epoch 1100: Loss = 0.001254, Discovered nu = 0.022057
+Adam Epoch 1200: Loss = 0.001127, Discovered nu = 0.022026
+Adam Epoch 1300: Loss = 0.001017, Discovered nu = 0.021996
+Adam Epoch 1400: Loss = 0.000918, Discovered nu = 0.021965
+Adam Epoch 1500: Loss = 0.000832, Discovered nu = 0.021934
+Adam Epoch 1600: Loss = 0.000755, Discovered nu = 0.021904
+Adam Epoch 1700: Loss = 0.000686, Discovered nu = 0.021875
+Adam Epoch 1800: Loss = 0.000625, Discovered nu = 0.021847
+Adam Epoch 1900: Loss = 0.000573, Discovered nu = 0.021820
+Adam training finished in 212.15 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B training finished in 52.00 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 3
+  Final Discovered nu: 0.021796, Relative Error: 56.41%, Total MSE: 1.377428e-01
+
+--- Training Candidate 7/10: nu_candidate = 0.171536 ---
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Epoch 0: Data Loss = 0.083433
+Data-Only Epoch 1000: Data Loss = 0.000082
+Data-Only Epoch 2000: Data Loss = 0.000198
+Data-Only Epoch 3000: Data Loss = 0.000039
+Data-Only Epoch 4000: Data Loss = 0.000114
+Data-Only Epoch 5000: Data Loss = 0.000015
+Data-Only Epoch 6000: Data Loss = 0.000490
+Data-Only Epoch 7000: Data Loss = 0.000020
+Data-Only Epoch 8000: Data Loss = 0.000034
+Data-Only Epoch 9000: Data Loss = 0.000007
+Data-Only Pre-training finished in 22.73 seconds.
+Starting Adam training (Full Loss)...
+Adam Epoch 0: Loss = 1.391846, Discovered nu = 0.171364
+Adam Epoch 100: Loss = 0.020706, Discovered nu = 0.166961
+Adam Epoch 200: Loss = 0.014231, Discovered nu = 0.165869
+Adam Epoch 300: Loss = 0.011065, Discovered nu = 0.164897
+Adam Epoch 400: Loss = 0.009049, Discovered nu = 0.163971
+Adam Epoch 500: Loss = 0.007530, Discovered nu = 0.163049
+Adam Epoch 600: Loss = 0.006347, Discovered nu = 0.162101
+Adam Epoch 700: Loss = 0.005402, Discovered nu = 0.161113
+Adam Epoch 800: Loss = 0.004972, Discovered nu = 0.160102
+Adam Epoch 900: Loss = 0.004359, Discovered nu = 0.159066
+Adam Epoch 1000: Loss = 0.005690, Discovered nu = 0.158008
+Adam Epoch 1100: Loss = 0.003266, Discovered nu = 0.156925
+Adam Epoch 1200: Loss = 0.004866, Discovered nu = 0.155837
+Adam Epoch 1300: Loss = 0.004076, Discovered nu = 0.154765
+Adam Epoch 1400: Loss = 0.003077, Discovered nu = 0.153708
+Adam Epoch 1500: Loss = 0.002012, Discovered nu = 0.152628
+Adam Epoch 1600: Loss = 0.003068, Discovered nu = 0.151613
+Adam Epoch 1700: Loss = 0.001869, Discovered nu = 0.150555
+Adam Epoch 1800: Loss = 0.001568, Discovered nu = 0.149563
+Adam Epoch 1900: Loss = 0.001730, Discovered nu = 0.148565
+Adam training finished in 215.88 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B training finished in 1193.96 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 189
+  Final Discovered nu: 0.122459, Relative Error: 144.92%, Total MSE: 1.341073e-01
+
+--- Training Candidate 8/10: nu_candidate = 0.390646 ---
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Epoch 0: Data Loss = 0.089567
+Data-Only Epoch 1000: Data Loss = 0.000051
+Data-Only Epoch 2000: Data Loss = 0.000030
+Data-Only Epoch 3000: Data Loss = 0.000012
+Data-Only Epoch 4000: Data Loss = 0.000043
+Data-Only Epoch 5000: Data Loss = 0.000008
+Data-Only Epoch 6000: Data Loss = 0.000019
+Data-Only Epoch 7000: Data Loss = 0.000017
+Data-Only Epoch 8000: Data Loss = 0.000015
+Data-Only Epoch 9000: Data Loss = 0.000054
+Data-Only Pre-training finished in 23.57 seconds.
+Starting Adam training (Full Loss)...
+Adam Epoch 0: Loss = 4.321255, Discovered nu = 0.390255
+Adam Epoch 100: Loss = 0.034880, Discovered nu = 0.384393
+Adam Epoch 200: Loss = 0.026448, Discovered nu = 0.383833
+Adam Epoch 300: Loss = 0.022271, Discovered nu = 0.383274
+Adam Epoch 400: Loss = 0.020223, Discovered nu = 0.382708
+Adam Epoch 500: Loss = 0.023101, Discovered nu = 0.382108
+Adam Epoch 600: Loss = 0.019314, Discovered nu = 0.381449
+Adam Epoch 700: Loss = 0.038217, Discovered nu = 0.380720
+Adam Epoch 800: Loss = 0.017246, Discovered nu = 0.379909
+Adam Epoch 900: Loss = 0.015762, Discovered nu = 0.379016
+Adam Epoch 1000: Loss = 0.020381, Discovered nu = 0.378036
+Adam Epoch 1100: Loss = 0.022305, Discovered nu = 0.376970
+Adam Epoch 1200: Loss = 0.013732, Discovered nu = 0.375806
+Adam Epoch 1300: Loss = 0.013074, Discovered nu = 0.374537
+Adam Epoch 1400: Loss = 0.012711, Discovered nu = 0.373209
+Adam Epoch 1500: Loss = 0.012026, Discovered nu = 0.371778
+Adam Epoch 1600: Loss = 0.013753, Discovered nu = 0.370295
+Adam Epoch 1700: Loss = 0.024745, Discovered nu = 0.368702
+Adam Epoch 1800: Loss = 0.010489, Discovered nu = 0.366979
+Adam Epoch 1900: Loss = 0.010250, Discovered nu = 0.365268
+Adam training finished in 238.60 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B training finished in 3403.81 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 421
+  Final Discovered nu: 0.118917, Relative Error: 137.83%, Total MSE: 1.342885e-01
+
+--- Training Candidate 9/10: nu_candidate = 0.059312 ---
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Epoch 0: Data Loss = 0.110561
+Data-Only Epoch 1000: Data Loss = 0.000047
+Data-Only Epoch 2000: Data Loss = 0.000020
+Data-Only Epoch 3000: Data Loss = 0.000029
+Data-Only Epoch 4000: Data Loss = 0.000017
+Data-Only Epoch 5000: Data Loss = 0.000022
+Data-Only Epoch 6000: Data Loss = 0.000023
+Data-Only Epoch 7000: Data Loss = 0.000019
+Data-Only Epoch 8000: Data Loss = 0.000016
+Data-Only Epoch 9000: Data Loss = 0.000014
+Data-Only Pre-training finished in 24.59 seconds.
+Starting Adam training (Full Loss)...
+Adam Epoch 0: Loss = 2.737584, Discovered nu = 0.059253
+Adam Epoch 100: Loss = 0.015042, Discovered nu = 0.057056
+Adam Epoch 200: Loss = 0.009586, Discovered nu = 0.056221
+Adam Epoch 300: Loss = 0.006791, Discovered nu = 0.055571
+Adam Epoch 400: Loss = 0.005187, Discovered nu = 0.054992
+Adam Epoch 500: Loss = 0.004188, Discovered nu = 0.054474
+Adam Epoch 600: Loss = 0.003514, Discovered nu = 0.054009
+Adam Epoch 700: Loss = 0.003026, Discovered nu = 0.053592
+Adam Epoch 800: Loss = 0.002653, Discovered nu = 0.053213
+Adam Epoch 900: Loss = 0.002353, Discovered nu = 0.052869
+Adam Epoch 1000: Loss = 0.002104, Discovered nu = 0.052553
+Adam Epoch 1100: Loss = 0.001894, Discovered nu = 0.052264
+Adam Epoch 1200: Loss = 0.001713, Discovered nu = 0.052001
+Adam Epoch 1300: Loss = 0.001557, Discovered nu = 0.051760
+Adam Epoch 1400: Loss = 0.001419, Discovered nu = 0.051545
+Adam Epoch 1500: Loss = 0.001302, Discovered nu = 0.051353
+Adam Epoch 1600: Loss = 0.001195, Discovered nu = 0.051184
+Adam Epoch 1700: Loss = 0.001111, Discovered nu = 0.051035
+Adam Epoch 1800: Loss = 0.001173, Discovered nu = 0.050902
+Adam Epoch 1900: Loss = 0.000954, Discovered nu = 0.050783
+Adam training finished in 283.43 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B training finished in 225.97 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 8
+  Final Discovered nu: 0.050681, Relative Error: 1.36%, Total MSE: 1.356950e-01
+
+--- Training Candidate 10/10: nu_candidate = 0.282010 ---
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Epoch 0: Data Loss = 0.146466
+Data-Only Epoch 1000: Data Loss = 0.000091
+Data-Only Epoch 2000: Data Loss = 0.000052
+Data-Only Epoch 3000: Data Loss = 0.000061
+Data-Only Epoch 4000: Data Loss = 0.000032
+Data-Only Epoch 5000: Data Loss = 0.000043
+Data-Only Epoch 6000: Data Loss = 0.000231
+Data-Only Epoch 7000: Data Loss = 0.000025
+Data-Only Epoch 8000: Data Loss = 0.000006
+Data-Only Epoch 9000: Data Loss = 0.000005
+Data-Only Pre-training finished in 19.71 seconds.
+Starting Adam training (Full Loss)...
+Adam Epoch 0: Loss = 2.360817, Discovered nu = 0.281728
+Adam Epoch 100: Loss = 0.029205, Discovered nu = 0.276881
+Adam Epoch 200: Loss = 0.021006, Discovered nu = 0.276174
+Adam Epoch 300: Loss = 0.017120, Discovered nu = 0.275525
+Adam Epoch 400: Loss = 0.014819, Discovered nu = 0.274879
+Adam Epoch 500: Loss = 0.014954, Discovered nu = 0.274184
+Adam Epoch 600: Loss = 0.012017, Discovered nu = 0.273406
+Adam Epoch 700: Loss = 0.011823, Discovered nu = 0.272511
+Adam Epoch 800: Loss = 0.011086, Discovered nu = 0.271603
+Adam Epoch 900: Loss = 0.009807, Discovered nu = 0.270543
+Adam Epoch 1000: Loss = 0.009168, Discovered nu = 0.269500
+Adam Epoch 1100: Loss = 0.015522, Discovered nu = 0.268364
+Adam Epoch 1200: Loss = 0.007235, Discovered nu = 0.267114
+Adam Epoch 1300: Loss = 0.006782, Discovered nu = 0.265867
+Adam Epoch 1400: Loss = 0.007181, Discovered nu = 0.264570
+Adam Epoch 1500: Loss = 0.006884, Discovered nu = 0.263257
+Adam Epoch 1600: Loss = 0.005171, Discovered nu = 0.261805
+Adam Epoch 1700: Loss = 0.004668, Discovered nu = 0.260420
+Adam Epoch 1800: Loss = 0.004248, Discovered nu = 0.258965
+Adam Epoch 1900: Loss = 0.004612, Discovered nu = 0.257542
+Adam training finished in 289.16 seconds.
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B training finished in 2316.02 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 206
+  Final Discovered nu: 0.174015, Relative Error: 248.03%, Total MSE: 1.311766e-01
+
+--- Final Results for Each Initial Guess Candidate ---
+Candidate nu         Final Discovered nu       Relative Error (%)   Total MSE           
+-------------------------------------------------------------------------------------
+0.151083             0.129235                  158.47               1.316823e-01        
+0.334714             0.126401                  152.80               1.335342e-01        
+0.069570             0.058011                  16.02                1.364362e-01        
+0.214881             0.191152                  282.30               1.277465e-01        
+0.384852             0.125341                  150.68               1.336213e-01        
+0.021782             0.021796                  56.41                1.377428e-01        
+0.171536             0.122459                  144.92               1.341073e-01        
+0.390646             0.118917                  137.83               1.342885e-01        
+0.059312             0.050681                  1.36                 1.356950e-01        
+0.282010             0.174015                  248.03               1.311766e-01        
+-------------------------------------------------------------------------------------
+All candidate results saved to results/guess_results_seed_1.npz
+
+--- Overall HPC Performance Metrics ---
+Data Preparation Duration: 4.17 seconds
+Model Initialization Duration: 0.04 seconds
+Total Execution Duration: 12654.71 seconds

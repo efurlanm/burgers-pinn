@@ -1,0 +1,6 @@
+Carregando resultados de: pinn_results_03_scipy_test.npz
+Gráfico salvo em: pinn_results_03_scipy_test.jpg
+
+--- Statistics ---
+u_medido:    min=0.0000, max=0.9269, mean=0.0934
+u_pinn_pred: min=-0.0165, max=0.9262, mean=0.0934

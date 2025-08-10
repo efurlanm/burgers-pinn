@@ -1,0 +1,106 @@
+Ground truth nu: 0.05
+Initial guess for nu: 0.060000
+Training with: Adam Epochs = 5000, Lambda Data = 1.0, Lambda PDE = 1.0
+Starting Adam training...
+Adam Epoch 0: Loss = 0.997297, Discovered nu = 0.060060
+Adam Epoch 100: Loss = 0.075247, Discovered nu = 0.060009
+Adam Epoch 200: Loss = 0.072142, Discovered nu = 0.059916
+Adam Epoch 300: Loss = 0.071522, Discovered nu = 0.059873
+Adam Epoch 400: Loss = 0.071194, Discovered nu = 0.059831
+Adam Epoch 500: Loss = 0.070918, Discovered nu = 0.059790
+Adam Epoch 600: Loss = 0.070635, Discovered nu = 0.059753
+Adam Epoch 700: Loss = 0.070308, Discovered nu = 0.059718
+Adam Epoch 800: Loss = 0.069906, Discovered nu = 0.059681
+Adam Epoch 900: Loss = 0.069384, Discovered nu = 0.059635
+Adam Epoch 1000: Loss = 0.068684, Discovered nu = 0.059570
+Adam Epoch 1100: Loss = 0.067707, Discovered nu = 0.059475
+Adam Epoch 1200: Loss = 0.066303, Discovered nu = 0.059320
+Adam Epoch 1300: Loss = 0.064212, Discovered nu = 0.059045
+Adam Epoch 1400: Loss = 0.060998, Discovered nu = 0.058452
+Adam Epoch 1500: Loss = 0.055977, Discovered nu = 0.057349
+Adam Epoch 1600: Loss = 0.053459, Discovered nu = 0.055914
+Adam Epoch 1700: Loss = 0.041036, Discovered nu = 0.053542
+Adam Epoch 1800: Loss = 0.034511, Discovered nu = 0.049483
+Adam Epoch 1900: Loss = 0.027868, Discovered nu = 0.045588
+Adam Epoch 2000: Loss = 0.022827, Discovered nu = 0.042208
+Adam Epoch 2100: Loss = 0.019101, Discovered nu = 0.039484
+Adam Epoch 2200: Loss = 0.016654, Discovered nu = 0.037574
+Adam Epoch 2300: Loss = 0.014210, Discovered nu = 0.036388
+Adam Epoch 2400: Loss = 0.012424, Discovered nu = 0.035566
+Adam Epoch 2500: Loss = 0.010934, Discovered nu = 0.034804
+Adam Epoch 2600: Loss = 0.009691, Discovered nu = 0.034059
+Adam Epoch 2700: Loss = 0.009258, Discovered nu = 0.033358
+Adam Epoch 2800: Loss = 0.010524, Discovered nu = 0.032955
+Adam Epoch 2900: Loss = 0.007340, Discovered nu = 0.032745
+Adam Epoch 3000: Loss = 0.006709, Discovered nu = 0.032717
+Adam Epoch 3100: Loss = 0.006252, Discovered nu = 0.033034
+Adam Epoch 3200: Loss = 0.005849, Discovered nu = 0.033365
+Adam Epoch 3300: Loss = 0.005453, Discovered nu = 0.033990
+Adam Epoch 3400: Loss = 0.005086, Discovered nu = 0.034641
+Adam Epoch 3500: Loss = 0.004626, Discovered nu = 0.035391
+Adam Epoch 3600: Loss = 0.004190, Discovered nu = 0.036118
+Adam Epoch 3700: Loss = 0.003832, Discovered nu = 0.036878
+Adam Epoch 3800: Loss = 0.003622, Discovered nu = 0.037460
+Adam Epoch 3900: Loss = 0.003276, Discovered nu = 0.038073
+Adam Epoch 4000: Loss = 0.002815, Discovered nu = 0.038504
+Adam Epoch 4100: Loss = 0.002542, Discovered nu = 0.038893
+Adam Epoch 4200: Loss = 0.002970, Discovered nu = 0.039120
+Adam Epoch 4300: Loss = 0.002137, Discovered nu = 0.039279
+Adam Epoch 4400: Loss = 0.001888, Discovered nu = 0.039342
+Adam Epoch 4500: Loss = 0.001719, Discovered nu = 0.039438
+Adam Epoch 4600: Loss = 0.001574, Discovered nu = 0.039426
+Adam Epoch 4700: Loss = 0.001411, Discovered nu = 0.039616
+Adam Epoch 4800: Loss = 0.001338, Discovered nu = 0.039797
+Adam Epoch 4900: Loss = 0.001164, Discovered nu = 0.039784
+
+Adam training finished.
+Starting L-BFGS-B training with SciPy...
+  L-BFGS-B: Loss = 1.092074e-03, Grad Norm = 2.415670e-01, nu_pinn_grad = 1.948891e-04
+  L-BFGS-B: Loss = 4.702155e+02, Grad Norm = 2.799379e+03, nu_pinn_grad = -3.011111e-01
+  L-BFGS-B: Loss = 1.065366e-03, Grad Norm = 7.476618e-02, nu_pinn_grad = -2.396866e-04
+  L-BFGS-B: Loss = 1.062067e-03, Grad Norm = 2.414256e-02, nu_pinn_grad = -2.201703e-04
+  L-BFGS-B: Loss = 1.061722e-03, Grad Norm = 8.762622e-03, nu_pinn_grad = -2.070343e-04
+  L-BFGS-B: Loss = 1.061580e-03, Grad Norm = 7.217078e-03, nu_pinn_grad = -1.744069e-04
+  L-BFGS-B: Loss = 1.061397e-03, Grad Norm = 8.253199e-03, nu_pinn_grad = -1.372914e-04
+  L-BFGS-B: Loss = 1.061202e-03, Grad Norm = 9.177552e-03, nu_pinn_grad = -7.621451e-05
+  L-BFGS-B: Loss = 1.061132e-03, Grad Norm = 9.748911e-03, nu_pinn_grad = -2.449087e-05
+  L-BFGS-B: Loss = 1.061060e-03, Grad Norm = 7.306251e-03, nu_pinn_grad = -2.550875e-06
+  L-BFGS-B: Loss = 1.060954e-03, Grad Norm = 6.770820e-03, nu_pinn_grad = -8.272756e-06
+  L-BFGS-B: Loss = 1.060788e-03, Grad Norm = 1.715470e-02, nu_pinn_grad = -4.414077e-05
+  L-BFGS-B: Loss = 1.060638e-03, Grad Norm = 1.457960e-02, nu_pinn_grad = -5.384538e-05
+  L-BFGS-B: Loss = 1.060382e-03, Grad Norm = 1.821041e-02, nu_pinn_grad = -5.189966e-05
+  L-BFGS-B: Loss = 1.059899e-03, Grad Norm = 1.640155e-02, nu_pinn_grad = -1.103443e-04
+  L-BFGS-B: Loss = 1.060043e-03, Grad Norm = 3.915526e-02, nu_pinn_grad = -1.178741e-04
+  L-BFGS-B: Loss = 1.059762e-03, Grad Norm = 1.774190e-02, nu_pinn_grad = -1.181244e-04
+  L-BFGS-B: Loss = 1.059187e-03, Grad Norm = 2.850106e-02, nu_pinn_grad = -1.219141e-04
+  L-BFGS-B: Loss = 1.059255e-03, Grad Norm = 2.913397e-02, nu_pinn_grad = -8.980681e-05
+  L-BFGS-B: Loss = 1.059236e-03, Grad Norm = 2.842913e-02, nu_pinn_grad = -1.185131e-04
+  L-BFGS-B: Loss = 1.059244e-03, Grad Norm = 2.919364e-02, nu_pinn_grad = -1.236934e-04
+  L-BFGS-B: Loss = 1.059189e-03, Grad Norm = 2.796772e-02, nu_pinn_grad = -1.208187e-04
+  L-BFGS-B: Loss = 1.059185e-03, Grad Norm = 2.850513e-02, nu_pinn_grad = -1.219611e-04
+  L-BFGS-B: Loss = 1.059185e-03, Grad Norm = 2.850513e-02, nu_pinn_grad = -1.219611e-04
+  L-BFGS-B: Loss = 1.059190e-03, Grad Norm = 2.800652e-02, nu_pinn_grad = -1.218771e-04
+  L-BFGS-B: Loss = 1.059185e-03, Grad Norm = 2.850186e-02, nu_pinn_grad = -1.219561e-04
+  L-BFGS-B: Loss = 1.059185e-03, Grad Norm = 2.850160e-02, nu_pinn_grad = -1.219626e-04
+  L-BFGS-B: Loss = 1.059193e-03, Grad Norm = 2.849921e-02, nu_pinn_grad = -1.220313e-04
+  L-BFGS-B: Loss = 1.059185e-03, Grad Norm = 2.850204e-02, nu_pinn_grad = -1.219616e-04
+  L-BFGS-B: Loss = 1.059185e-03, Grad Norm = 2.850160e-02, nu_pinn_grad = -1.219626e-04
+  L-BFGS-B: Loss = 1.059257e-03, Grad Norm = 2.915273e-02, nu_pinn_grad = -8.976371e-05
+  L-BFGS-B: Loss = 1.059243e-03, Grad Norm = 2.914401e-02, nu_pinn_grad = -1.194573e-04
+  L-BFGS-B: Loss = 1.059233e-03, Grad Norm = 2.830734e-02, nu_pinn_grad = -1.220192e-04
+  L-BFGS-B: Loss = 1.059185e-03, Grad Norm = 2.796220e-02, nu_pinn_grad = -1.208612e-04
+  L-BFGS-B: Loss = 1.059193e-03, Grad Norm = 2.849782e-02, nu_pinn_grad = -1.220229e-04
+  L-BFGS-B: Loss = 1.059185e-03, Grad Norm = 2.850158e-02, nu_pinn_grad = -1.219626e-04
+  L-BFGS-B: Loss = 1.059185e-03, Grad Norm = 2.850160e-02, nu_pinn_grad = -1.219626e-04
+  L-BFGS-B: Loss = 1.059185e-03, Grad Norm = 2.850160e-02, nu_pinn_grad = -1.219626e-04
+  L-BFGS-B: Loss = 1.059185e-03, Grad Norm = 2.850160e-02, nu_pinn_grad = -1.219626e-04
+
+L-BFGS-B training finished.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 17
+--------------------------------------------------
+Final Discovered nu: 0.040033
+Ground Truth nu: 0.05
+
+Results saved to results/precision_results_data_1.0_pde_1.0_epochs_5000.npz

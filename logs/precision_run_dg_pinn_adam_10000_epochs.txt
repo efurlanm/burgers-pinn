@@ -1,0 +1,142 @@
+Ground truth nu: 0.05
+Initial guess for nu: 0.060000
+Training with: Adam Epochs = 10000, Data-Only Epochs = 10000, Lambda Data = 1.0, Lambda PDE = 1.0, PDE Points = 40000
+
+Starting Data-Only Pre-training for 10000 epochs...
+Data-Only Epoch 0: Data Loss = 0.099572
+Data-Only Epoch 1000: Data Loss = 0.000135
+Data-Only Epoch 2000: Data Loss = 0.000029
+Data-Only Epoch 3000: Data Loss = 0.000040
+Data-Only Epoch 4000: Data Loss = 0.000013
+Data-Only Epoch 5000: Data Loss = 0.000061
+Data-Only Epoch 6000: Data Loss = 0.000019
+Data-Only Epoch 7000: Data Loss = 0.000014
+Data-Only Epoch 8000: Data Loss = 0.000019
+Data-Only Epoch 9000: Data Loss = 0.000020
+Data-Only Pre-training finished in 20.81 seconds.
+
+Starting Adam training (Full Loss)...
+Adam Epoch 0: Loss = 0.242586, Discovered nu = 0.059940
+Adam Epoch 100: Loss = 0.007623, Discovered nu = 0.058003
+Adam Epoch 200: Loss = 0.004778, Discovered nu = 0.056853
+Adam Epoch 300: Loss = 0.003287, Discovered nu = 0.055725
+Adam Epoch 400: Loss = 0.002347, Discovered nu = 0.054738
+Adam Epoch 500: Loss = 0.001754, Discovered nu = 0.053921
+Adam Epoch 600: Loss = 0.001369, Discovered nu = 0.053269
+Adam Epoch 700: Loss = 0.001107, Discovered nu = 0.052765
+Adam Epoch 800: Loss = 0.000920, Discovered nu = 0.052382
+Adam Epoch 900: Loss = 0.000783, Discovered nu = 0.052071
+Adam Epoch 1000: Loss = 0.000925, Discovered nu = 0.051820
+Adam Epoch 1100: Loss = 0.000640, Discovered nu = 0.051597
+Adam Epoch 1200: Loss = 0.000536, Discovered nu = 0.051425
+Adam Epoch 1300: Loss = 0.000483, Discovered nu = 0.051170
+Adam Epoch 1400: Loss = 0.000437, Discovered nu = 0.051051
+Adam Epoch 1500: Loss = 0.000943, Discovered nu = 0.050934
+Adam Epoch 1600: Loss = 0.000360, Discovered nu = 0.050798
+Adam Epoch 1700: Loss = 0.000359, Discovered nu = 0.050547
+Adam Epoch 1800: Loss = 0.000318, Discovered nu = 0.050463
+Adam Epoch 1900: Loss = 0.000339, Discovered nu = 0.050375
+Adam Epoch 2000: Loss = 0.001257, Discovered nu = 0.050274
+Adam Epoch 2100: Loss = 0.000257, Discovered nu = 0.050162
+Adam Epoch 2200: Loss = 0.000236, Discovered nu = 0.050057
+Adam Epoch 2300: Loss = 0.000357, Discovered nu = 0.049930
+Adam Epoch 2400: Loss = 0.000231, Discovered nu = 0.049818
+Adam Epoch 2500: Loss = 0.000279, Discovered nu = 0.049711
+Adam Epoch 2600: Loss = 0.000239, Discovered nu = 0.049608
+Adam Epoch 2700: Loss = 0.000485, Discovered nu = 0.049485
+Adam Epoch 2800: Loss = 0.000417, Discovered nu = 0.049361
+Adam Epoch 2900: Loss = 0.000209, Discovered nu = 0.049240
+Adam Epoch 3000: Loss = 0.000437, Discovered nu = 0.049137
+Adam Epoch 3100: Loss = 0.000658, Discovered nu = 0.049001
+Adam Epoch 3200: Loss = 0.001602, Discovered nu = 0.048885
+Adam Epoch 3300: Loss = 0.000194, Discovered nu = 0.048745
+Adam Epoch 3400: Loss = 0.000324, Discovered nu = 0.048607
+Adam Epoch 3500: Loss = 0.000451, Discovered nu = 0.048473
+Adam Epoch 3600: Loss = 0.000565, Discovered nu = 0.048307
+Adam Epoch 3700: Loss = 0.000174, Discovered nu = 0.048181
+Adam Epoch 3800: Loss = 0.000176, Discovered nu = 0.048011
+Adam Epoch 3900: Loss = 0.000394, Discovered nu = 0.047858
+Adam Epoch 4000: Loss = 0.000205, Discovered nu = 0.047708
+Adam Epoch 4100: Loss = 0.000252, Discovered nu = 0.047557
+Adam Epoch 4200: Loss = 0.000708, Discovered nu = 0.047415
+Adam Epoch 4300: Loss = 0.000236, Discovered nu = 0.047223
+Adam Epoch 4400: Loss = 0.000245, Discovered nu = 0.047035
+Adam Epoch 4500: Loss = 0.000208, Discovered nu = 0.046842
+Adam Epoch 4600: Loss = 0.000363, Discovered nu = 0.046707
+Adam Epoch 4700: Loss = 0.000148, Discovered nu = 0.046527
+Adam Epoch 4800: Loss = 0.000264, Discovered nu = 0.046318
+Adam Epoch 4900: Loss = 0.000253, Discovered nu = 0.046158
+Adam Epoch 5000: Loss = 0.000429, Discovered nu = 0.045964
+Adam Epoch 5100: Loss = 0.000166, Discovered nu = 0.045795
+Adam Epoch 5200: Loss = 0.000270, Discovered nu = 0.045607
+Adam Epoch 5300: Loss = 0.000324, Discovered nu = 0.045437
+Adam Epoch 5400: Loss = 0.000191, Discovered nu = 0.045241
+Adam Epoch 5500: Loss = 0.000071, Discovered nu = 0.045064
+Adam Epoch 5600: Loss = 0.000438, Discovered nu = 0.044884
+Adam Epoch 5700: Loss = 0.000181, Discovered nu = 0.044671
+Adam Epoch 5800: Loss = 0.000141, Discovered nu = 0.044466
+Adam Epoch 5900: Loss = 0.001625, Discovered nu = 0.044317
+Adam Epoch 6000: Loss = 0.000127, Discovered nu = 0.044108
+Adam Epoch 6100: Loss = 0.000301, Discovered nu = 0.043851
+Adam Epoch 6200: Loss = 0.000312, Discovered nu = 0.043651
+Adam Epoch 6300: Loss = 0.000355, Discovered nu = 0.043496
+Adam Epoch 6400: Loss = 0.000170, Discovered nu = 0.043322
+Adam Epoch 6500: Loss = 0.000117, Discovered nu = 0.043109
+Adam Epoch 6600: Loss = 0.000175, Discovered nu = 0.042912
+Adam Epoch 6700: Loss = 0.000116, Discovered nu = 0.042729
+Adam Epoch 6800: Loss = 0.000165, Discovered nu = 0.042528
+Adam Epoch 6900: Loss = 0.000192, Discovered nu = 0.042361
+Adam Epoch 7000: Loss = 0.000250, Discovered nu = 0.042119
+Adam Epoch 7100: Loss = 0.000130, Discovered nu = 0.041983
+Adam Epoch 7200: Loss = 0.000669, Discovered nu = 0.041798
+Adam Epoch 7300: Loss = 0.000110, Discovered nu = 0.041617
+Adam Epoch 7400: Loss = 0.001862, Discovered nu = 0.041455
+Adam Epoch 7500: Loss = 0.000169, Discovered nu = 0.041126
+Adam Epoch 7600: Loss = 0.000195, Discovered nu = 0.041012
+Adam Epoch 7700: Loss = 0.000061, Discovered nu = 0.040874
+Adam Epoch 7800: Loss = 0.000164, Discovered nu = 0.040695
+Adam Epoch 7900: Loss = 0.000288, Discovered nu = 0.040425
+Adam Epoch 8000: Loss = 0.000215, Discovered nu = 0.040320
+Adam Epoch 8100: Loss = 0.000319, Discovered nu = 0.040173
+Adam Epoch 8200: Loss = 0.000061, Discovered nu = 0.039974
+Adam Epoch 8300: Loss = 0.000417, Discovered nu = 0.039812
+Adam Epoch 8400: Loss = 0.000096, Discovered nu = 0.039656
+Adam Epoch 8500: Loss = 0.000157, Discovered nu = 0.039456
+Adam Epoch 8600: Loss = 0.000049, Discovered nu = 0.039334
+Adam Epoch 8700: Loss = 0.000099, Discovered nu = 0.039171
+Adam Epoch 8800: Loss = 0.000248, Discovered nu = 0.038935
+Adam Epoch 8900: Loss = 0.000058, Discovered nu = 0.038792
+Adam Epoch 9000: Loss = 0.000191, Discovered nu = 0.038648
+Adam Epoch 9100: Loss = 0.000115, Discovered nu = 0.038516
+Adam Epoch 9200: Loss = 0.000114, Discovered nu = 0.038362
+Adam Epoch 9300: Loss = 0.000176, Discovered nu = 0.038222
+Adam Epoch 9400: Loss = 0.000185, Discovered nu = 0.038054
+Adam Epoch 9500: Loss = 0.000068, Discovered nu = 0.037925
+Adam Epoch 9600: Loss = 0.000432, Discovered nu = 0.037834
+Adam Epoch 9700: Loss = 0.000064, Discovered nu = 0.037618
+Adam Epoch 9800: Loss = 0.000093, Discovered nu = 0.037382
+Adam Epoch 9900: Loss = 0.000085, Discovered nu = 0.037359
+Adam training finished in 1066.20 seconds.
+
+Starting L-BFGS-B training with SciPy...
+L-BFGS-B training finished in 27.22 seconds.
+L-BFGS-B converged: True
+L-BFGS-B message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+L-BFGS-B iterations: 32
+--------------------------------------------------
+Final Discovered nu: 0.037185
+Ground Truth nu: 0.05
+
+Prediction MSE (u): 6.928381e-02
+Prediction MSE (v): 6.930072e-02
+Total Prediction MSE (u+v): 1.385845e-01
+
+Results saved to results/precision_results_data_1.0_pde_1.0_epochs_10000_pdepoints_40000.npz
+
+--- HPC Performance Metrics ---
+Data Preparation Duration: 3.58 seconds
+Model Initialization Duration: 3.64 seconds
+Data-Only Pre-training Duration: 20.81 seconds
+Adam Training Duration: 1066.20 seconds
+L-BFGS-B Training Duration: 27.22 seconds
+Total Execution Duration: 1122.53 seconds
